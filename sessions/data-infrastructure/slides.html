@@ -32,6 +32,72 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-3da55e4bce9fb696ec08762b031f6615.css">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -159,8 +225,8 @@ Course at Julius-Maximilians-Universität Würzburg, RTG 2660: Approach-Avoidanc
 <h2 id="toc-title">Agenda</h2>
 <ul>
 <li><a href="#/this-session-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206d657461207469746c65203e7d7d" id="/toc-this-session-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206d657461207469746c65203e7d7d"><span class="header-section-number">1</span> This session: Data Infrastructure</a></li>
-<li><a href="#/data-infrastructure-at-uhh" id="/toc-data-infrastructure-at-uhh"><span class="header-section-number">2</span> Data Infrastructure at UHH</a></li>
-<li><a href="#/choosing-the-right-service" id="/toc-choosing-the-right-service"><span class="header-section-number">3</span> Choosing the Right Service</a></li>
+<li><a href="#/nextcloud" id="/toc-nextcloud"><span class="header-section-number">2</span> Nextcloud</a></li>
+<li><a href="#/zotero-nextcloud" id="/toc-zotero-nextcloud"><span class="header-section-number">3</span> Zotero + Nextcloud</a></li>
 <li><a href="#/exercises" id="/toc-exercises"><span class="header-section-number">4</span> Exercises</a></li>
 <li><a href="#/resources" id="/toc-resources"><span class="header-section-number">5</span> Resources</a></li>
 <li><a href="#/questions-discussion" id="/toc-questions-discussion"><span class="header-section-number">6</span> Questions &amp; Discussion</a></li>
@@ -229,373 +295,293 @@ Course at Julius-Maximilians-Universität Würzburg, RTG 2660: Approach-Avoidanc
 </section>
 <section id="objectives" class="slide level2">
 <h2>Objectives</h2>
-<p><span class="emoji" data-emoji="bulb">💡</span> You know about the different data infrastructure services available at the University of Hamburg.<br> <span class="emoji" data-emoji="bulb">💡</span> You can distinguish between local storage, cloud storage, and object storage solutions.<br> <span class="emoji" data-emoji="bulb">💡</span> You know how to access and use UHH Disk, UHH Cloud, and Object Storage services.<br> <span class="emoji" data-emoji="bulb">💡</span> You understand the role of version control systems like GitLab for research data management.<br> <span class="emoji" data-emoji="bulb">💡</span> You are familiar with the UHH Research Data Repository and its features for long-term data preservation.</p>
+<p><span class="emoji" data-emoji="bulb">💡</span> You know what Nextcloud is and its capabilities.<br> <span class="emoji" data-emoji="bulb">💡</span> You can navigate the Nextcloud web interface and describe its main areas.<br> <span class="emoji" data-emoji="bulb">💡</span> You know the typical features of Nextcloud, including file management, sharing, versioning, and collaborative editing.<br> <span class="emoji" data-emoji="bulb">💡</span> You understand the different access methods for Nextcloud (web, desktop clients, mobile apps, WebDAV/API).<br> <span class="emoji" data-emoji="bulb">💡</span> You can integrate Nextcloud with DataLad using WebDAV for automated research data workflows.</p>
+</section></section>
+<section>
+<section id="nextcloud" class="title-slide slide level1 center" data-number="2">
+<h1><span class="header-section-number">2</span> Nextcloud</h1>
+
 </section>
-<section id="overview-of-uhh-data-services" class="slide level2">
-<h2>Overview of UHH Data Services</h2>
+<section id="what-is-nextcloud" class="slide level2">
+<h2>What is Nextcloud?</h2>
 <div class="fragment">
-<p>The University of Hamburg provides various data infrastructure services to support research:</p>
+<p><strong>Nextcloud</strong> is an open-source, self-hosted cloud-based collaboration platform.</p>
+</div>
+<div class="fragment">
 <ul>
-<li><strong>UHH Disk</strong>: Network storage for daily research work</li>
-<li><strong>UHH Cloud</strong>: Collaborative cloud platform</li>
-<li><strong>Object Storage</strong>: Large-scale, automated data storage</li>
-<li><strong>GitLab</strong>: Version control and code collaboration</li>
-<li><strong>Research Data Repository</strong>: Long-term data preservation and publication</li>
+<li>Web-based access from anywhere — no VPN required</li>
+<li>Cross-platform synchronization (Windows, macOS, Linux, iOS, Android)</li>
+<li>External sharing and collaborative workspaces</li>
+<li>Authentication via institutional Single Sign-On (SSO)</li>
 </ul>
 </div>
 <div class="fragment">
-<p><span class="emoji" data-emoji="bulb">💡</span> <strong>Key principle</strong>: Different services for different stages of the research data lifecycle</p>
+<p><span class="emoji" data-emoji="link">🔗</span> <a href="https://nextcloud.com">More information</a></p>
+</div>
+</section>
+<section id="nextcloud-web-interface" class="slide level2">
+<h2>Nextcloud: Web Interface</h2>
+<div class="fragment">
+<p>After login, the <strong>main view</strong> provides access to all key functions:</p>
+<ul>
+<li><strong>Dashboard</strong> (centre): customizable widgets — recent activity, frequently used files, etc.</li>
+<li><strong>App switcher</strong> (top-left): access all available apps with a single click</li>
+</ul>
+</div>
+<div class="fragment">
+<p><strong>Top-right icons:</strong></p>
+<ul>
+<li><span class="emoji" data-emoji="mag">🔍</span> <strong>Search</strong> — find files and content</li>
+<li><span class="emoji" data-emoji="bell">🔔</span> <strong>Notifications</strong> — activity alerts</li>
+<li><span class="emoji" data-emoji="busts_in_silhouette">👥</span> <strong>Contacts</strong> — user directory</li>
+<li><span class="emoji" data-emoji="bust_in_silhouette">👤</span> <strong>Profile</strong> (circle with initials) — personal settings, preferences, help, and logout</li>
+</ul>
+</div>
+</section>
+<section id="nextcloud-available-apps" class="slide level2">
+<h2>Nextcloud: Available Apps</h2>
+<div class="fragment">
+<p>Nextcloud extends beyond file storage through <strong>Apps</strong> (extensions). Depending on your institution’s configuration, a curated set of apps may be available:</p>
+</div>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="fragment">
+<p><strong>Productivity:</strong></p>
+<ul>
+<li><span class="emoji" data-emoji="calendar">📆</span> Calendar — shared scheduling</li>
+<li><span class="emoji" data-emoji="envelope">✉️</span> Mail</li>
+<li><span class="emoji" data-emoji="lock">🔒</span> Password manager</li>
+<li><span class="emoji" data-emoji="speech_balloon">💬</span> Chat</li>
+<li><span class="emoji" data-emoji="video_camera">📹</span> Video conferencing</li>
+</ul>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="fragment">
+<p><strong>Collaboration &amp; Organisation:</strong></p>
+<ul>
+<li><span class="emoji" data-emoji="clipboard">📋</span> Forms and surveys</li>
+<li><span class="emoji" data-emoji="bar_chart">📊</span> Project management (Deck — Kanban boards)</li>
+<li><span class="emoji" data-emoji="book">📖</span> Address books and internal contact groups</li>
+</ul>
+</div>
+</div></div>
+</section>
+<section id="nextcloud-focus-on-file-management-and-collaboration" class="slide level2">
+<h2>Nextcloud: Focus on file management and collaboration</h2>
+<div class="fragment">
+<p><strong>Authentication &amp; Access:</strong></p>
+<ul>
+<li>Single Sign-On with institutional login</li>
+<li>Web interface + desktop/mobile clients</li>
+<li>API access via WebDAV</li>
+</ul>
+</div>
+<div class="fragment">
+<p><strong>File Management:</strong></p>
+<ul>
+<li>Share files and folders with other users</li>
+<li>Granular access rights control (read, write, share)</li>
+<li>File versioning and change history</li>
+<li>Comments on files and folders</li>
+</ul>
+</div>
+<div class="fragment">
+<p><strong>Collaboration:</strong></p>
+<ul>
+<li>Online editing of Office documents (<code>.docx</code>, <code>.xlsx</code>, <code>.pptx</code>)</li>
+<li>Simultaneous co-editing of documents</li>
+<li>Shared calendars for scheduling</li>
+<li>Kanban-based project management (Deck)</li>
+</ul>
+</div>
+</section>
+<section id="nextcloud-access-methods" class="slide level2">
+<h2>Nextcloud: Access Methods</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="fragment">
+<p><strong>Web Interface:</strong></p>
+<ul>
+<li>Access from any browser</li>
+<li>No installation required</li>
+<li>Full feature access</li>
+</ul>
+</div>
+<div class="fragment">
+<p><strong>Desktop Clients:</strong></p>
+<ul>
+<li>Available for Windows, macOS, Linux</li>
+<li>Automatic file synchronization</li>
+<li>Offline access to synced files</li>
+</ul>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="fragment">
+<p><strong>Mobile Apps:</strong></p>
+<ul>
+<li>Available for iOS and Android</li>
+<li>Access and share files on the go</li>
+</ul>
+</div>
+<div class="fragment">
+<p><strong>API / WebDAV:</strong></p>
+<ul>
+<li>Programmatic access via WebDAV protocol</li>
+<li>Integrate with scripts and tools (e.g., DataLad via <code>datalad-next</code>)</li>
+<li>Suitable for automated workflows</li>
+</ul>
+</div>
+</div></div>
+</section>
+<section id="nextcloud-connecting-via-rclone" class="slide level2">
+<h2>Nextcloud: Connecting via <code>rclone</code></h2>
+<div class="fragment">
+<p><a href="https://rclone.org"><code>rclone</code></a> is a command-line tool for transferring files between local systems and cloud storage — including Nextcloud via <strong>WebDAV</strong>. Useful for HPC and analysis server workflows.</p>
+</div>
+<div class="fragment">
+<p><strong>Configure Nextcloud as a WebDAV remote:</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a></a><span class="ex">rclone</span> config</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ul>
+<li>Type: <code>webdav</code></li>
+<li>URL: <code>https://&lt;your-nextcloud&gt;/remote.php/dav/files/YOURUSERNAME/</code></li>
+<li>Vendor: <code>Nextcloud</code></li>
+<li>Authenticate with an <strong>App Password</strong> (Settings → Security → App Passwords)</li>
+</ul>
+</div>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="fragment">
+<p><strong>Mount as a local folder:</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a></a><span class="ex">rclone</span> mount nextcloud:/ ~/mnt/nextcloud <span class="dt">\</span></span>
+<span id="cb2-2"><a></a>  <span class="at">--vfs-cache-mode</span> writes</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="fragment">
+<p><strong>Copy files to/from Nextcloud:</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a></a><span class="ex">rclone</span> copy /local/folder <span class="dt">\</span></span>
+<span id="cb3-2"><a></a>  nextcloud:/your-folder <span class="at">--progress</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div></div>
+<div class="fragment">
+<p><span class="emoji" data-emoji="lock">🔒</span> App passwords can be revoked at any time and are safer than your main login credentials.</p>
+<p><span class="emoji" data-emoji="link">🔗</span> <a href="https://rclone.org/webdav/">rclone WebDAV Documentation</a></p>
 </div>
 </section></section>
 <section>
-<section id="data-infrastructure-at-uhh" class="title-slide slide level1 center" data-number="2">
-<h1><span class="header-section-number">2</span> Data Infrastructure at UHH</h1>
+<section id="zotero-nextcloud" class="title-slide slide level1 center" data-number="3">
+<h1><span class="header-section-number">3</span> Zotero + Nextcloud</h1>
 
 </section>
-<section id="uhh-disk" class="slide level2">
-<h2>UHH Disk</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><strong>What is it?</strong></p>
+<section id="what-is-zotero" class="slide level2">
+<h2>What is Zotero?</h2>
+<div class="fragment">
+<p><a href="https://www.zotero.org"><strong>Zotero</strong></a> is a free, open-source <strong>reference management</strong> software.</p>
+</div>
+<div class="fragment">
+<p><strong>Key features:</strong></p>
 <ul>
-<li>Network-attached storage service</li>
-<li>Accessible from UHH network and VPN</li>
-<li>Designed for active research data</li>
+<li>Collect and organise (scientific) literature, notes, and citations</li>
+<li>Insert citations directly into word processors (Word, LibreOffice)</li>
+<li>Automatically generate bibliographies</li>
+<li>Available for Windows, macOS, and Linux</li>
 </ul>
-<p><strong>Key Features:</strong></p>
-<ul>
-<li>High-performance access</li>
-<li>Regular backups</li>
-<li>Integration with UHH IT infrastructure</li>
-<li>Suitable for daily research workflows</li>
-</ul>
-<p><strong>Best for:</strong></p>
-<ul>
-<li>Active research projects</li>
-<li>Frequent data access</li>
-<li>Integration with campus IT</li>
-<li>Personal research storage</li>
-</ul>
-</div><div class="column" style="width:50%;">
-<p><strong>Storage Capacity:</strong></p>
-<ul>
-<li><strong>Staff</strong>: Maximum 500 GB per personal directory</li>
-<li><strong>Students</strong>: Maximum 100 GB per personal directory</li>
-<li><strong>Project spaces</strong>: Available on request via ServicePortal</li>
-</ul>
-<p><strong>Access Methods:</strong></p>
-<ul>
-<li>Within UHH network: <code>\\uhhdisk.uni-hamburg.de\home</code></li>
-<li>RRZ-managed devices: Drive letter K:</li>
-<li>Remote access: VPN required</li>
-<li>Protocols: SMB/CIFS, NFS (for servers)</li>
-</ul>
-<p><span class="emoji" data-emoji="link">🔗</span> <a href="https://www.rrz.uni-hamburg.de/services/datenhaltung/uhhdisk.html">More information</a></p>
-</div></div>
+</div>
+<div class="fragment">
+<p><span class="emoji" data-emoji="warning">⚠️</span> <strong>Storage limitation:</strong> Free Zotero Cloud storage is capped at <strong>300 MB</strong>.</p>
+</div>
+<div class="fragment">
+<p><span class="emoji" data-emoji="bulb">💡</span> <strong>Solution:</strong> Extend storage via a <strong>WebDAV</strong> connection to Nextcloud.</p>
+</div>
 </section>
-<section id="uhh-cloud" class="slide level2">
-<h2>UHH Cloud</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><strong>What is it?</strong></p>
+<section id="zotero-privacy-notice" class="slide level2">
+<h2>Zotero: Privacy Notice</h2>
+<div class="fragment">
+<p>Many institutional data protection offices advise <strong>caution</strong> when using Zotero as a cloud service:</p>
 <ul>
-<li>Cloud-based collaboration platform (using Nextcloud)</li>
-<li>Used for File sharing and synchronization</li>
-<li>Web-based access from anywhere</li>
+<li>The Zotero Privacy Policy provides insufficient information about data processing</li>
+<li>Personal data of third parties (e.g.&nbsp;co-authors’ names) may be processed without a clear legal basis</li>
+<li>Zotero does not offer a data processing agreement (required under GDPR / institutional policy)</li>
 </ul>
-<p><strong>Key Features:</strong></p>
-<ul>
-<li>Cross-platform synchronization</li>
-<li>Collaborative workspaces</li>
-<li>External sharing capabilities</li>
-<li>Mobile and desktop applications</li>
-</ul>
-<p><strong>Best for:</strong></p>
-<ul>
-<li>Team collaboration</li>
-<li>Remote access</li>
-<li>File sharing</li>
-<li>Cross-device synchronization</li>
-</ul>
-</div><div class="column" style="width:50%;">
-<p><strong>Storage Capacity:</strong></p>
-<ul>
-<li>Specific limits not publicly specified</li>
-<li>Request additional storage via RRZ if needed</li>
-</ul>
-<p><strong>Access Methods:</strong></p>
-<ul>
-<li>Web interface: Available via UHH login</li>
-<li>Desktop clients: Available for Windows, macOS, Linux</li>
-<li>Mobile apps: Available for iOS and Android</li>
-<li>Sync &amp; Share: Cross-device synchronization</li>
-</ul>
-<p><span class="emoji" data-emoji="link">🔗</span> <a href="https://www.rrz.uni-hamburg.de/services/kollaboration/uhhcloud.html">More information</a></p>
-</div></div>
+</div>
+<div class="fragment">
+<p><span class="emoji" data-emoji="bulb">💡</span> Check your institution’s data protection guidance before syncing sensitive data via Zotero Cloud.</p>
+</div>
+<div class="fragment">
+<p><span class="emoji" data-emoji="link">🔗</span> Further reading: <a href="https://blogs.tu-berlin.de/datenschutz_notizen/2024/01/10/literaturverwaltung-mit-zotero/">Literaturverwaltung mit Zotero (TU Berlin)</a></p>
+</div>
 </section>
-<section id="object-storage" class="slide level2">
-<h2>Object Storage</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><strong>What is it?</strong></p>
+<section id="zotero-expanding-storage-via-webdav" class="slide level2">
+<h2>Zotero: Expanding Storage via WebDAV</h2>
+<div class="fragment">
+<p><strong>Prerequisites:</strong></p>
 <ul>
-<li>Large-scale storage system</li>
-<li>API-based access</li>
-<li>Designed for automated workflows</li>
+<li>Access to a <strong>Nextcloud</strong> instance (or any WebDAV-compatible storage) — e.g., provided by your institution</li>
+<li>Zotero desktop client installed</li>
+<li>A (free) Zotero account</li>
 </ul>
-<p><strong>Key Features:</strong></p>
-<ul>
-<li>Virtually unlimited capacity</li>
-<li>Programmatic access (S3-compatible)</li>
-<li>Cost-effective for large datasets</li>
-<li>Integration with computational workflows</li>
-</ul>
-<p><strong>Best for:</strong></p>
-<ul>
-<li>Large datasets</li>
-<li>Automated processing</li>
-<li>Long-term storage</li>
-<li>Computational workflows</li>
-</ul>
-</div><div class="column" style="width:50%;">
-<p><strong>Access Methods:</strong></p>
-<ul>
-<li>S3 API: Compatible with Amazon S3 protocols</li>
-<li>REST API: HTTP-based access</li>
-<li>SDK support: Python boto3, AWS CLI, etc.</li>
-<li>Integration: CMS, research data management systems</li>
-</ul>
-<p><strong>Use Cases:</strong></p>
-<ul>
-<li>Backend for file services and archival solutions</li>
-<li>Multimedia file delivery</li>
-<li>Measurement data and simulation results</li>
-<li>Photo, video, and digitized book collections</li>
-</ul>
-<p><span class="emoji" data-emoji="link">🔗</span> <a href="https://www.rrz.uni-hamburg.de/services/datenhaltung/objektspeicher.html">More information</a></p>
-</div></div>
+</div>
+<div class="fragment">
+<p><strong>How it works:</strong></p>
+<p>Instead of syncing files through Zotero’s own servers, file attachments are stored on your own Nextcloud instance via the <strong>WebDAV</strong> protocol.</p>
+<p><span class="emoji" data-emoji="lock">🔒</span> Only the dedicated Zotero folder is exposed — not your entire Nextcloud.</p>
+</div>
+<div class="fragment">
+<p><span class="emoji" data-emoji="warning">⚠️</span> <strong>Note:</strong> The setup described here uses a <strong>public link</strong> for access. Anyone with the link can access the Zotero data. Always set up <strong>password protection</strong> for the shared link.</p>
+</div>
 </section>
-<section id="gitlab-at-uhh" class="slide level2">
-<h2>GitLab at UHH</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><strong>What is it?</strong></p>
-<ul>
-<li>Git-based version control system</li>
-<li>Code and document collaboration</li>
-<li>Integrated CI/CD pipelines</li>
-</ul>
-<p><strong>Key Features:</strong></p>
-<ul>
-<li>Version tracking for code and documents</li>
-<li>Issue tracking and project management</li>
-<li>Collaborative development workflows</li>
-<li>Integration with other UHH services</li>
-</ul>
-<p><strong>Best for:</strong></p>
-<ul>
-<li>Source code management</li>
-<li>Collaborative writing</li>
-<li>Project documentation</li>
-<li>Reproducible research workflows</li>
-</ul>
-</div><div class="column" style="width:50%;">
-<p><strong>Two Instances Available:</strong></p>
-<ul>
-<li><strong>Research &amp; Teaching</strong>: <code>https://gitlab.rrz.uni-hamburg.de</code>
-<ul>
-<li>GitLab Ultimate features via GitLab Education</li>
-</ul></li>
-<li><strong>Other purposes</strong>: <code>https://gitlab-ce.rrz.uni-hamburg.de</code>
-<ul>
-<li>GitLab Community Edition (open-source)</li>
-</ul></li>
-</ul>
-<p><strong>Access Methods:</strong></p>
-<ul>
-<li><strong>Web interface</strong>: Browser-based project management</li>
-<li><strong>Git clients</strong>: Command line, desktop apps</li>
-<li><strong>HTTPS</strong>: Encrypted data transfer</li>
-<li><strong>SSH</strong>: Available within UHH network</li>
-</ul>
-<p><span class="emoji" data-emoji="link">🔗</span> <a href="https://www.rrz.uni-hamburg.de/services/datenhaltung/repositories/gitlab.html">More information</a></p>
-</div></div>
-</section>
-<section id="uhh-research-data-repository" class="slide level2">
-<h2>UHH Research Data Repository</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
+<section id="zotero-nextcloud-setup" class="slide level2">
+<h2>Zotero + Nextcloud: Setup</h2>
 <div class="fragment">
-<p><strong>Purpose:</strong></p>
+<p><strong>Step 1 — Create a folder structure in Nextcloud:</strong></p>
 <ul>
-<li>Long-term preservation of research data</li>
-<li>Publication and citation of datasets</li>
-<li>Compliance with funder requirements</li>
-<li>Support for open science practices</li>
+<li>Zotero <strong>requires</strong> a subfolder named exactly <code>zotero</code></li>
+<li>Example structure: <code>/Projects/Zotero/zotero</code></li>
 </ul>
 </div>
 <div class="fragment">
-<p>Managed by Centre for Sustainable Research Data Management at University of Hamburg</p>
-<p><span class="emoji" data-emoji="link">🔗</span> <a href="https://www.fdm.uni-hamburg.de/en">More information</a></p>
-</div>
-</div><div class="column" style="width:50%;">
-<div class="fragment">
-<p><strong>Storage Capacity:</strong></p>
+<p><strong>Step 2 — Share the parent folder as a public link:</strong></p>
 <ul>
-<li><strong>Standard upload</strong>: Up to 50 GB via web interface</li>
-<li><strong>Larger datasets</strong>: Available upon request</li>
-<li><strong>File formats</strong>: Any digital format supported</li>
-<li><strong>Retention</strong>: Minimum 10 years (renewable)</li>
+<li>Share the folder <strong>above</strong> <code>zotero</code> (e.g., <code>Zotero</code>) as a public link</li>
+<li>Enable <strong>edit rights</strong> (read + write)</li>
+<li>Set a <strong>password</strong> (strongly recommended)</li>
 </ul>
 </div>
 <div class="fragment">
-<p><strong>Access Methods:</strong></p>
-<ul>
-<li><strong>URL</strong>: <code>www.fdr.uni-hamburg.de</code></li>
-<li><strong>Login</strong>: B-Kennung (UHH username and password)</li>
-<li><strong>Upload</strong>: Drag &amp; drop or “Choose Files” interface</li>
-<li><strong>API</strong>: Available for automated uploads</li>
-</ul>
-</div>
-<div class="fragment">
-<p><strong>Access Control Options:</strong></p>
-<ul>
-<li><strong>Open Access</strong>: Public access with license selection</li>
-<li><strong>Embargoed Access</strong>: Delayed public access with end date</li>
-<li><strong>Restricted Access</strong>: Conditional access with approval</li>
-<li><strong>Closed Access</strong>: Metadata only, no file access</li>
-</ul>
-</div>
-</div></div>
-</section>
-<section id="key-features-of-rdr" class="slide level2">
-<h2>Key Features of RDR</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<div class="fragment">
-<p><strong>Versioning System:</strong></p>
-<ul>
-<li><strong>Concept-DOI</strong>: Cites entire entry across all versions</li>
-<li><strong>Version-DOI</strong>: Cites specific version of the data</li>
-<li>Enables proper citation of evolving datasets</li>
-</ul>
-</div>
-<div class="fragment">
-<p><strong>Data Storage:</strong></p>
-<ul>
-<li>Stored on RRZ long-term memory (S3 storage)</li>
-<li>Daily backups with multiple copies</li>
-<li>Separate geographic locations for redundancy</li>
-<li>Minimum 10-year retention period</li>
-<li>MD5 checksums for file integrity verification</li>
-</ul>
-</div>
-<div class="fragment">
-<p><strong>Metadata Licensing:</strong></p>
-<ul>
-<li>Metadata licensed under CC0 (Creative Commons Zero)</li>
-<li>Email addresses remain private</li>
-<li>Supports data discovery and reuse</li>
-</ul>
-</div>
-</div><div class="column" style="width:50%;">
-<div class="fragment">
-<p><strong>Copyright Requirements:</strong></p>
-<ul>
-<li>You must be the author or have usage rights</li>
-<li>Co-authors must agree on publication decisions</li>
-<li>No violation of copyright, privacy, or confidentiality laws</li>
-</ul>
-</div>
-<div class="fragment">
-<p><strong>Rights Retention:</strong></p>
-<ul>
-<li>No rights transferred to University of Hamburg</li>
-<li>Original copyright remains with authors</li>
-<li>Usage governed by license specified during upload</li>
-</ul>
-<div class="fragment">
-<p><strong>Support:</strong></p>
-<ul>
-<li><strong>RDM Team</strong>: <a href="mailto:repository.fdm@uni-hamburg.de">repository.fdm@uni-hamburg.de</a></li>
-<li><strong>Documentation</strong>: <a href="https://www.fdm.uni-hamburg.de/en/fdm.html">https://www.fdm.uni-hamburg.de/en/fdm.html</a></li>
-</ul>
-</div>
-</div>
-</div></div>
-</section></section>
-<section>
-<section id="choosing-the-right-service" class="title-slide slide level1 center" data-number="3">
-<h1><span class="header-section-number">3</span> Choosing the Right Service</h1>
-
-</section>
-<section id="decision-matrix" class="slide level2">
-<h2>Decision Matrix</h2>
+<p><strong>Step 3 — Configure Zotero Sync Settings:</strong></p>
+<p>Open Zotero → Preferences → Sync → File Syncing</p>
 <table class="caption-top">
-<colgroup>
-<col style="width: 18%">
-<col style="width: 38%">
-<col style="width: 32%">
-<col style="width: 10%">
-</colgroup>
 <thead>
 <tr class="header">
-<th>Use Case</th>
-<th style="text-align: right;">Recommended Service</th>
-<th style="text-align: center;">Storage Capacity</th>
-<th>Why?</th>
+<th>Field</th>
+<th>Value</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Daily research work</td>
-<td style="text-align: right;">UHH Disk</td>
-<td style="text-align: center;">Staff: 500GB, Students: 100GB</td>
-<td>High-performance, integrated access</td>
+<td>Sync attachment files in My Library using</td>
+<td>WebDAV</td>
 </tr>
 <tr class="even">
-<td>Team collaboration</td>
-<td style="text-align: right;">UHH Cloud</td>
-<td style="text-align: center;">Quotas available</td>
-<td>Sharing, synchronization, remote access</td>
+<td>URL</td>
+<td><code>&lt;your-nextcloud&gt;/public.php/webdav</code></td>
 </tr>
 <tr class="odd">
-<td>Large datasets</td>
-<td style="text-align: right;">Object Storage</td>
-<td style="text-align: center;">Unlimited</td>
-<td>Cost-effective, S3-compatible</td>
+<td>Username</td>
+<td>Public link token</td>
 </tr>
 <tr class="even">
-<td>Code development</td>
-<td style="text-align: right;">GitLab</td>
-<td style="text-align: center;">Project-based</td>
-<td>Version control, collaboration</td>
-</tr>
-<tr class="odd">
-<td>Data publication</td>
-<td style="text-align: right;">Research Data Repository</td>
-<td style="text-align: center;">50GB standard, more on request</td>
-<td>Long-term preservation, citation</td>
+<td>Password</td>
+<td>Password set for the shared link</td>
 </tr>
 </tbody>
 </table>
-</section>
-<section id="data-lifecycle-integration" class="slide level2">
-<h2>Data Lifecycle Integration</h2>
-<div class="fragment">
-<p><strong>Collection &amp; Processing</strong> → UHH Disk / Object Storage</p>
 </div>
 <div class="fragment">
-<p><strong>Analysis &amp; Development</strong> → GitLab + UHH Disk</p>
+<p><strong>Step 4 — Verify the connection:</strong></p>
+<p>Click <strong>“Verify Server”</strong> in Zotero’s sync settings to confirm the WebDAV connection is working.</p>
 </div>
 <div class="fragment">
-<p><strong>Collaboration</strong> → UHH Cloud</p>
-</div>
-<div class="fragment">
-<p><strong>Publication &amp; Archiving</strong> → Research Data Repository</p>
-</div>
-<div class="fragment">
-<p><span class="emoji" data-emoji="bulb">💡</span> <strong>Best practice</strong>: Use multiple services throughout your research project lifecycle</p>
+<p><span class="emoji" data-emoji="bulb">💡</span> Zotero can also be used for collaborative document editing in Nextcloud via the <strong>Zotero plugin in OnlyOffice</strong>.</p>
 </div>
 </section></section>
 <section>
@@ -605,45 +591,32 @@ Course at Julius-Maximilians-Universität Würzburg, RTG 2660: Approach-Avoidanc
 </section>
 <section id="exercise-1" class="slide level2 scrollable">
 <h2>Exercise 1</h2>
-<p><strong>Task:</strong> Compare the different storage solutions offered by the University of Hamburg.</p>
+<p><strong>Task:</strong> Explore the Nextcloud web interface.</p>
 <ol type="1">
-<li><p>Visit the UHH Disk, UHH Cloud, Object Storage and Research Data Repository service pages</p></li>
-<li><p>Discuss which solution would be most appropriate for different research scenarios:</p>
+<li><p>Log in to your institutional Nextcloud instance</p></li>
+<li><p>Familiarise yourself with the main areas of the interface:</p>
 <ul>
-<li>Daily research work with frequent file access</li>
-<li>Long-term archival storage</li>
-<li>Collaborative projects with external partners</li>
-<li>Large datasets requiring automated processing</li>
+<li><strong>Dashboard</strong>: What widgets are displayed? Can you customise them?</li>
+<li><strong>App switcher</strong> (top-left): Which apps are available?</li>
+<li><strong>Top-right icons</strong>: Locate the Search, Notifications, Contacts, and Profile functions.</li>
+</ul></li>
+<li><p>Try out the following file operations:</p>
+<ul>
+<li>Upload a file or folder</li>
+<li>Share a file with a colleague (set appropriate access rights)</li>
+<li>Create a new text document and edit it online</li>
+<li>Check the version history of a file</li>
+</ul></li>
+<li><p>Discuss with your neighbour:</p>
+<ul>
+<li>For which tasks in your research workflow could Nextcloud be useful?</li>
+<li>What are the advantages compared to storing files only on your local machine?</li>
 </ul></li>
 </ol>
 </section>
-<section id="exercise-2" class="slide level2 scrollable">
+<section id="exercise-2" class="slide level2">
 <h2>Exercise 2</h2>
-<p><strong>Task:</strong> Familiarize yourself with the UHH Research Data Repository features.</p>
-<ol type="1">
-<li>Explore the repository features mentioned in the documentation:
-<ul>
-<li>Versioning system (Concept-DOI vs.&nbsp;Versions-DOI)</li>
-<li>Citation export options</li>
-<li>Metadata licensing</li>
-</ul></li>
-<li>Discuss the importance of:
-<ul>
-<li>Long-term preservation (10+ years)</li>
-<li>Multiple backup locations</li>
-<li>Copyright and licensing considerations</li>
-</ul></li>
-<li>Consider a research project from your field and determine:
-<ul>
-<li>What type of data would you publish?</li>
-<li>What metadata would be essential?</li>
-<li>Which license would be appropriate?</li>
-</ul></li>
-</ol>
-</section>
-<section id="exercise-3" class="slide level2">
-<h2>Exercise 3</h2>
-<p><strong>Task:</strong> Integrate DataLad with UHHCloud</p>
+<p><strong>Task:</strong> Integrate DataLad with Nextcloud via WebDAV.</p>
 <p><strong>Relevant Links:</strong></p>
 <ul>
 <li><a href="https://lennartwittkuhn.com/datalad-tutorial/" class="uri">https://lennartwittkuhn.com/datalad-tutorial/</a></li>
@@ -656,23 +629,24 @@ Course at Julius-Maximilians-Universität Würzburg, RTG 2660: Approach-Avoidanc
 <h1><span class="header-section-number">5</span> Resources</h1>
 
 </section>
-<h3 id="university-of-hamburg-data-services">University of Hamburg Data Services</h3>
+<section id="resources-1" class="slide level2">
+<h2>Resources</h2>
+<h3 id="nextcloud-1">Nextcloud</h3>
 <ul>
-<li><a href="https://www.rrz.uni-hamburg.de/services/datenhaltung/uhhdisk.html">UHH Disk - Network storage service</a></li>
-<li><a href="https://www.rrz.uni-hamburg.de/services/kollaboration/uhhcloud.html">UHH Cloud - Cloud collaboration platform</a></li>
-<li><a href="https://www.rrz.uni-hamburg.de/services/datenhaltung/objektspeicher.html">Object Storage - Large-scale data storage</a></li>
-<li><a href="https://www.rrz.uni-hamburg.de/services/datenhaltung/repositories/gitlab.html">GitLab - Version control and collaboration</a></li>
+<li><a href="https://nextcloud.com">Nextcloud - Official website</a></li>
+<li><a href="https://www.decide.biozentrum.uni-wuerzburg.de/nextcloud.html">Using Nextcloud for Research Data Management (DECIDE RDM)</a></li>
 </ul>
-<h3 id="research-data-management">Research Data Management</h3>
+<h3 id="datalad-integration">DataLad Integration</h3>
 <ul>
-<li><a href="https://www.fdm.uni-hamburg.de/en">Centre for Sustainable Research Data Management</a></li>
-<li><a href="https://www.fdm.uni-hamburg.de/en/fdm.html">UHH Research Data Repository</a></li>
-<li><a href="mailto:repository.fdm@uni-hamburg.de">RDM Team Contact</a></li>
-</ul></section>
+<li><a href="https://lennartwittkuhn.com/datalad-tutorial/">DataLad Tutorial (Lennart Wittkuhn)</a></li>
+<li><a href="https://docs.datalad.org/projects/next/en/stable/generated/man/datalad-create-sibling-webdav.html">DataLad Next: <code>datalad create-sibling-webdav</code></a></li>
+<li><a href="https://www.youtube.com/watch?v=XkcwpqPQHQY">Video: Deposit and retrieve DataLad datasets with WebDAV services</a></li>
+</ul>
+</section></section>
 <section id="questions-discussion" class="title-slide slide level1 center" data-number="6">
 <h1><span class="header-section-number">6</span> Questions &amp; Discussion</h1>
-<p><span class="emoji" data-emoji="question">❓</span> Any questions about UHH data infrastructure services?</p>
-<p><span class="emoji" data-emoji="speech_balloon">💬</span> Discussion: How might these services fit into your research workflow?</p>
+<p><span class="emoji" data-emoji="question">❓</span> Any questions about Nextcloud?</p>
+<p><span class="emoji" data-emoji="speech_balloon">💬</span> Discussion: How could Nextcloud support your research workflow?</p>
 
 
 </section>

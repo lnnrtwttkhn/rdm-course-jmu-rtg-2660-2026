@@ -95,7 +95,7 @@
     "href": "sessions/summary/slides.html#objectives-continued-2",
     "title": "Summary & Outlook",
     "section": "Objectives (continued)",
-    "text": "Objectives (continued)\nProvenance with DataLad\n💡 You can link analyses to inputs and outputs using DataLad. 💡 You can execute a rerun of a previous analysis with DataLad 💡 You know how to establish provenance and reproducibility using DataLad.\nData Publication\n💡 You understand the importance of data publication for FAIR research data management. 💡 You can write Data Availability Statements for research articles. 💡 You know how to choose appropriate licenses for research data. 💡 You understand the role of persistent identifiers in ensuring reliable data access. 💡 You can select suitable repositories for different types of research data. 💡 You are aware of legal considerations when publishing research data.\nData Infrastructure\n💡 You know about the different data infrastructure services available at the University of Hamburg. 💡 You can distinguish between local storage, cloud storage, and object storage solutions. 💡 You know how to access and use UHH Disk, UHH Cloud, and Object Storage services. 💡 You understand the role of version control systems like GitLab for research data management. 💡 You are familiar with the UHH Research Data Repository and its features for long-term data preservation."
+    "text": "Objectives (continued)\nProvenance with DataLad\n💡 You can link analyses to inputs and outputs using DataLad. 💡 You can execute a rerun of a previous analysis with DataLad 💡 You know how to establish provenance and reproducibility using DataLad.\nData Publication\n💡 You understand the importance of data publication for FAIR research data management. 💡 You can write Data Availability Statements for research articles. 💡 You know how to choose appropriate licenses for research data. 💡 You understand the role of persistent identifiers in ensuring reliable data access. 💡 You can select suitable repositories for different types of research data. 💡 You are aware of legal considerations when publishing research data.\nData Infrastructure\n💡 You know what Nextcloud is and its capabilities. 💡 You can navigate the Nextcloud web interface and describe its main areas. 💡 You know the typical features of Nextcloud, including file management, sharing, versioning, and collaborative editing. 💡 You understand the different access methods for Nextcloud (web, desktop clients, mobile apps, WebDAV/API). 💡 You can integrate Nextcloud with DataLad using WebDAV for automated research data workflows."
   },
   {
     "objectID": "sessions/summary/slides.html#more-challenges-for-reproducible-scientific-workflows",
@@ -403,91 +403,98 @@
     "href": "sessions/data-infrastructure/slides.html#objectives",
     "title": "Data Infrastructure",
     "section": "Objectives",
-    "text": "Objectives\n💡 You know about the different data infrastructure services available at the University of Hamburg. 💡 You can distinguish between local storage, cloud storage, and object storage solutions. 💡 You know how to access and use UHH Disk, UHH Cloud, and Object Storage services. 💡 You understand the role of version control systems like GitLab for research data management. 💡 You are familiar with the UHH Research Data Repository and its features for long-term data preservation."
+    "text": "Objectives\n💡 You know what Nextcloud is and its capabilities. 💡 You can navigate the Nextcloud web interface and describe its main areas. 💡 You know the typical features of Nextcloud, including file management, sharing, versioning, and collaborative editing. 💡 You understand the different access methods for Nextcloud (web, desktop clients, mobile apps, WebDAV/API). 💡 You can integrate Nextcloud with DataLad using WebDAV for automated research data workflows."
   },
   {
-    "objectID": "sessions/data-infrastructure/slides.html#overview-of-uhh-data-services",
-    "href": "sessions/data-infrastructure/slides.html#overview-of-uhh-data-services",
+    "objectID": "sessions/data-infrastructure/slides.html#what-is-nextcloud",
+    "href": "sessions/data-infrastructure/slides.html#what-is-nextcloud",
     "title": "Data Infrastructure",
-    "section": "Overview of UHH Data Services",
-    "text": "Overview of UHH Data Services\n\nThe University of Hamburg provides various data infrastructure services to support research:\n\nUHH Disk: Network storage for daily research work\nUHH Cloud: Collaborative cloud platform\nObject Storage: Large-scale, automated data storage\nGitLab: Version control and code collaboration\nResearch Data Repository: Long-term data preservation and publication\n\n\n\n💡 Key principle: Different services for different stages of the research data lifecycle"
+    "section": "What is Nextcloud?",
+    "text": "What is Nextcloud?\n\nNextcloud is an open-source, self-hosted cloud-based collaboration platform.\n\n\n\nWeb-based access from anywhere — no VPN required\nCross-platform synchronization (Windows, macOS, Linux, iOS, Android)\nExternal sharing and collaborative workspaces\nAuthentication via institutional Single Sign-On (SSO)\n\n\n\n🔗 More information"
   },
   {
-    "objectID": "sessions/data-infrastructure/slides.html#uhh-disk",
-    "href": "sessions/data-infrastructure/slides.html#uhh-disk",
+    "objectID": "sessions/data-infrastructure/slides.html#nextcloud-web-interface",
+    "href": "sessions/data-infrastructure/slides.html#nextcloud-web-interface",
     "title": "Data Infrastructure",
-    "section": "UHH Disk",
-    "text": "UHH Disk\n\n\nWhat is it?\n\nNetwork-attached storage service\nAccessible from UHH network and VPN\nDesigned for active research data\n\nKey Features:\n\nHigh-performance access\nRegular backups\nIntegration with UHH IT infrastructure\nSuitable for daily research workflows\n\nBest for:\n\nActive research projects\nFrequent data access\nIntegration with campus IT\nPersonal research storage\n\n\nStorage Capacity:\n\nStaff: Maximum 500 GB per personal directory\nStudents: Maximum 100 GB per personal directory\nProject spaces: Available on request via ServicePortal\n\nAccess Methods:\n\nWithin UHH network: \\\\uhhdisk.uni-hamburg.de\\home\nRRZ-managed devices: Drive letter K:\nRemote access: VPN required\nProtocols: SMB/CIFS, NFS (for servers)\n\n🔗 More information"
+    "section": "Nextcloud: Web Interface",
+    "text": "Nextcloud: Web Interface\n\nAfter login, the main view provides access to all key functions:\n\nDashboard (centre): customizable widgets — recent activity, frequently used files, etc.\nApp switcher (top-left): access all available apps with a single click\n\n\n\nTop-right icons:\n\n🔍 Search — find files and content\n🔔 Notifications — activity alerts\n👥 Contacts — user directory\n👤 Profile (circle with initials) — personal settings, preferences, help, and logout"
   },
   {
-    "objectID": "sessions/data-infrastructure/slides.html#uhh-cloud",
-    "href": "sessions/data-infrastructure/slides.html#uhh-cloud",
+    "objectID": "sessions/data-infrastructure/slides.html#nextcloud-available-apps",
+    "href": "sessions/data-infrastructure/slides.html#nextcloud-available-apps",
     "title": "Data Infrastructure",
-    "section": "UHH Cloud",
-    "text": "UHH Cloud\n\n\nWhat is it?\n\nCloud-based collaboration platform (using Nextcloud)\nUsed for File sharing and synchronization\nWeb-based access from anywhere\n\nKey Features:\n\nCross-platform synchronization\nCollaborative workspaces\nExternal sharing capabilities\nMobile and desktop applications\n\nBest for:\n\nTeam collaboration\nRemote access\nFile sharing\nCross-device synchronization\n\n\nStorage Capacity:\n\nSpecific limits not publicly specified\nRequest additional storage via RRZ if needed\n\nAccess Methods:\n\nWeb interface: Available via UHH login\nDesktop clients: Available for Windows, macOS, Linux\nMobile apps: Available for iOS and Android\nSync & Share: Cross-device synchronization\n\n🔗 More information"
+    "section": "Nextcloud: Available Apps",
+    "text": "Nextcloud: Available Apps\n\nNextcloud extends beyond file storage through Apps (extensions). Depending on your institution’s configuration, a curated set of apps may be available:\n\n\n\n\nProductivity:\n\n📆 Calendar — shared scheduling\n✉️ Mail\n🔒 Password manager\n💬 Chat\n📹 Video conferencing\n\n\n\n\nCollaboration & Organisation:\n\n📋 Forms and surveys\n📊 Project management (Deck — Kanban boards)\n📖 Address books and internal contact groups"
   },
   {
-    "objectID": "sessions/data-infrastructure/slides.html#object-storage",
-    "href": "sessions/data-infrastructure/slides.html#object-storage",
+    "objectID": "sessions/data-infrastructure/slides.html#nextcloud-focus-on-file-management-and-collaboration",
+    "href": "sessions/data-infrastructure/slides.html#nextcloud-focus-on-file-management-and-collaboration",
     "title": "Data Infrastructure",
-    "section": "Object Storage",
-    "text": "Object Storage\n\n\nWhat is it?\n\nLarge-scale storage system\nAPI-based access\nDesigned for automated workflows\n\nKey Features:\n\nVirtually unlimited capacity\nProgrammatic access (S3-compatible)\nCost-effective for large datasets\nIntegration with computational workflows\n\nBest for:\n\nLarge datasets\nAutomated processing\nLong-term storage\nComputational workflows\n\n\nAccess Methods:\n\nS3 API: Compatible with Amazon S3 protocols\nREST API: HTTP-based access\nSDK support: Python boto3, AWS CLI, etc.\nIntegration: CMS, research data management systems\n\nUse Cases:\n\nBackend for file services and archival solutions\nMultimedia file delivery\nMeasurement data and simulation results\nPhoto, video, and digitized book collections\n\n🔗 More information"
+    "section": "Nextcloud: Focus on file management and collaboration",
+    "text": "Nextcloud: Focus on file management and collaboration\n\nAuthentication & Access:\n\nSingle Sign-On with institutional login\nWeb interface + desktop/mobile clients\nAPI access via WebDAV\n\n\n\nFile Management:\n\nShare files and folders with other users\nGranular access rights control (read, write, share)\nFile versioning and change history\nComments on files and folders\n\n\n\nCollaboration:\n\nOnline editing of Office documents (.docx, .xlsx, .pptx)\nSimultaneous co-editing of documents\nShared calendars for scheduling\nKanban-based project management (Deck)"
   },
   {
-    "objectID": "sessions/data-infrastructure/slides.html#gitlab-at-uhh",
-    "href": "sessions/data-infrastructure/slides.html#gitlab-at-uhh",
+    "objectID": "sessions/data-infrastructure/slides.html#nextcloud-access-methods",
+    "href": "sessions/data-infrastructure/slides.html#nextcloud-access-methods",
     "title": "Data Infrastructure",
-    "section": "GitLab at UHH",
-    "text": "GitLab at UHH\n\n\nWhat is it?\n\nGit-based version control system\nCode and document collaboration\nIntegrated CI/CD pipelines\n\nKey Features:\n\nVersion tracking for code and documents\nIssue tracking and project management\nCollaborative development workflows\nIntegration with other UHH services\n\nBest for:\n\nSource code management\nCollaborative writing\nProject documentation\nReproducible research workflows\n\n\nTwo Instances Available:\n\nResearch & Teaching: https://gitlab.rrz.uni-hamburg.de\n\nGitLab Ultimate features via GitLab Education\n\nOther purposes: https://gitlab-ce.rrz.uni-hamburg.de\n\nGitLab Community Edition (open-source)\n\n\nAccess Methods:\n\nWeb interface: Browser-based project management\nGit clients: Command line, desktop apps\nHTTPS: Encrypted data transfer\nSSH: Available within UHH network\n\n🔗 More information"
+    "section": "Nextcloud: Access Methods",
+    "text": "Nextcloud: Access Methods\n\n\n\nWeb Interface:\n\nAccess from any browser\nNo installation required\nFull feature access\n\n\n\nDesktop Clients:\n\nAvailable for Windows, macOS, Linux\nAutomatic file synchronization\nOffline access to synced files\n\n\n\n\nMobile Apps:\n\nAvailable for iOS and Android\nAccess and share files on the go\n\n\n\nAPI / WebDAV:\n\nProgrammatic access via WebDAV protocol\nIntegrate with scripts and tools (e.g., DataLad via datalad-next)\nSuitable for automated workflows"
   },
   {
-    "objectID": "sessions/data-infrastructure/slides.html#uhh-research-data-repository",
-    "href": "sessions/data-infrastructure/slides.html#uhh-research-data-repository",
+    "objectID": "sessions/data-infrastructure/slides.html#nextcloud-connecting-via-rclone",
+    "href": "sessions/data-infrastructure/slides.html#nextcloud-connecting-via-rclone",
     "title": "Data Infrastructure",
-    "section": "UHH Research Data Repository",
-    "text": "UHH Research Data Repository\n\n\n\nPurpose:\n\nLong-term preservation of research data\nPublication and citation of datasets\nCompliance with funder requirements\nSupport for open science practices\n\n\n\nManaged by Centre for Sustainable Research Data Management at University of Hamburg\n🔗 More information\n\n\n\nStorage Capacity:\n\nStandard upload: Up to 50 GB via web interface\nLarger datasets: Available upon request\nFile formats: Any digital format supported\nRetention: Minimum 10 years (renewable)\n\n\n\nAccess Methods:\n\nURL: www.fdr.uni-hamburg.de\nLogin: B-Kennung (UHH username and password)\nUpload: Drag & drop or “Choose Files” interface\nAPI: Available for automated uploads\n\n\n\nAccess Control Options:\n\nOpen Access: Public access with license selection\nEmbargoed Access: Delayed public access with end date\nRestricted Access: Conditional access with approval\nClosed Access: Metadata only, no file access"
+    "section": "Nextcloud: Connecting via rclone",
+    "text": "Nextcloud: Connecting via rclone\n\nrclone is a command-line tool for transferring files between local systems and cloud storage — including Nextcloud via WebDAV. Useful for HPC and analysis server workflows.\n\n\nConfigure Nextcloud as a WebDAV remote:\nrclone config\n\nType: webdav\nURL: https://&lt;your-nextcloud&gt;/remote.php/dav/files/YOURUSERNAME/\nVendor: Nextcloud\nAuthenticate with an App Password (Settings → Security → App Passwords)\n\n\n\n\n\nMount as a local folder:\nrclone mount nextcloud:/ ~/mnt/nextcloud \\\n  --vfs-cache-mode writes\n\n\n\nCopy files to/from Nextcloud:\nrclone copy /local/folder \\\n  nextcloud:/your-folder --progress\n\n\n\n🔒 App passwords can be revoked at any time and are safer than your main login credentials.\n🔗 rclone WebDAV Documentation"
   },
   {
-    "objectID": "sessions/data-infrastructure/slides.html#key-features-of-rdr",
-    "href": "sessions/data-infrastructure/slides.html#key-features-of-rdr",
+    "objectID": "sessions/data-infrastructure/slides.html#what-is-zotero",
+    "href": "sessions/data-infrastructure/slides.html#what-is-zotero",
     "title": "Data Infrastructure",
-    "section": "Key Features of RDR",
-    "text": "Key Features of RDR\n\n\n\nVersioning System:\n\nConcept-DOI: Cites entire entry across all versions\nVersion-DOI: Cites specific version of the data\nEnables proper citation of evolving datasets\n\n\n\nData Storage:\n\nStored on RRZ long-term memory (S3 storage)\nDaily backups with multiple copies\nSeparate geographic locations for redundancy\nMinimum 10-year retention period\nMD5 checksums for file integrity verification\n\n\n\nMetadata Licensing:\n\nMetadata licensed under CC0 (Creative Commons Zero)\nEmail addresses remain private\nSupports data discovery and reuse\n\n\n\n\nCopyright Requirements:\n\nYou must be the author or have usage rights\nCo-authors must agree on publication decisions\nNo violation of copyright, privacy, or confidentiality laws\n\n\n\nRights Retention:\n\nNo rights transferred to University of Hamburg\nOriginal copyright remains with authors\nUsage governed by license specified during upload\n\n\nSupport:\n\nRDM Team: repository.fdm@uni-hamburg.de\nDocumentation: https://www.fdm.uni-hamburg.de/en/fdm.html"
+    "section": "What is Zotero?",
+    "text": "What is Zotero?\n\nZotero is a free, open-source reference management software.\n\n\nKey features:\n\nCollect and organise (scientific) literature, notes, and citations\nInsert citations directly into word processors (Word, LibreOffice)\nAutomatically generate bibliographies\nAvailable for Windows, macOS, and Linux\n\n\n\n⚠️ Storage limitation: Free Zotero Cloud storage is capped at 300 MB.\n\n\n💡 Solution: Extend storage via a WebDAV connection to Nextcloud."
   },
   {
-    "objectID": "sessions/data-infrastructure/slides.html#decision-matrix",
-    "href": "sessions/data-infrastructure/slides.html#decision-matrix",
+    "objectID": "sessions/data-infrastructure/slides.html#zotero-privacy-notice",
+    "href": "sessions/data-infrastructure/slides.html#zotero-privacy-notice",
     "title": "Data Infrastructure",
-    "section": "Decision Matrix",
-    "text": "Decision Matrix\n\n\n\n\n\n\n\n\n\nUse Case\nRecommended Service\nStorage Capacity\nWhy?\n\n\n\n\nDaily research work\nUHH Disk\nStaff: 500GB, Students: 100GB\nHigh-performance, integrated access\n\n\nTeam collaboration\nUHH Cloud\nQuotas available\nSharing, synchronization, remote access\n\n\nLarge datasets\nObject Storage\nUnlimited\nCost-effective, S3-compatible\n\n\nCode development\nGitLab\nProject-based\nVersion control, collaboration\n\n\nData publication\nResearch Data Repository\n50GB standard, more on request\nLong-term preservation, citation"
+    "section": "Zotero: Privacy Notice",
+    "text": "Zotero: Privacy Notice\n\nMany institutional data protection offices advise caution when using Zotero as a cloud service:\n\nThe Zotero Privacy Policy provides insufficient information about data processing\nPersonal data of third parties (e.g. co-authors’ names) may be processed without a clear legal basis\nZotero does not offer a data processing agreement (required under GDPR / institutional policy)\n\n\n\n💡 Check your institution’s data protection guidance before syncing sensitive data via Zotero Cloud.\n\n\n🔗 Further reading: Literaturverwaltung mit Zotero (TU Berlin)"
   },
   {
-    "objectID": "sessions/data-infrastructure/slides.html#data-lifecycle-integration",
-    "href": "sessions/data-infrastructure/slides.html#data-lifecycle-integration",
+    "objectID": "sessions/data-infrastructure/slides.html#zotero-expanding-storage-via-webdav",
+    "href": "sessions/data-infrastructure/slides.html#zotero-expanding-storage-via-webdav",
     "title": "Data Infrastructure",
-    "section": "Data Lifecycle Integration",
-    "text": "Data Lifecycle Integration\n\nCollection & Processing → UHH Disk / Object Storage\n\n\nAnalysis & Development → GitLab + UHH Disk\n\n\nCollaboration → UHH Cloud\n\n\nPublication & Archiving → Research Data Repository\n\n\n💡 Best practice: Use multiple services throughout your research project lifecycle"
+    "section": "Zotero: Expanding Storage via WebDAV",
+    "text": "Zotero: Expanding Storage via WebDAV\n\nPrerequisites:\n\nAccess to a Nextcloud instance (or any WebDAV-compatible storage) — e.g., provided by your institution\nZotero desktop client installed\nA (free) Zotero account\n\n\n\nHow it works:\nInstead of syncing files through Zotero’s own servers, file attachments are stored on your own Nextcloud instance via the WebDAV protocol.\n🔒 Only the dedicated Zotero folder is exposed — not your entire Nextcloud.\n\n\n⚠️ Note: The setup described here uses a public link for access. Anyone with the link can access the Zotero data. Always set up password protection for the shared link."
+  },
+  {
+    "objectID": "sessions/data-infrastructure/slides.html#zotero-nextcloud-setup",
+    "href": "sessions/data-infrastructure/slides.html#zotero-nextcloud-setup",
+    "title": "Data Infrastructure",
+    "section": "Zotero + Nextcloud: Setup",
+    "text": "Zotero + Nextcloud: Setup\n\nStep 1 — Create a folder structure in Nextcloud:\n\nZotero requires a subfolder named exactly zotero\nExample structure: /Projects/Zotero/zotero\n\n\n\nStep 2 — Share the parent folder as a public link:\n\nShare the folder above zotero (e.g., Zotero) as a public link\nEnable edit rights (read + write)\nSet a password (strongly recommended)\n\n\n\nStep 3 — Configure Zotero Sync Settings:\nOpen Zotero → Preferences → Sync → File Syncing\n\n\n\nField\nValue\n\n\n\n\nSync attachment files in My Library using\nWebDAV\n\n\nURL\n&lt;your-nextcloud&gt;/public.php/webdav\n\n\nUsername\nPublic link token\n\n\nPassword\nPassword set for the shared link\n\n\n\n\n\nStep 4 — Verify the connection:\nClick “Verify Server” in Zotero’s sync settings to confirm the WebDAV connection is working.\n\n\n💡 Zotero can also be used for collaborative document editing in Nextcloud via the Zotero plugin in OnlyOffice."
   },
   {
     "objectID": "sessions/data-infrastructure/slides.html#exercise-1",
     "href": "sessions/data-infrastructure/slides.html#exercise-1",
     "title": "Data Infrastructure",
     "section": "Exercise 1",
-    "text": "Exercise 1\nTask: Compare the different storage solutions offered by the University of Hamburg.\n\nVisit the UHH Disk, UHH Cloud, Object Storage and Research Data Repository service pages\nDiscuss which solution would be most appropriate for different research scenarios:\n\nDaily research work with frequent file access\nLong-term archival storage\nCollaborative projects with external partners\nLarge datasets requiring automated processing"
+    "text": "Exercise 1\nTask: Explore the Nextcloud web interface.\n\nLog in to your institutional Nextcloud instance\nFamiliarise yourself with the main areas of the interface:\n\nDashboard: What widgets are displayed? Can you customise them?\nApp switcher (top-left): Which apps are available?\nTop-right icons: Locate the Search, Notifications, Contacts, and Profile functions.\n\nTry out the following file operations:\n\nUpload a file or folder\nShare a file with a colleague (set appropriate access rights)\nCreate a new text document and edit it online\nCheck the version history of a file\n\nDiscuss with your neighbour:\n\nFor which tasks in your research workflow could Nextcloud be useful?\nWhat are the advantages compared to storing files only on your local machine?"
   },
   {
     "objectID": "sessions/data-infrastructure/slides.html#exercise-2",
     "href": "sessions/data-infrastructure/slides.html#exercise-2",
     "title": "Data Infrastructure",
     "section": "Exercise 2",
-    "text": "Exercise 2\nTask: Familiarize yourself with the UHH Research Data Repository features.\n\nExplore the repository features mentioned in the documentation:\n\nVersioning system (Concept-DOI vs. Versions-DOI)\nCitation export options\nMetadata licensing\n\nDiscuss the importance of:\n\nLong-term preservation (10+ years)\nMultiple backup locations\nCopyright and licensing considerations\n\nConsider a research project from your field and determine:\n\nWhat type of data would you publish?\nWhat metadata would be essential?\nWhich license would be appropriate?"
+    "text": "Exercise 2\nTask: Integrate DataLad with Nextcloud via WebDAV.\nRelevant Links:\n\nhttps://lennartwittkuhn.com/datalad-tutorial/\nDataLad Next Documentation\nVideo: Deposit and retrieve DataLad datasets with WebDAV services"
   },
   {
-    "objectID": "sessions/data-infrastructure/slides.html#exercise-3",
-    "href": "sessions/data-infrastructure/slides.html#exercise-3",
+    "objectID": "sessions/data-infrastructure/slides.html#resources-1",
+    "href": "sessions/data-infrastructure/slides.html#resources-1",
     "title": "Data Infrastructure",
-    "section": "Exercise 3",
-    "text": "Exercise 3\nTask: Integrate DataLad with UHHCloud\nRelevant Links:\n\nhttps://lennartwittkuhn.com/datalad-tutorial/\nDataLad Next Documentation\nVideo: Deposit and retrieve DataLad datasets with WebDAV services"
+    "section": "Resources",
+    "text": "Resources\nNextcloud\n\nNextcloud - Official website\nUsing Nextcloud for Research Data Management (DECIDE RDM)\n\nDataLad Integration\n\nDataLad Tutorial (Lennart Wittkuhn)\nDataLad Next: datalad create-sibling-webdav\nVideo: Deposit and retrieve DataLad datasets with WebDAV services"
   },
   {
     "objectID": "sessions/datalad/index.html",
@@ -1712,14 +1719,14 @@
     "href": "sessions/data-infrastructure/index.html#objectives",
     "title": "Data Infrastructure",
     "section": "Objectives",
-    "text": "Objectives\n💡 You know about the different data infrastructure services available at the University of Hamburg. 💡 You can distinguish between local storage, cloud storage, and object storage solutions. 💡 You know how to access and use UHH Disk, UHH Cloud, and Object Storage services. 💡 You understand the role of version control systems like GitLab for research data management. 💡 You are familiar with the UHH Research Data Repository and its features for long-term data preservation."
+    "text": "Objectives\n💡 You know what Nextcloud is and its capabilities. 💡 You can navigate the Nextcloud web interface and describe its main areas. 💡 You know the typical features of Nextcloud, including file management, sharing, versioning, and collaborative editing. 💡 You understand the different access methods for Nextcloud (web, desktop clients, mobile apps, WebDAV/API). 💡 You can integrate Nextcloud with DataLad using WebDAV for automated research data workflows."
   },
   {
     "objectID": "sessions/data-infrastructure/index.html#exercises",
     "href": "sessions/data-infrastructure/index.html#exercises",
     "title": "Data Infrastructure",
     "section": "Exercises",
-    "text": "Exercises\n\n\n\n\n\n\nNoteExercise 1: Comparing Storage Solutions\n\n\n\n\n\nTask: Compare the different storage solutions offered by the University of Hamburg.\n\nVisit the UHH Disk, UHH Cloud, Object Storage and Research Data Repository service pages\nDiscuss which solution would be most appropriate for different research scenarios:\n\nDaily research work with frequent file access\nLong-term archival storage\nCollaborative projects with external partners\nLarge datasets requiring automated processing\n\n\n\n\n\n\n\n\n\n\n\nNoteExercise 2: Exploring the Research Data Repository\n\n\n\n\n\nTask: Familiarize yourself with the UHH Research Data Repository features.\n\nExplore the repository features mentioned in the documentation:\n\nVersioning system (Concept-DOI vs. Versions-DOI)\nCitation export options\nMetadata licensing\n\nDiscuss the importance of:\n\nLong-term preservation (10+ years)\nMultiple backup locations\nCopyright and licensing considerations\n\nConsider a research project from your field and determine:\n\nWhat type of data would you publish?\nWhat metadata would be essential?\nWhich license would be appropriate?\n\n\n\n\n\n\n\n\n\n\n\nNoteExercise 3: Integrating UHH infrastructure with DataLad\n\n\n\n\n\nTask: Integrate DataLad with UHHCloud\nRelevant Links:\n\nhttps://lennartwittkuhn.com/datalad-tutorial/\nDataLad Next Documentation\nVideo: Deposit and retrieve DataLad datasets with WebDAV services"
+    "text": "Exercises\n\n\n\n\n\n\nNoteExercise 1: Exploring Nextcloud\n\n\n\n\n\nTask: Explore the Nextcloud web interface.\n\nLog in to your institutional Nextcloud instance\nFamiliarise yourself with the main areas of the interface:\n\nDashboard: What widgets are displayed? Can you customise them?\nApp switcher (top-left): Which apps are available?\nTop-right icons: Locate the Search, Notifications, Contacts, and Profile functions.\n\nTry out the following file operations:\n\nUpload a file or folder\nShare a file with a colleague (set appropriate access rights)\nCreate a new text document and edit it online\nCheck the version history of a file\n\nDiscuss with your neighbour:\n\nFor which tasks in your research workflow could Nextcloud be useful?\nWhat are the advantages compared to storing files only on your local machine?\n\n\n\n\n\n\n\n\n\n\n\nNoteExercise 2: Integrating Nextcloud with DataLad\n\n\n\n\n\nTask: Integrate DataLad with Nextcloud via WebDAV.\nRelevant Links:\n\nhttps://lennartwittkuhn.com/datalad-tutorial/\nDataLad Next Documentation\nVideo: Deposit and retrieve DataLad datasets with WebDAV services"
   },
   {
     "objectID": "sessions/data-infrastructure/index.html#slides",
@@ -1733,7 +1740,7 @@
     "href": "sessions/data-infrastructure/index.html#resources",
     "title": "Data Infrastructure",
     "section": "Resources",
-    "text": "Resources\n\nUniversity of Hamburg Data Services\n\nUHH Disk - Network storage service\nUHH Cloud - Cloud collaboration platform\nObject Storage - Large-scale data storage\nGitLab - Version control and collaboration\n\n\n\nResearch Data Management\n\nCentre for Sustainable Research Data Management\nUHH Research Data Repository\nRDM Team Contact"
+    "text": "Resources\n\nNextcloud\n\nNextcloud - Official website\nUsing Nextcloud for Research Data Management (DECIDE RDM)\n\n\n\nDataLad Integration\n\nDataLad Tutorial (Lennart Wittkuhn)\nDataLad Next: datalad create-sibling-webdav\nVideo: Deposit and retrieve DataLad datasets with WebDAV services"
   },
   {
     "objectID": "sessions/bids/index.html#objectives",

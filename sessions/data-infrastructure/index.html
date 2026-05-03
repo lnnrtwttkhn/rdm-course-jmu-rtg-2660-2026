@@ -140,8 +140,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#slides" id="toc-slides" class="nav-link" data-scroll-target="#slides">Slides</a></li>
   <li><a href="#resources" id="toc-resources" class="nav-link" data-scroll-target="#resources">Resources</a>
   <ul>
-  <li><a href="#university-of-hamburg-data-services" id="toc-university-of-hamburg-data-services" class="nav-link" data-scroll-target="#university-of-hamburg-data-services">University of Hamburg Data Services</a></li>
-  <li><a href="#research-data-management" id="toc-research-data-management" class="nav-link" data-scroll-target="#research-data-management">Research Data Management</a></li>
+  <li><a href="#nextcloud" id="toc-nextcloud" class="nav-link" data-scroll-target="#nextcloud">Nextcloud</a></li>
+  <li><a href="#datalad-integration" id="toc-datalad-integration" class="nav-link" data-scroll-target="#datalad-integration">DataLad Integration</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -179,85 +179,60 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <section id="objectives" class="level2">
 <h2 class="anchored" data-anchor-id="objectives">Objectives</h2>
-<p><span class="emoji" data-emoji="bulb">💡</span> You know about the different data infrastructure services available at the University of Hamburg.<br> <span class="emoji" data-emoji="bulb">💡</span> You can distinguish between local storage, cloud storage, and object storage solutions.<br> <span class="emoji" data-emoji="bulb">💡</span> You know how to access and use UHH Disk, UHH Cloud, and Object Storage services.<br> <span class="emoji" data-emoji="bulb">💡</span> You understand the role of version control systems like GitLab for research data management.<br> <span class="emoji" data-emoji="bulb">💡</span> You are familiar with the UHH Research Data Repository and its features for long-term data preservation.</p>
+<p><span class="emoji" data-emoji="bulb">💡</span> You know what Nextcloud is and its capabilities.<br> <span class="emoji" data-emoji="bulb">💡</span> You can navigate the Nextcloud web interface and describe its main areas.<br> <span class="emoji" data-emoji="bulb">💡</span> You know the typical features of Nextcloud, including file management, sharing, versioning, and collaborative editing.<br> <span class="emoji" data-emoji="bulb">💡</span> You understand the different access methods for Nextcloud (web, desktop clients, mobile apps, WebDAV/API).<br> <span class="emoji" data-emoji="bulb">💡</span> You can integrate Nextcloud with DataLad using WebDAV for automated research data workflows.</p>
 </section>
 <section id="exercises" class="level2">
 <h2 class="anchored" data-anchor-id="exercises">Exercises</h2>
-<div class="callout callout-style-default callout-note callout-titled" title="Exercise 1: Comparing Storage Solutions">
+<div class="callout callout-style-default callout-note callout-titled" title="Exercise 1: Exploring Nextcloud">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Exercise 1: Comparing Storage Solutions
+<span class="screen-reader-only">Note</span>Exercise 1: Exploring Nextcloud
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><strong>Task:</strong> Compare the different storage solutions offered by the University of Hamburg.</p>
+<p><strong>Task:</strong> Explore the Nextcloud web interface.</p>
 <ol type="1">
-<li><p>Visit the UHH Disk, UHH Cloud, Object Storage and Research Data Repository service pages</p></li>
-<li><p>Discuss which solution would be most appropriate for different research scenarios:</p>
+<li><p>Log in to your institutional Nextcloud instance</p></li>
+<li><p>Familiarise yourself with the main areas of the interface:</p>
 <ul>
-<li>Daily research work with frequent file access</li>
-<li>Long-term archival storage</li>
-<li>Collaborative projects with external partners</li>
-<li>Large datasets requiring automated processing</li>
+<li><strong>Dashboard</strong>: What widgets are displayed? Can you customise them?</li>
+<li><strong>App switcher</strong> (top-left): Which apps are available?</li>
+<li><strong>Top-right icons</strong>: Locate the Search, Notifications, Contacts, and Profile functions.</li>
+</ul></li>
+<li><p>Try out the following file operations:</p>
+<ul>
+<li>Upload a file or folder</li>
+<li>Share a file with a colleague (set appropriate access rights)</li>
+<li>Create a new text document and edit it online</li>
+<li>Check the version history of a file</li>
+</ul></li>
+<li><p>Discuss with your neighbour:</p>
+<ul>
+<li>For which tasks in your research workflow could Nextcloud be useful?</li>
+<li>What are the advantages compared to storing files only on your local machine?</li>
 </ul></li>
 </ol>
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-note callout-titled" title="Exercise 2: Exploring the Research Data Repository">
+<div class="callout callout-style-default callout-note callout-titled" title="Exercise 2: Integrating Nextcloud with DataLad">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Exercise 2: Exploring the Research Data Repository
+<span class="screen-reader-only">Note</span>Exercise 2: Integrating Nextcloud with DataLad
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><strong>Task:</strong> Familiarize yourself with the UHH Research Data Repository features.</p>
-<ol type="1">
-<li>Explore the repository features mentioned in the documentation:
-<ul>
-<li>Versioning system (Concept-DOI vs.&nbsp;Versions-DOI)</li>
-<li>Citation export options</li>
-<li>Metadata licensing</li>
-</ul></li>
-<li>Discuss the importance of:
-<ul>
-<li>Long-term preservation (10+ years)</li>
-<li>Multiple backup locations</li>
-<li>Copyright and licensing considerations</li>
-</ul></li>
-<li>Consider a research project from your field and determine:
-<ul>
-<li>What type of data would you publish?</li>
-<li>What metadata would be essential?</li>
-<li>Which license would be appropriate?</li>
-</ul></li>
-</ol>
-</div>
-</div>
-</div>
-<div class="callout callout-style-default callout-note callout-titled" title="Exercise 3: Integrating UHH infrastructure with DataLad">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Exercise 3: Integrating UHH infrastructure with DataLad
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p><strong>Task:</strong> Integrate DataLad with UHHCloud</p>
+<p><strong>Task:</strong> Integrate DataLad with Nextcloud via WebDAV.</p>
 <p><strong>Relevant Links:</strong></p>
 <ul>
 <li><a href="https://lennartwittkuhn.com/datalad-tutorial/" class="uri">https://lennartwittkuhn.com/datalad-tutorial/</a></li>
@@ -272,7 +247,7 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="slides">Slides</h2>
 <iframe width="100%" height="500" src="slides.html"></iframe>
 <div class="callout callout-style-simple callout-note callout-titled" title="How can I download the slides as a PDF file?">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -281,7 +256,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>To export the slides to PDF, do the following:</p>
 <ol type="1">
@@ -302,21 +277,19 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="resources" class="level2">
 <h2 class="anchored" data-anchor-id="resources">Resources</h2>
-<section id="university-of-hamburg-data-services" class="level3">
-<h3 class="anchored" data-anchor-id="university-of-hamburg-data-services">University of Hamburg Data Services</h3>
+<section id="nextcloud" class="level3">
+<h3 class="anchored" data-anchor-id="nextcloud">Nextcloud</h3>
 <ul>
-<li><a href="https://www.rrz.uni-hamburg.de/services/datenhaltung/uhhdisk.html">UHH Disk - Network storage service</a></li>
-<li><a href="https://www.rrz.uni-hamburg.de/services/kollaboration/uhhcloud.html">UHH Cloud - Cloud collaboration platform</a></li>
-<li><a href="https://www.rrz.uni-hamburg.de/services/datenhaltung/objektspeicher.html">Object Storage - Large-scale data storage</a></li>
-<li><a href="https://www.rrz.uni-hamburg.de/services/datenhaltung/repositories/gitlab.html">GitLab - Version control and collaboration</a></li>
+<li><a href="https://nextcloud.com">Nextcloud - Official website</a></li>
+<li><a href="https://www.decide.biozentrum.uni-wuerzburg.de/nextcloud.html">Using Nextcloud for Research Data Management (DECIDE RDM)</a></li>
 </ul>
 </section>
-<section id="research-data-management" class="level3">
-<h3 class="anchored" data-anchor-id="research-data-management">Research Data Management</h3>
+<section id="datalad-integration" class="level3">
+<h3 class="anchored" data-anchor-id="datalad-integration">DataLad Integration</h3>
 <ul>
-<li><a href="https://www.fdm.uni-hamburg.de/en">Centre for Sustainable Research Data Management</a></li>
-<li><a href="https://www.fdm.uni-hamburg.de/en/fdm.html">UHH Research Data Repository</a></li>
-<li><a href="mailto:repository.fdm@uni-hamburg.de">RDM Team Contact</a></li>
+<li><a href="https://lennartwittkuhn.com/datalad-tutorial/">DataLad Tutorial (Lennart Wittkuhn)</a></li>
+<li><a href="https://docs.datalad.org/projects/next/en/stable/generated/man/datalad-create-sibling-webdav.html">DataLad Next: <code>datalad create-sibling-webdav</code></a></li>
+<li><a href="https://www.youtube.com/watch?v=XkcwpqPQHQY">Video: Deposit and retrieve DataLad datasets with WebDAV services</a></li>
 </ul>
 
 
