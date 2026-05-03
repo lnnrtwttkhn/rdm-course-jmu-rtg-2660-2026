@@ -67,7 +67,7 @@
     "href": "sessions/summary/slides.html#schedule",
     "title": "Summary & Outlook",
     "section": "Schedule",
-    "text": "Schedule\nDay 1\n\n\n\n\n\nDay\nDate\nTime\nTitle\n\n\n\n\n1\n2026-05-07\n09:00 - 09:30\nWelcome and Introduction to Research Data Management\n\n\n1\n2026-05-07\n09:30 - 10:30\nProject & Data Organization\n\n\n1\n2026-05-07\n10:30 - 11:30\nData Management Plans (DMPs)\n\n\n1\n2026-05-07\n11:30 - 12:30\nLunch Break\n\n\n1\n2026-05-07\n12:30 - 13:30\nCommand Line\n\n\n1\n2026-05-07\n13:30 - 14:30\nBest practices for rectangular data\n\n\n1\n2026-05-07\n14:30 - 16:00\nBrain Imaging Data Structure (BIDS)\n\n\n\n\n\nDay 2\n\n\n\n\n\nDay\nDate\nTime\nTitle\n\n\n\n\n2\n2026-05-08\n09:00 - 09:30\nIntroduction to Version Control\n\n\n2\n2026-05-08\n09:30 - 11:30\nVersion Control of Data with DataLad\n\n\n2\n2026-05-08\n11:30 - 12:30\nLunch Break\n\n\n2\n2026-05-08\n12:30 - 13:30\nData publication\n\n\n2\n2026-05-08\n13:30 - 15:30\nIntegrating with data infrastructure at UHH (and beyond)\n\n\n2\n2026-05-08\n15:30 - 16:00\nSummary & Outlook"
+    "text": "Schedule\nDay 1\n\n\n\n\n\nDay\nDate\nTime\nTitle\n\n\n\n\n1\n2026-05-07\n09:00 - 09:30\nWelcome and Introduction to Research Data Management\n\n\n1\n2026-05-07\n09:30 - 10:30\nProject & Data Organization\n\n\n1\n2026-05-07\n10:30 - 11:30\nData Management Plans (DMPs)\n\n\n1\n2026-05-07\n11:30 - 12:30\nLunch Break\n\n\n1\n2026-05-07\n12:30 - 13:30\nCommand Line\n\n\n1\n2026-05-07\n13:30 - 14:30\nBest practices for rectangular data\n\n\n1\n2026-05-07\n14:30 - 16:00\nBrain Imaging Data Structure (BIDS)\n\n\n\n\n\nDay 2\n\n\n\n\n\nDay\nDate\nTime\nTitle\n\n\n\n\n2\n2026-05-08\n09:00 - 09:30\nIntroduction to Version Control\n\n\n2\n2026-05-08\n09:30 - 11:30\nVersion Control of Data with DataLad\n\n\n2\n2026-05-08\n11:30 - 12:30\nLunch Break\n\n\n2\n2026-05-08\n12:30 - 13:30\nData publication\n\n\n2\n2026-05-08\n13:30 - 15:30\nData Infrastructure: Nextcloud\n\n\n2\n2026-05-08\n15:30 - 16:00\nSummary & Outlook"
   },
   {
     "objectID": "sessions/summary/slides.html#objectives",
@@ -396,7 +396,7 @@
     "href": "sessions/data-infrastructure/slides.html#schedule",
     "title": "Data Infrastructure",
     "section": "Schedule",
-    "text": "Schedule\n\n\n\n\n\nDay\nDate\nTime\nTitle\n\n\n\n\n2\n2026-05-08\n09:00 - 09:30\nIntroduction to Version Control\n\n\n2\n2026-05-08\n09:30 - 11:30\nVersion Control of Data with DataLad\n\n\n2\n2026-05-08\n11:30 - 12:30\nLunch Break\n\n\n2\n2026-05-08\n12:30 - 13:30\nData publication\n\n\n2\n2026-05-08\n13:30 - 15:30\nIntegrating with data infrastructure at UHH (and beyond)\n\n\n2\n2026-05-08\n15:30 - 16:00\nSummary & Outlook"
+    "text": "Schedule\n\n\n\n\n\nDay\nDate\nTime\nTitle\n\n\n\n\n2\n2026-05-08\n09:00 - 09:30\nIntroduction to Version Control\n\n\n2\n2026-05-08\n09:30 - 11:30\nVersion Control of Data with DataLad\n\n\n2\n2026-05-08\n11:30 - 12:30\nLunch Break\n\n\n2\n2026-05-08\n12:30 - 13:30\nData publication\n\n\n2\n2026-05-08\n13:30 - 15:30\nData Infrastructure: Nextcloud\n\n\n2\n2026-05-08\n15:30 - 16:00\nSummary & Outlook"
   },
   {
     "objectID": "sessions/data-infrastructure/slides.html#objectives",
@@ -886,7 +886,7 @@
     "href": "sessions/introduction/slides.html#schedule",
     "title": "Introduction to Research Data Management",
     "section": "Schedule",
-    "text": "Schedule\n\nDay 1\n\n\n\n\n\nDay\nDate\nTime\nTitle\n\n\n\n\n1\n2026-05-07\n09:00 - 09:30\nWelcome and Introduction to Research Data Management\n\n\n1\n2026-05-07\n09:30 - 10:30\nProject & Data Organization\n\n\n1\n2026-05-07\n10:30 - 11:30\nData Management Plans (DMPs)\n\n\n1\n2026-05-07\n11:30 - 12:30\nLunch Break\n\n\n1\n2026-05-07\n12:30 - 13:30\nCommand Line\n\n\n1\n2026-05-07\n13:30 - 14:30\nBest practices for rectangular data\n\n\n1\n2026-05-07\n14:30 - 16:00\nBrain Imaging Data Structure (BIDS)\n\n\n\n\n\n\n\nDay 2\n\n\n\n\n\nDay\nDate\nTime\nTitle\n\n\n\n\n2\n2026-05-08\n09:00 - 09:30\nIntroduction to Version Control\n\n\n2\n2026-05-08\n09:30 - 11:30\nVersion Control of Data with DataLad\n\n\n2\n2026-05-08\n11:30 - 12:30\nLunch Break\n\n\n2\n2026-05-08\n12:30 - 13:30\nData publication\n\n\n2\n2026-05-08\n13:30 - 15:30\nIntegrating with data infrastructure at UHH (and beyond)\n\n\n2\n2026-05-08\n15:30 - 16:00\nSummary & Outlook"
+    "text": "Schedule\n\nDay 1\n\n\n\n\n\nDay\nDate\nTime\nTitle\n\n\n\n\n1\n2026-05-07\n09:00 - 09:30\nWelcome and Introduction to Research Data Management\n\n\n1\n2026-05-07\n09:30 - 10:30\nProject & Data Organization\n\n\n1\n2026-05-07\n10:30 - 11:30\nData Management Plans (DMPs)\n\n\n1\n2026-05-07\n11:30 - 12:30\nLunch Break\n\n\n1\n2026-05-07\n12:30 - 13:30\nCommand Line\n\n\n1\n2026-05-07\n13:30 - 14:30\nBest practices for rectangular data\n\n\n1\n2026-05-07\n14:30 - 16:00\nBrain Imaging Data Structure (BIDS)\n\n\n\n\n\n\n\nDay 2\n\n\n\n\n\nDay\nDate\nTime\nTitle\n\n\n\n\n2\n2026-05-08\n09:00 - 09:30\nIntroduction to Version Control\n\n\n2\n2026-05-08\n09:30 - 11:30\nVersion Control of Data with DataLad\n\n\n2\n2026-05-08\n11:30 - 12:30\nLunch Break\n\n\n2\n2026-05-08\n12:30 - 13:30\nData publication\n\n\n2\n2026-05-08\n13:30 - 15:30\nData Infrastructure: Nextcloud\n\n\n2\n2026-05-08\n15:30 - 16:00\nSummary & Outlook"
   },
   {
     "objectID": "sessions/introduction/slides.html#course-website",
@@ -1425,7 +1425,7 @@
     "href": "sessions/data-publication/slides.html#schedule",
     "title": "Data Publication",
     "section": "Schedule",
-    "text": "Schedule\n\n\n\n\n\nDay\nDate\nTime\nTitle\n\n\n\n\n2\n2026-05-08\n09:00 - 09:30\nIntroduction to Version Control\n\n\n2\n2026-05-08\n09:30 - 11:30\nVersion Control of Data with DataLad\n\n\n2\n2026-05-08\n11:30 - 12:30\nLunch Break\n\n\n2\n2026-05-08\n12:30 - 13:30\nData publication\n\n\n2\n2026-05-08\n13:30 - 15:30\nIntegrating with data infrastructure at UHH (and beyond)\n\n\n2\n2026-05-08\n15:30 - 16:00\nSummary & Outlook"
+    "text": "Schedule\n\n\n\n\n\nDay\nDate\nTime\nTitle\n\n\n\n\n2\n2026-05-08\n09:00 - 09:30\nIntroduction to Version Control\n\n\n2\n2026-05-08\n09:30 - 11:30\nVersion Control of Data with DataLad\n\n\n2\n2026-05-08\n11:30 - 12:30\nLunch Break\n\n\n2\n2026-05-08\n12:30 - 13:30\nData publication\n\n\n2\n2026-05-08\n13:30 - 15:30\nData Infrastructure: Nextcloud\n\n\n2\n2026-05-08\n15:30 - 16:00\nSummary & Outlook"
   },
   {
     "objectID": "sessions/data-publication/slides.html#objectives",
@@ -1565,7 +1565,7 @@
     "href": "sessions/version-control-introduction/slides.html#schedule",
     "title": "Introduction to Version Control",
     "section": "Schedule",
-    "text": "Schedule\n\n\n\n\n\nDay\nDate\nTime\nTitle\n\n\n\n\n2\n2026-05-08\n09:00 - 09:30\nIntroduction to Version Control\n\n\n2\n2026-05-08\n09:30 - 11:30\nVersion Control of Data with DataLad\n\n\n2\n2026-05-08\n11:30 - 12:30\nLunch Break\n\n\n2\n2026-05-08\n12:30 - 13:30\nData publication\n\n\n2\n2026-05-08\n13:30 - 15:30\nIntegrating with data infrastructure at UHH (and beyond)\n\n\n2\n2026-05-08\n15:30 - 16:00\nSummary & Outlook"
+    "text": "Schedule\n\n\n\n\n\nDay\nDate\nTime\nTitle\n\n\n\n\n2\n2026-05-08\n09:00 - 09:30\nIntroduction to Version Control\n\n\n2\n2026-05-08\n09:30 - 11:30\nVersion Control of Data with DataLad\n\n\n2\n2026-05-08\n11:30 - 12:30\nLunch Break\n\n\n2\n2026-05-08\n12:30 - 13:30\nData publication\n\n\n2\n2026-05-08\n13:30 - 15:30\nData Infrastructure: Nextcloud\n\n\n2\n2026-05-08\n15:30 - 16:00\nSummary & Outlook"
   },
   {
     "objectID": "sessions/version-control-introduction/slides.html#objectives",
@@ -1845,6 +1845,6 @@
     "href": "schedule.html",
     "title": "Schedule",
     "section": "",
-    "text": "When? May 7th & 8th 2026, 9:00 to 16:00 (detailed schedule below)\n Where? Julius-Maximilians-Universität Würzburg, RTG 2660: Approach-Avoidance, Marcusstraße 9-11, 97070 Würzburg (Thursday: Room 318 | Friday: Room 213)\n\n\n\n\n\nDay\nDate\nTime\nTitle\n\n\n\n\n1\n2026-05-07\n09:00 - 09:30\nWelcome and Introduction to Research Data Management\n\n\n1\n2026-05-07\n09:30 - 10:30\nProject & Data Organization\n\n\n1\n2026-05-07\n10:30 - 11:30\nData Management Plans (DMPs)\n\n\n1\n2026-05-07\n11:30 - 12:30\nLunch Break\n\n\n1\n2026-05-07\n12:30 - 13:30\nCommand Line\n\n\n1\n2026-05-07\n13:30 - 14:30\nBest practices for rectangular data\n\n\n1\n2026-05-07\n14:30 - 16:00\nBrain Imaging Data Structure (BIDS)\n\n\n\n\n\n\n\n\nDay\nDate\nTime\nTitle\n\n\n\n\n2\n2026-05-08\n09:00 - 09:30\nIntroduction to Version Control\n\n\n2\n2026-05-08\n09:30 - 11:30\nVersion Control of Data with DataLad\n\n\n2\n2026-05-08\n11:30 - 12:30\nLunch Break\n\n\n2\n2026-05-08\n12:30 - 13:30\nData publication\n\n\n2\n2026-05-08\n13:30 - 15:30\nIntegrating with data infrastructure at UHH (and beyond)\n\n\n2\n2026-05-08\n15:30 - 16:00\nSummary & Outlook"
+    "text": "When? May 7th & 8th 2026, 9:00 to 16:00 (detailed schedule below)\n Where? Julius-Maximilians-Universität Würzburg, RTG 2660: Approach-Avoidance, Marcusstraße 9-11, 97070 Würzburg (Thursday: Room 318 | Friday: Room 213)\n\n\n\n\n\nDay\nDate\nTime\nTitle\n\n\n\n\n1\n2026-05-07\n09:00 - 09:30\nWelcome and Introduction to Research Data Management\n\n\n1\n2026-05-07\n09:30 - 10:30\nProject & Data Organization\n\n\n1\n2026-05-07\n10:30 - 11:30\nData Management Plans (DMPs)\n\n\n1\n2026-05-07\n11:30 - 12:30\nLunch Break\n\n\n1\n2026-05-07\n12:30 - 13:30\nCommand Line\n\n\n1\n2026-05-07\n13:30 - 14:30\nBest practices for rectangular data\n\n\n1\n2026-05-07\n14:30 - 16:00\nBrain Imaging Data Structure (BIDS)\n\n\n\n\n\n\n\n\nDay\nDate\nTime\nTitle\n\n\n\n\n2\n2026-05-08\n09:00 - 09:30\nIntroduction to Version Control\n\n\n2\n2026-05-08\n09:30 - 11:30\nVersion Control of Data with DataLad\n\n\n2\n2026-05-08\n11:30 - 12:30\nLunch Break\n\n\n2\n2026-05-08\n12:30 - 13:30\nData publication\n\n\n2\n2026-05-08\n13:30 - 15:30\nData Infrastructure: Nextcloud\n\n\n2\n2026-05-08\n15:30 - 16:00\nSummary & Outlook"
   }
 ]
