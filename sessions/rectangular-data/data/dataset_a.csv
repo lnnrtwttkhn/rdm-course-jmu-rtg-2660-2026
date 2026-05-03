@@ -1,0 +1,7 @@
+"ID","Age","Gender","Measurement1","Measurement2"
+"001",25,"Male","15.2 cm","Normal"
+"002",30,"F","18.7","High (above threshold)"
+"003",NA,"female","12.1",""
+"004",28,"Male","14.9","Low"
+"005",32,"M","16.8 cm","Normal"
+"006",29,"Female","13.4","Low (recheck)"

@@ -1,0 +1,8 @@
+"participant","condition","reaction_time","accuracy"
+"P001","control",450,0.95
+"P002","treatment",380,0.88
+"P003","control",520,0.92
+"P004","treatment",25,0.85
+"P005","control",490,1.2
+"P006","treatment",2500,0.9
+"P007","invalid",420,0.89

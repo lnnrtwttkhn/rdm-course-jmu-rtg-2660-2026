@@ -1,0 +1,8 @@
+"ID","Age","Gender","Score","Date","Notes"
+"001","25","Male","85.5","2024-01-15","Normal"
+"002","30","F","92.0","15/01/2024",""
+"003","Twenty-five","female","78.2","Jan 15 2024","Outlier - check data"
+" 004","28","M","88.7","2024-01-17","Normal"
+"005","35","Female","95.5*","2024/01/18","Equipment malfunction"
+"006","","male"," ","2024-01-20","Missing data"
+"007","29","FEMALE","102.3","2024-01-21","Score above range"

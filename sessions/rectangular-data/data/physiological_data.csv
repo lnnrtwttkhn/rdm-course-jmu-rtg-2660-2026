@@ -1,0 +1,7 @@
+"Subject","Time_Point","Heart_Rate_Baseline","Heart_Rate_Stress","Blood_Pressure_Sys","Blood_Pressure_Dia"
+"001","Week1",72,85,120,80
+"001","Week2",70,88,118,78
+"002","Week1",68,82,125,82
+"002","Week2",69,84,122,79
+"003","Week1",74,90,115,75
+"003","Week2",73,87,117,77

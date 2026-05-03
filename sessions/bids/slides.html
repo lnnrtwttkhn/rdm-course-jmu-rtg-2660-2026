@@ -1,0 +1,1309 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.9.37">
+
+  <title>Research Data Management for Psychology and Neuroscience – Brain Imaging Data Structure (BIDS)</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/reveal.css">
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+      margin-bottom: 0em;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-3da55e4bce9fb696ec08762b031f6615.css">
+  <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+  <link href="../../site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet">
+  <script src="../../site_libs/pagedtable-1.1/js/pagedtable.js"></script>
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title">Brain Imaging Data Structure (BIDS)</h1>
+  <p class="subtitle"><strong>Research Data Management for Psychology and Neuroscience</strong><br>
+Course at Julius-Maximilians-Universität Würzburg, RTG 2660: Approach-Avoidance<br>
+<a href="https://lennartwittkuhn.com/rdm-course"><i class="fa-solid fa-display" aria-label="display"></i> Slides</a> | <a href="https://github.com/lnnrtwttkhn/rdm-course"><i class="fa-brands fa-github" aria-label="github"></i> Source</a><br>
+<a href="https://creativecommons.org/licenses/by/4.0/"><img data-src="https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg" alt="License: CC BY 4.0"></a></p>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+<a href="https://lennartwittkuhn.com/">Dr.&nbsp;Lennart Wittkuhn</a> <a href="https://orcid.org/0000-0003-2966-6888" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a>
+</div>
+<div class="quarto-title-author-email">
+<a href="mailto:lennart.wittkuhn@tutanota.com">lennart.wittkuhn@tutanota.com</a>
+</div>
+</div>
+</div>
+
+  <p class="date">14:30</p>
+</section><section id="TOC">
+<nav role="doc-toc"> 
+<h2 id="toc-title">Agenda</h2>
+<ul>
+<li><a href="#/introduction-to-bids" id="/toc-introduction-to-bids"><span class="header-section-number">1</span> Introduction to BIDS</a></li>
+<li><a href="#/bids-principles" id="/toc-bids-principles"><span class="header-section-number">2</span> BIDS Principles</a></li>
+<li><a href="#/bids-directory-structure" id="/toc-bids-directory-structure"><span class="header-section-number">3</span> BIDS Directory Structure</a></li>
+<li><a href="#/data-types-and-modalities" id="/toc-data-types-and-modalities"><span class="header-section-number">4</span> Data Types and Modalities</a></li>
+<li><a href="#/metadata-and-documentation" id="/toc-metadata-and-documentation"><span class="header-section-number">5</span> Metadata and Documentation</a></li>
+<li><a href="#/bids-ecosystem" id="/toc-bids-ecosystem"><span class="header-section-number">6</span> BIDS Ecosystem</a></li>
+<li><a href="#/getting-started-with-bids" id="/toc-getting-started-with-bids"><span class="header-section-number">7</span> Getting Started with BIDS</a></li>
+<li><a href="#/examples" id="/toc-examples"><span class="header-section-number">8</span> Examples</a></li>
+<li><a href="#/extensions-and-future" id="/toc-extensions-and-future"><span class="header-section-number">9</span> Extensions and Future</a></li>
+<li><a href="#/summary" id="/toc-summary"><span class="header-section-number">10</span> Summary</a></li>
+<li><a href="#/exercises" id="/toc-exercises"><span class="header-section-number">11</span> Exercises</a></li>
+</ul>
+</nav>
+</section>
+<section id="schedule" class="slide level2">
+<h2>Schedule</h2>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Day</th>
+<th style="text-align: left;">Date</th>
+<th style="text-align: left;">Time</th>
+<th style="text-align: left;">Title</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">2026-05-07</td>
+<td style="text-align: left;">09:00 - 09:30</td>
+<td style="text-align: left;"><strong><a href="https://lennartwittkuhn.com/rdm-course-jmu-rtg-2660-2026/sessions/introduction">Welcome and Introduction to Research Data Management</a></strong></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">2026-05-07</td>
+<td style="text-align: left;">09:30 - 10:30</td>
+<td style="text-align: left;"><strong><a href="https://lennartwittkuhn.com/rdm-course-jmu-rtg-2660-2026/sessions/project-organization">Project &amp; Data Organization</a></strong></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">2026-05-07</td>
+<td style="text-align: left;">10:30 - 11:30</td>
+<td style="text-align: left;"><strong><a href="https://lennartwittkuhn.com/rdm-course-jmu-rtg-2660-2026/sessions/dmp">Data Management Plans (DMPs)</a></strong></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">2026-05-07</td>
+<td style="text-align: left;">11:30 - 12:30</td>
+<td style="text-align: left;"><strong><a href="https://lennartwittkuhn.com/rdm-course-jmu-rtg-2660-2026/sessions/lunch-day1">Lunch Break</a></strong></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">2026-05-07</td>
+<td style="text-align: left;">12:30 - 13:30</td>
+<td style="text-align: left;"><strong><a href="https://lennartwittkuhn.com/rdm-course-jmu-rtg-2660-2026/sessions/command-line">Command Line</a></strong></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">2026-05-07</td>
+<td style="text-align: left;">13:30 - 14:30</td>
+<td style="text-align: left;"><strong><a href="https://lennartwittkuhn.com/rdm-course-jmu-rtg-2660-2026/sessions/rectangular-data">Best practices for rectangular data</a></strong></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">2026-05-07</td>
+<td style="text-align: left;">14:30 - 16:00</td>
+<td style="text-align: left;"><strong><a href="https://lennartwittkuhn.com/rdm-course-jmu-rtg-2660-2026/sessions/bids">Brain Imaging Data Structure (BIDS)</a></strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="this-session-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206d657461207469746c65203e7d7d" class="slide level2">
+<h2>This session: Brain Imaging Data Structure (BIDS)</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../../images/bids-dataset.png"></p>
+<figcaption>Image taken from <span class="citation" data-cites="gorgolewski2016">Gorgolewski et al. (<a href="#/references-1" role="doc-biblioref" onclick="">2016</a>)</span></figcaption>
+</figure>
+</div>
+</section>
+<section id="objectives" class="slide level2">
+<h2>Objectives</h2>
+<p><span class="emoji" data-emoji="bulb">💡</span> You understand what BIDS (Brain Imaging Data Structure) is and why it’s important for neuroimaging.<br> <span class="emoji" data-emoji="bulb">💡</span> You can explain the core principles of BIDS and how it solves common data organization problems.<br> <span class="emoji" data-emoji="bulb">💡</span> You can organize neuroimaging data according to BIDS directory structure standards.<br> <span class="emoji" data-emoji="bulb">💡</span> You understand the role of JSON metadata files and TSV data files in BIDS datasets.<br> <span class="emoji" data-emoji="bulb">💡</span> You know how to validate BIDS datasets using the BIDS validator.<br> <span class="emoji" data-emoji="bulb">💡</span> You understand the benefits of using BIDS for collaboration, reproducibility, and data sharing.<br></p>
+</section>
+<section>
+<section id="introduction-to-bids" class="title-slide slide level1 center" data-number="1">
+<h1><span class="header-section-number">1</span> Introduction to BIDS</h1>
+
+</section>
+<section id="what-is-bids" class="slide level2">
+<h2>What is BIDS?</h2>
+<p><strong>The Brain Imaging Data Structure (BIDS)</strong> is a simple and intuitive way to organize and describe neuroimaging and behavioral data.</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../../images/bids-dataset.png"></p>
+<figcaption>Image taken from <span class="citation" data-cites="gorgolewski2016">Gorgolewski et al. (<a href="#/references-1" role="doc-biblioref" onclick="">2016</a>)</span></figcaption>
+</figure>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="fragment">
+<p><strong>Key characteristics:</strong></p>
+<ul>
+<li><strong>Standardized</strong> file organization and naming conventions</li>
+<li><strong>Community-driven</strong> specification</li>
+<li><strong>Modality-agnostic</strong> (fMRI, EEG, MEG, PET, behavioral data, etc.)</li>
+<li><strong>Human and machine readable</strong></li>
+<li><strong>Growing ecosystem</strong> of compatible tools</li>
+</ul>
+</div>
+</div></div>
+</section>
+<section id="the-problem-bids-solves" class="slide level2">
+<h2>The Problem BIDS Solves</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="fragment">
+<h3 id="before-bids">Before BIDS 😞</h3>
+<ul>
+<li>Every lab organized data differently</li>
+<li>Time wasted understanding data structure</li>
+<li>Difficult collaboration and data sharing</li>
+<li>Scripts broke when data moved</li>
+<li>No common metadata standards</li>
+</ul>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="fragment">
+<h3 id="with-bids">With BIDS 😊</h3>
+<ul>
+<li>Standard organization across labs</li>
+<li>Immediate data comprehension</li>
+<li>Easy collaboration and sharing</li>
+<li>Tool interoperability</li>
+<li>Structured metadata</li>
+<li>Automated validation</li>
+</ul>
+</div>
+</div></div>
+</section>
+<section id="standards" class="slide level2">
+<h2>Standards …</h2>
+<p>… but probably different with BIDS?</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../../images/xkcd-standards.png"></p>
+<figcaption>XKCD: Standards</figcaption>
+</figure>
+</div>
+</section></section>
+<section>
+<section id="bids-principles" class="title-slide slide level1 center" data-number="2">
+<h1><span class="header-section-number">2</span> BIDS Principles</h1>
+
+</section>
+<section id="core-bids-principles" class="slide level2 scrollable">
+<h2>Core BIDS Principles</h2>
+<ol type="1">
+<li class="fragment"><strong>Simplicity:</strong> Based on common file formats (NIfTI, JSON, TSV)</li>
+<li class="fragment"><strong>Consistency:</strong> Standardized naming and folder structure</li>
+<li class="fragment"><strong>Flexibility:</strong> Supports multiple neuroimaging modalities</li>
+<li class="fragment"><strong>Extensibility:</strong> Community-driven extensions (BEPs)</li>
+<li class="fragment"><strong>Validation:</strong> Tools to check compliance</li>
+<li class="fragment"><strong>Documentation:</strong> Self-documenting through metadata files</li>
+</ol>
+</section>
+<section id="file-naming-convention" class="slide level2">
+<h2>File Naming Convention</h2>
+<p>BIDS uses <strong>entities</strong> to create standardized file names:</p>
+<div class="fragment">
+<pre><code>sub-&lt;label&gt;[_ses-&lt;label&gt;][_task-&lt;label&gt;][_acq-&lt;label&gt;][_run-&lt;label&gt;]_&lt;suffix&gt;.&lt;ext&gt;</code></pre>
+</div>
+<div class="fragment">
+<p><strong>Examples:</strong></p>
+<ul>
+<li><code>sub-01_task-rest_bold.nii.gz</code> (fMRI resting-state)</li>
+<li><code>sub-02_ses-001_task-faces_run-1_bold.nii.gz</code> (task fMRI)</li>
+<li><code>sub-01_T1w.nii.gz</code> (structural MRI)</li>
+<li><code>sub-03_task-nback_eeg.bdf</code> (EEG data)</li>
+</ul>
+</div>
+</section></section>
+<section>
+<section id="bids-directory-structure" class="title-slide slide level1 center" data-number="3">
+<h1><span class="header-section-number">3</span> BIDS Directory Structure</h1>
+
+</section>
+<section id="basic-bids-dataset-structure" class="slide level2">
+<h2>Basic BIDS Dataset Structure</h2>
+<pre><code>my-dataset/
+├── dataset_description.json
+├── README
+├── CHANGES
+├── participants.tsv
+├── participants.json
+└── sub-01/
+    ├── anat/
+    │   ├── sub-01_T1w.nii.gz
+    │   └── sub-01_T1w.json
+    └── func/
+        ├── sub-01_task-rest_bold.nii.gz
+        ├── sub-01_task-rest_bold.json
+        └── sub-01_task-rest_events.tsv</code></pre>
+</section>
+<section id="required-files" class="slide level2 scrollable">
+<h2>Required Files</h2>
+<p><strong>Every BIDS dataset must include:</strong></p>
+<ol type="1">
+<li class="fragment"><strong><code>dataset_description.json</code></strong> - Dataset metadata (name, version, authors)</li>
+<li class="fragment"><strong><code>README</code></strong> - Human-readable description</li>
+<li class="fragment"><strong>At least one subject folder</strong> (<code>sub-&lt;label&gt;/</code>)</li>
+<li class="fragment"><strong>Proper file naming</strong> following BIDS conventions</li>
+</ol>
+</section>
+<section id="optional-but-recommended" class="slide level2">
+<h2>Optional but Recommended</h2>
+<ul>
+<li class="fragment"><strong><code>participants.tsv</code></strong> - Subject demographics and characteristics</li>
+<li class="fragment"><strong><code>participants.json</code></strong> - Metadata for participants file</li>
+<li class="fragment"><strong><code>CHANGES</code></strong> - Version history</li>
+<li class="fragment"><strong><code>LICENSE</code></strong> - Data usage license</li>
+<li class="fragment"><strong><code>code/</code></strong> - Analysis scripts</li>
+<li class="fragment"><strong><code>derivatives/</code></strong> - Processed data</li>
+</ul>
+</section></section>
+<section>
+<section id="data-types-and-modalities" class="title-slide slide level1 center" data-number="4">
+<h1><span class="header-section-number">4</span> Data Types and Modalities</h1>
+
+</section>
+<section id="supported-neuroimaging-modalities" class="slide level2">
+<h2>Supported Neuroimaging Modalities</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="fragment">
+<p><strong>Core modalities:</strong></p>
+<ul>
+<li><strong>Anatomical MRI</strong> (<code>anat/</code>)</li>
+<li><strong>Functional MRI</strong> (<code>func/</code>)</li>
+<li><strong>Diffusion MRI</strong> (<code>dwi/</code>)</li>
+<li><strong>Fieldmaps</strong> (<code>fmap/</code>)</li>
+</ul>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="fragment">
+<p><strong>Electrophysiology:</strong></p>
+<ul>
+<li><strong>EEG</strong> (<code>eeg/</code>)</li>
+<li><strong>MEG</strong> (<code>meg/</code>)</li>
+<li><strong>iEEG</strong> (<code>ieeg/</code>)</li>
+</ul>
+</div>
+</div></div>
+<div class="fragment">
+<p><strong>Other modalities:</strong> PET, microscopy, behavioral data, genetics, physiological recordings, and more!</p>
+</div>
+</section>
+<section id="example-fmri-task-data" class="slide level2">
+<h2>Example: fMRI Task Data</h2>
+<pre><code>sub-01/
+└── func/
+    ├── sub-01_task-faces_bold.nii.gz        # Brain imaging data
+    ├── sub-01_task-faces_bold.json          # Imaging parameters
+    ├── sub-01_task-faces_events.tsv         # Task events/stimuli
+    └── sub-01_task-faces_events.json        # Events metadata</code></pre>
+<div class="fragment">
+<p><strong>Key files:</strong></p>
+<ul>
+<li><strong><code>.nii.gz</code></strong> - Brain imaging data</li>
+<li><strong><code>.json</code></strong> - Technical metadata (TR, TE, slice timing, etc.)</li>
+<li><strong><code>_events.tsv</code></strong> - Task timing and conditions</li>
+</ul>
+</div>
+</section></section>
+<section>
+<section id="metadata-and-documentation" class="title-slide slide level1 center" data-number="5">
+<h1><span class="header-section-number">5</span> Metadata and Documentation</h1>
+
+</section>
+<section id="json-metadata-files" class="slide level2">
+<h2>JSON Metadata Files</h2>
+<p>BIDS uses <strong>JSON files</strong> to store technical parameters and metadata:</p>
+<div class="fragment">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource json number-lines code-with-copy"><code class="sourceCode json"><span id="cb4-1"><a></a><span class="fu">{</span></span>
+<span id="cb4-2"><a></a>  <span class="dt">"TaskName"</span><span class="fu">:</span> <span class="st">"face perception"</span><span class="fu">,</span></span>
+<span id="cb4-3"><a></a>  <span class="dt">"RepetitionTime"</span><span class="fu">:</span> <span class="fl">2.0</span><span class="fu">,</span></span>
+<span id="cb4-4"><a></a>  <span class="dt">"EchoTime"</span><span class="fu">:</span> <span class="fl">0.03</span><span class="fu">,</span></span>
+<span id="cb4-5"><a></a>  <span class="dt">"FlipAngle"</span><span class="fu">:</span> <span class="dv">90</span><span class="fu">,</span></span>
+<span id="cb4-6"><a></a>  <span class="dt">"SliceTiming"</span><span class="fu">:</span> <span class="ot">[</span><span class="dv">0</span><span class="ot">,</span> <span class="fl">0.5</span><span class="ot">,</span> <span class="fl">1.0</span><span class="ot">,</span> <span class="fl">1.5</span><span class="ot">]</span><span class="fu">,</span></span>
+<span id="cb4-7"><a></a>  <span class="dt">"TaskDescription"</span><span class="fu">:</span> <span class="st">"Participants viewed faces and objects"</span></span>
+<span id="cb4-8"><a></a><span class="fu">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="tsv-files-for-tabular-data" class="slide level2">
+<h2>TSV Files for Tabular Data</h2>
+<p><strong>Tab-separated values</strong> for events, participants, and other tabular data:</p>
+<div class="fragment">
+<pre><code>onset   duration    trial_type  response_time
+0.0 2.5 face    1.2
+3.0 2.5 object  0.9
+6.0 2.5 face    1.1</code></pre>
+</div>
+<div class="fragment">
+<ul>
+<li><strong>Machine-readable</strong> for analysis</li>
+<li><strong>Human-readable</strong> for inspection</li>
+<li><strong>Version-control friendly</strong> (plain text)</li>
+</ul>
+</div>
+</section></section>
+<section>
+<section id="bids-ecosystem" class="title-slide slide level1 center" data-number="6">
+<h1><span class="header-section-number">6</span> BIDS Ecosystem</h1>
+
+</section>
+<section id="bids-compatible-tools" class="slide level2">
+<h2>BIDS-Compatible Tools</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="fragment">
+<p><strong>Data organization:</strong></p>
+<ul>
+<li>Heudiconv</li>
+<li>BIDScoin</li>
+<li>dcm2bids</li>
+</ul>
+<p><strong>Preprocessing:</strong></p>
+<ul>
+<li>fMRIPrep</li>
+<li>MRIQC</li>
+<li>QSIPrep</li>
+</ul>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="fragment">
+<p><strong>Analysis:</strong></p>
+<ul>
+<li>Nilearn</li>
+<li>SPM12</li>
+<li>FSL</li>
+<li>AFNI</li>
+</ul>
+<p><strong>Data sharing:</strong></p>
+<ul>
+<li>OpenNeuro</li>
+<li>BIDS Validator</li>
+</ul>
+</div>
+</div></div>
+</section>
+<section id="bids-validator" class="slide level2">
+<h2>BIDS Validator</h2>
+<p><strong>Automatic validation</strong> of BIDS compliance:</p>
+<div class="fragment">
+<ul>
+<li><strong>Web version:</strong> <a href="https://bids-standard.github.io/bids-validator/">bids-standard.github.io/bids-validator/</a></li>
+<li><strong>Command-line tool:</strong> <code>bids-validator /path/to/dataset</code></li>
+<li><strong>Checks:</strong> File naming, required files, metadata consistency</li>
+</ul>
+</div>
+<div class="fragment">
+<p><strong>Benefits:</strong></p>
+<ul>
+<li>Catch errors early</li>
+<li>Ensure compatibility with BIDS tools</li>
+<li>Prepare for data sharing</li>
+</ul>
+</div>
+</section></section>
+<section>
+<section id="getting-started-with-bids" class="title-slide slide level1 center" data-number="7">
+<h1><span class="header-section-number">7</span> Getting Started with BIDS</h1>
+
+</section>
+<section id="steps-to-bidsify-your-data" class="slide level2 scrollable">
+<h2>Steps to BIDSify Your Data</h2>
+<ol type="1">
+<li class="fragment"><strong>Plan ahead:</strong> Consider BIDS during data collection</li>
+<li class="fragment"><strong>Learn the specification:</strong> Read the <a href="https://bids-specification.readthedocs.io/">BIDS specification</a></li>
+<li class="fragment"><strong>Use conversion tools:</strong> dcm2bids, Heudiconv, etc.</li>
+<li class="fragment"><strong>Validate:</strong> Use BIDS validator regularly</li>
+<li class="fragment"><strong>Document:</strong> Create comprehensive README and metadata</li>
+<li class="fragment"><strong>Share:</strong> Consider uploading to OpenNeuro</li>
+</ol>
+</section>
+<section id="bids-starter-kit" class="slide level2">
+<h2>BIDS Starter Kit</h2>
+<p>The <a href="https://bids-standard.github.io/bids-starter-kit/"><strong>BIDS Starter Kit</strong></a> provides:</p>
+<div class="fragment">
+<ul>
+<li><strong>Tutorials</strong> for getting started</li>
+<li><strong>Templates</strong> for common files</li>
+<li><strong>Best practices</strong> and examples</li>
+<li><strong>Community support</strong> and resources</li>
+</ul>
+</div>
+</section>
+<section id="benefits-of-using-bids" class="slide level2">
+<h2>Benefits of Using BIDS</h2>
+<ul>
+<li class="fragment"><strong>Collaboration:</strong> Easier to share and understand data</li>
+<li class="fragment"><strong>Reproducibility:</strong> Standardized organization aids replication</li>
+<li class="fragment"><strong>Tool compatibility:</strong> Access to BIDS-aware analysis pipelines</li>
+<li class="fragment"><strong>Data sharing:</strong> Ready for repositories like OpenNeuro</li>
+<li class="fragment"><strong>Future-proofing:</strong> Organized data survives lab transitions</li>
+<li class="fragment"><strong>Quality control:</strong> Built-in validation catches errors</li>
+</ul>
+</section></section>
+<section>
+<section id="examples" class="title-slide slide level1 center" data-number="8">
+<h1><span class="header-section-number">8</span> Examples</h1>
+
+</section>
+<section id="example-dataset-task-fmri-study" class="slide level2">
+<h2>Example Dataset: Task fMRI Study</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a></a><span class="ex">bids-dataset/</span></span>
+<span id="cb6-2"><a></a><span class="ex">├──</span> dataset_description.json</span>
+<span id="cb6-3"><a></a><span class="ex">├──</span> README</span>
+<span id="cb6-4"><a></a><span class="ex">├──</span> participants.tsv</span>
+<span id="cb6-5"><a></a><span class="ex">├──</span> participants.json</span>
+<span id="cb6-6"><a></a><span class="ex">├──</span> task-faces_bold.json          <span class="co"># Task-level metadata</span></span>
+<span id="cb6-7"><a></a><span class="ex">├──</span> sub-01/</span>
+<span id="cb6-8"><a></a><span class="ex">│</span>   ├── anat/</span>
+<span id="cb6-9"><a></a><span class="ex">│</span>   │   ├── sub-01_T1w.nii.gz</span>
+<span id="cb6-10"><a></a><span class="ex">│</span>   │   └── sub-01_T1w.json</span>
+<span id="cb6-11"><a></a><span class="ex">│</span>   └── func/</span>
+<span id="cb6-12"><a></a><span class="ex">│</span>       ├── sub-01_task-faces_run-1_bold.nii.gz</span>
+<span id="cb6-13"><a></a><span class="ex">│</span>       ├── sub-01_task-faces_run-1_bold.json</span>
+<span id="cb6-14"><a></a><span class="ex">│</span>       ├── sub-01_task-faces_run-1_events.tsv</span>
+<span id="cb6-15"><a></a><span class="ex">│</span>       ├── sub-01_task-faces_run-2_bold.nii.gz</span>
+<span id="cb6-16"><a></a><span class="ex">│</span>       ├── sub-01_task-faces_run-2_bold.json</span>
+<span id="cb6-17"><a></a><span class="ex">│</span>       └── sub-01_task-faces_run-2_events.tsv</span>
+<span id="cb6-18"><a></a><span class="ex">└──</span> sub-02/</span>
+<span id="cb6-19"><a></a>    <span class="ex">└──</span> ... <span class="er">(</span><span class="ex">similar</span> structure<span class="kw">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="common-challenges-and-solutions" class="slide level2">
+<h2>Common Challenges and Solutions</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="fragment">
+<p><strong>Challenge: Complex naming</strong></p>
+<ul>
+<li>Solution: Use BIDS tools for conversion</li>
+<li>Start with simple cases first</li>
+</ul>
+<p><strong>Challenge: Legacy data</strong></p>
+<ul>
+<li>Solution: Gradual conversion</li>
+<li>Document any deviations</li>
+</ul>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="fragment">
+<p><strong>Challenge: Multiple sessions</strong></p>
+<ul>
+<li>Solution: Use session folders (<code>ses-&lt;label&gt;</code>)</li>
+<li>Consistent session naming</li>
+</ul>
+<p><strong>Challenge: Non-standard acquisitions</strong></p>
+<ul>
+<li>Solution: Use acquisition entity (<code>acq-&lt;label&gt;</code>)</li>
+<li>Document in README</li>
+</ul>
+</div>
+</div></div>
+</section></section>
+<section>
+<section id="extensions-and-future" class="title-slide slide level1 center" data-number="9">
+<h1><span class="header-section-number">9</span> Extensions and Future</h1>
+
+</section>
+<section id="bids-extension-proposals-beps" class="slide level2">
+<h2>BIDS Extension Proposals (BEPs)</h2>
+<p>BIDS evolves through <strong>community-driven extensions</strong>:</p>
+<div class="fragment">
+<p><strong>Recent additions:</strong></p>
+<ul>
+<li><strong>EEG/MEG</strong> data organization</li>
+<li><strong>PET</strong> imaging protocols</li>
+<li><strong>Microscopy</strong> data standards</li>
+<li><strong>Motion</strong> data capture</li>
+<li><strong>Genetics</strong> information</li>
+</ul>
+</div>
+</section>
+<section id="the-future-of-bids" class="slide level2">
+<h2>The Future of BIDS</h2>
+<ul>
+<li class="fragment"><strong>Broader adoption</strong> across neuroscience</li>
+<li class="fragment"><strong>New modalities</strong> being standardized</li>
+<li class="fragment"><strong>Enhanced metadata</strong> schemas</li>
+<li class="fragment"><strong>Integration</strong> with analysis platforms</li>
+<li class="fragment"><strong>Machine learning</strong> dataset preparation</li>
+</ul>
+</section></section>
+<section>
+<section id="summary" class="title-slide slide level1 center" data-number="10">
+<h1><span class="header-section-number">10</span> Summary</h1>
+
+</section>
+<section id="key-takeaways" class="slide level2 scrollable">
+<h2>Key Takeaways</h2>
+<ol type="1">
+<li class="fragment"><strong>BIDS standardizes</strong> neuroimaging data organization</li>
+<li class="fragment"><strong>Benefits everyone:</strong> researchers, collaborators, future you</li>
+<li class="fragment"><strong>Ecosystem growth:</strong> tools, databases, and community support</li>
+<li class="fragment"><strong>Start now:</strong> Plan BIDS organization during data collection</li>
+<li class="fragment"><strong>Resources available:</strong> Specification, starter kit, validator, community</li>
+<li class="fragment"><strong>Future-proof</strong> your research data management</li>
+</ol>
+</section>
+<section id="next-steps" class="slide level2 scrollable">
+<h2>Next Steps</h2>
+<div class="fragment">
+<p><strong>For your next neuroimaging project:</strong></p>
+<ol type="1">
+<li>Read the <a href="https://bids-specification.readthedocs.io/">BIDS specification</a></li>
+<li>Explore the <a href="https://bids-standard.github.io/bids-starter-kit/">BIDS Starter Kit</a></li>
+<li>Try the <a href="https://bids-standard.github.io/bids-validator/">BIDS validator</a></li>
+<li>Join the <a href="https://neurostars.org/tag/bids">BIDS community</a></li>
+<li>Consider your data collection protocol</li>
+</ol>
+</div>
+</section>
+<section id="resources" class="slide level2">
+<h2>Resources</h2>
+<ul>
+<li><strong>BIDS Specification:</strong> <a href="https://bids-specification.readthedocs.io/">bids-specification.readthedocs.io</a></li>
+<li><strong>BIDS Starter Kit:</strong> <a href="https://bids-standard.github.io/bids-starter-kit/">bids-standard.github.io/bids-starter-kit/</a></li>
+<li><strong>BIDS Validator:</strong> <a href="https://bids-standard.github.io/bids-validator/">bids-standard.github.io/bids-validator/</a></li>
+<li><strong>OpenNeuro:</strong> <a href="https://openneuro.org/">openneuro.org</a></li>
+<li><strong>Community Forum:</strong> <a href="https://neurostars.org/tag/bids">neurostars.org/tag/bids</a></li>
+</ul>
+</section>
+<section id="references" class="slide level2">
+<h2>References</h2>
+<ul>
+<li>Gorgolewski, K.J., Auer, T., Calhoun, V.D., et al.&nbsp;(2016). <strong>The brain imaging data structure, a format for organizing and describing outputs of neuroimaging experiments.</strong> <em>Scientific Data</em>, 3, 160044. <a href="https://doi.org/10.1038/sdata.2016.44">doi:10.1038/sdata.2016.44</a></li>
+</ul>
+</section></section>
+<section>
+<section id="exercises" class="title-slide slide level1 center" data-number="11">
+<h1><span class="header-section-number">11</span> Exercises</h1>
+
+</section>
+<section id="exercise-1" class="slide level2 scrollable">
+<h2>Exercise 1</h2>
+<h3 id="exercise-1-explore-bids-datasets-on-openneuro">Exercise 1: Explore BIDS datasets on OpenNeuro</h3>
+<p><strong>Objective:</strong> Familiarize yourself with BIDS-formatted datasets and understand how standardized organization facilitates data sharing and reuse.</p>
+<p><strong>Instructions:</strong></p>
+<ol type="1">
+<li><p><strong>Navigate to OpenNeuro:</strong></p>
+<ul>
+<li>Visit <a href="https://openneuro.org/">https://openneuro.org/</a></li>
+<li>Browse the available datasets on the homepage</li>
+</ul></li>
+<li><p><strong>Select and explore a dataset:</strong></p>
+<ul>
+<li>Choose one dataset that interests you (e.g., neuroimaging study related to your research area)</li>
+<li>Click on the dataset to view its details</li>
+</ul></li>
+<li><p><strong>Examine the BIDS structure:</strong></p>
+<ul>
+<li>Click “Browse” or “Files” to view the dataset’s file structure</li>
+<li>Explore the following directories (if present):
+<ul>
+<li>Root level files (<code>dataset_description.json</code>, <code>README</code>, <code>participants.tsv</code>)</li>
+<li>Subject folders (<code>sub-01</code>, <code>sub-02</code>, etc.)</li>
+<li>Session folders (if applicable: <code>ses-01</code>, <code>ses-baseline</code>, etc.)</li>
+<li>Modality folders (<code>anat</code>, <code>func</code>, <code>dwi</code>, <code>fmap</code>, etc.)</li>
+</ul></li>
+</ul></li>
+<li><p><strong>Explore the dataset:</strong></p>
+<ul>
+<li>What type of neuroimaging data does it contain?</li>
+<li>How many subjects are included?</li>
+<li>What file naming patterns do you observe?</li>
+<li>Are there any derivative datasets associated with it?</li>
+</ul></li>
+<li><p><strong>Compare with raw data organization:</strong></p>
+<ul>
+<li>Think about how this standardized structure compares to typical “raw” data organization</li>
+<li>What advantages does this standardization provide for:
+<ul>
+<li>Data sharing?</li>
+<li>Automated processing?</li>
+<li>Reproducibility?</li>
+</ul></li>
+</ul></li>
+</ol>
+<p><strong>Discussion points:</strong></p>
+<ul>
+<li>How does the BIDS structure make it easier to understand the dataset without detailed documentation?</li>
+<li>What challenges might researchers face when converting their data to BIDS format?</li>
+</ul>
+</section>
+<section id="exercise-2" class="slide level2">
+<h2>Exercise 2</h2>
+<h3 id="exercise-2-hands-on-bids-practice">Exercise 2: Hands-on BIDS practice</h3>
+<p><strong>Objective:</strong> Learn how to create a BIDS dataset using <code>heudiconv</code> and use BIDS validation.</p>
+<p><strong>Access the hands-on tutorial:</strong> <a href="https://lennartwittkuhn.com/rdm-bids/">https://lennartwittkuhn.com/rdm-bids/</a></p>
+</section>
+<section id="questions-discussion" class="slide level2">
+<h2>Questions &amp; Discussion</h2>
+<div class="fragment">
+<p><i class="fa-solid fa-comments" aria-label="comments"></i> <strong>Discussion time:</strong></p>
+<ul>
+<li>Have you encountered challenges organizing neuroimaging data?</li>
+<li>Which BIDS modalities are relevant to your research?</li>
+<li>What barriers do you see to adopting BIDS?</li>
+<li>How might BIDS improve your workflow?</li>
+</ul>
+</div>
+</section>
+<section id="references-1" class="slide level2 smaller scrollable">
+<h2>References</h2>
+<div class="refs">
+
+</div>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-gorgolewski2016" class="csl-entry" role="listitem">
+Gorgolewski, K. J., Auer, T., Calhoun, V. D., Craddock, R. C., Das, S., Duff, E. P., Flandin, G., Ghosh, S. S., Glatard, T., Halchenko, Y. O., Handwerker, D. A., Hanke, M., Keator, D., Li, X., Michael, Z., Maumet, C., Nichols, B. N., Nichols, T. E., Pellman, J., … Poldrack, R. A. (2016). The brain imaging data structure, a format for organizing and describing outputs of neuroimaging experiments. <em>Scientific Data</em>, <em>3</em>(1). <a href="https://doi.org/10.1038/sdata.2016.44">https://doi.org/10.1038/sdata.2016.44</a>.
+</div>
+</div>
+</section></section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<div class="footer footer-default">
+<p>RDM Course</p>
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="../../site_libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="../../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="../../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../../site_libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
+  <script src="../../site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="../../site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="../../site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="../../site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="../../site_libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"8\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'chalkboard': {"buttons":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'fast',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1050,
+
+        height: 700,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
+    <script id="quarto-html-after-body" type="application/javascript">
+      window.document.addEventListener("DOMContentLoaded", function (event) {
+        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+        tabsets.forEach(function(tabset) {
+          const tabby = new Tabby('#' + tabset.id);
+        });
+        const isCodeAnnotation = (el) => {
+          for (const clz of el.classList) {
+            if (clz.startsWith('code-annotation-')) {                     
+              return true;
+            }
+          }
+          return false;
+        }
+        const onCopySuccess = function(e) {
+          // button target
+          const button = e.trigger;
+          // don't keep focus
+          button.blur();
+          // flash "checked"
+          button.classList.add('code-copy-button-checked');
+          var currentTitle = button.getAttribute("title");
+          button.setAttribute("title", "Copied!");
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute("data-bs-toggle", "tooltip");
+            button.setAttribute("data-bs-placement", "left");
+            button.setAttribute("data-bs-title", "Copied!");
+            tooltip = new bootstrap.Tooltip(button, 
+              { trigger: "manual", 
+                customClass: "code-copy-button-tooltip",
+                offset: [0, -8]});
+            tooltip.show();    
+          }
+          setTimeout(function() {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute("data-bs-title");
+              button.removeAttribute("data-bs-toggle");
+              button.removeAttribute("data-bs-placement");
+            }
+            button.setAttribute("title", currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+          // clear code selection
+          e.clearSelection();
+        }
+        const getTextToCopy = function(trigger) {
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+          text: getTextToCopy
+        });
+        clipboard.on('success', onCopySuccess);
+        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+            text: getTextToCopy,
+            container: window.document.getElementById('quarto-embedded-source-code-modal')
+          });
+          clipboardModal.on('success', onCopySuccess);
+        }
+          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+          var mailtoRegex = new RegExp(/^mailto:/);
+            var filterRegex = new RegExp("https:\/\/lennartwittkuhn\.com\/rdm-course-jmu-rtg-2660-2026\/");
+          var isInternal = (href) => {
+              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          }
+          // Inspect non-navigation links and adorn them if external
+         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          for (var i=0; i<links.length; i++) {
+            const link = links[i];
+            if (!isInternal(link.href)) {
+              // undo the damage that might have been done by quarto-nav.js in the case of
+              // links that we want to consider external
+              if (link.dataset.originalHref !== undefined) {
+                link.href = link.dataset.originalHref;
+              }
+                // target, if specified
+                link.setAttribute("target", "_blank");
+                if (link.getAttribute("rel") === null) {
+                  link.setAttribute("rel", "noopener");
+                }
+            }
+          }
+        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+          const config = {
+            allowHTML: true,
+            maxWidth: 500,
+            delay: 100,
+            arrow: false,
+            appendTo: function(el) {
+                return el.closest('section.slide') || el.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'light-border',
+            placement: 'bottom-start',
+          };
+          if (contentFn) {
+            config.content = contentFn;
+          }
+          if (onTriggerFn) {
+            config.onTrigger = onTriggerFn;
+          }
+          if (onUntriggerFn) {
+            config.onUntrigger = onUntriggerFn;
+          }
+            config['offset'] = [0,0];
+            config['maxWidth'] = 700;
+          window.tippy(el, config); 
+        }
+        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+        for (var i=0; i<noterefs.length; i++) {
+          const ref = noterefs[i];
+          tippyHover(ref, function() {
+            // use id or data attribute instead here
+            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+            try { href = new URL(href).hash; } catch {}
+            const id = href.replace(/^#\/?/, "");
+            const note = window.document.getElementById(id);
+            if (note) {
+              return note.innerHTML;
+            } else {
+              return "";
+            }
+          });
+        }
+        const findCites = (el) => {
+          const parentEl = el.parentElement;
+          if (parentEl) {
+            const cites = parentEl.dataset.cites;
+            if (cites) {
+              return {
+                el,
+                cites: cites.split(' ')
+              };
+            } else {
+              return findCites(el.parentElement)
+            }
+          } else {
+            return undefined;
+          }
+        };
+        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+        for (var i=0; i<bibliorefs.length; i++) {
+          const ref = bibliorefs[i];
+          const citeInfo = findCites(ref);
+          if (citeInfo) {
+            tippyHover(citeInfo.el, function() {
+              var popup = window.document.createElement('div');
+              citeInfo.cites.forEach(function(cite) {
+                var citeDiv = window.document.createElement('div');
+                citeDiv.classList.add('hanging-indent');
+                citeDiv.classList.add('csl-entry');
+                var biblioDiv = window.document.getElementById('ref-' + cite);
+                if (biblioDiv) {
+                  citeDiv.innerHTML = biblioDiv.innerHTML;
+                }
+                popup.appendChild(citeDiv);
+              });
+              return popup.innerHTML;
+            });
+          }
+        }
+      });
+      </script>
+    
+
+</body></html>

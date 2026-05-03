@@ -1,0 +1,6 @@
+"Participant","Day1_Sleep","Day1_Exercise","Day2_Sleep","Day2_Exercise","Notes"
+"P001",7.5,"Yes",6,"No","Sick on day 2"
+"P002",8,"No",8.5,"Yes",""
+"P003",6.5,"Yes",7,"Yes","Traveled on day 1"
+"P004",7.2,"No",NA,"No","Missing sleep data"
+"P005",6.8,"Yes",7.8,"Yes",""
