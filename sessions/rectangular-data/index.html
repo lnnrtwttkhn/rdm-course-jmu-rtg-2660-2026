@@ -91,7 +91,6 @@ div.csl-indent {
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-f79c7fb6db380d32be398468f2fb58cf.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
@@ -205,39 +204,44 @@ div.csl-indent {
 </nav>
     </div>
 <!-- main -->
-<main class="content column-page-left" id="quarto-document-content">
+<main class="content page-columns page-full column-page-left" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+
+
+
+<div class="quarto-about-solana column-page-left">
+  <div class="about-entity">
+    <div class="entity-contents">
+      <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">Best practices for rectangular data</h1>
 </div>
-
-
-
 <div class="quarto-title-meta column-page-left">
-
-    
     <div>
     <div class="quarto-title-meta-heading">Starts at:</div>
     <div class="quarto-title-meta-contents">
       <p class="date">Thursday, 13:30</p>
     </div>
   </div>
-  
-    
   </div>
-  
-
-
-</header>
-
+</header> <div class="about-links">
+  <a href="https://lennartwittkuhn.com/rdm-course-jmu-rtg-2660-2026/sessions/rectangular-data/slides.html" class="about-link" rel="" target="">
+    <i class="bi bi-display"></i>
+     <span class="about-link-text">Slides</span>
+  </a>
+</div>
+      <div class="about-contents"><div id="hero-heading">
+</div></div>
+    </div>
+  </div>
+</div>
 
 <section id="objectives" class="level2">
-<h2 class="anchored" data-anchor-id="objectives">Objectives</h2>
+<h2 data-anchor-id="objectives">Objectives</h2>
 <p><span class="emoji" data-emoji="bulb">💡</span> You can apply the 12 rules of rectangular data to organize research datasets effectively.<br> <span class="emoji" data-emoji="bulb">💡</span> You understand the principles of tidy data and can identify when data meets tidy data criteria.<br> <span class="emoji" data-emoji="bulb">💡</span> You can convert between wide and long data formats.<br> <span class="emoji" data-emoji="bulb">💡</span> You can implement data validation techniques to detect and prevent common data entry errors.<br> <span class="emoji" data-emoji="bulb">💡</span> You can apply best practices for file naming and data organization in research projects.<br> <span class="emoji" data-emoji="bulb">💡</span> You can identify and fix data problems such as empty cells, inconsistent formatting, and mixed data types.<br> <span class="emoji" data-emoji="bulb">💡</span> You understand the importance of data dictionaries and can create them for your datasets.</p>
 </section>
 <section id="exercises" class="level2">
-<h2 class="anchored" data-anchor-id="exercises">Exercises</h2>
+<h2 data-anchor-id="exercises">Exercises</h2>
 <div class="callout callout-style-default callout-note callout-titled" title="Exercise 1: Identifying rectangular data rules">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -250,13 +254,13 @@ div.csl-indent {
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <section id="exercise-1-identifying-rectangular-data-rules" class="level3 callout-body-container callout-body">
-<h3 class="anchored" data-anchor-id="exercise-1-identifying-rectangular-data-rules">Exercise 1: Identifying rectangular data rules</h3>
+<h3 data-anchor-id="exercise-1-identifying-rectangular-data-rules">Exercise 1: Identifying rectangular data rules</h3>
 <ol type="1">
 <li>Look at the following dataset examples and identify which rules of rectangular data are being violated.</li>
 <li>For each violation, explain how you would fix it.</li>
 </ol>
 <section id="dataset-a" class="level4">
-<h4 class="anchored" data-anchor-id="dataset-a">Dataset A</h4>
+<h4 data-anchor-id="dataset-a">Dataset A</h4>
 <p><a href="data/dataset_a.csv" class="btn btn-outline-primary" role="button">Download the data</a></p>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
@@ -271,7 +275,7 @@ div.csl-indent {
 </div>
 </section>
 <section id="dataset-b" class="level4">
-<h4 class="anchored" data-anchor-id="dataset-b">Dataset B</h4>
+<h4 data-anchor-id="dataset-b">Dataset B</h4>
 <p><a href="data/dataset_b.csv" class="btn btn-outline-primary" role="button">Download the data</a></p>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
@@ -305,7 +309,7 @@ div.csl-indent {
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <section id="exercise-2-wide-vs.-long-data-conversion" class="level3 callout-body-container callout-body">
-<h3 class="anchored" data-anchor-id="exercise-2-wide-vs.-long-data-conversion">Exercise 2: Wide vs.&nbsp;long data conversion</h3>
+<h3 data-anchor-id="exercise-2-wide-vs.-long-data-conversion">Exercise 2: Wide vs.&nbsp;long data conversion</h3>
 <p><a href="data/scores_wide.csv" class="btn btn-outline-primary" role="button">Download the data</a></p>
 <p>Given the following wide-format dataset about students’ test scores:</p>
 <div class="cell">
@@ -339,7 +343,7 @@ div.csl-indent {
 </div>
 <div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <section id="exercise-3-data-validation-with-assertr-in-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206272616e647320722d70726f6a656374203e7d7d" class="level3 callout-body-container callout-body">
-<h3 class="anchored" data-anchor-id="exercise-3-data-validation-with-assertr-in-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206272616e647320722d70726f6a656374203e7d7d">Exercise 3: Data validation with <code>assertr</code> in <i class="fa-brands fa-r-project" aria-label="r-project"></i></h3>
+<h3 data-anchor-id="exercise-3-data-validation-with-assertr-in-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206272616e647320722d70726f6a656374203e7d7d">Exercise 3: Data validation with <code>assertr</code> in <i class="fa-brands fa-r-project" aria-label="r-project"></i></h3>
 <p><a href="data/reaction_data.csv" class="btn btn-outline-primary" role="button">Download the data</a></p>
 <p>You have collected reaction time data from a psychological experiment. Write validation rules using the <code>assertr</code> package in <i class="fa-brands fa-r-project" aria-label="r-project"></i> to check for the following conditions:</p>
 <div class="cell">
@@ -377,7 +381,7 @@ div.csl-indent {
 </div>
 <div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <section id="exercise-4-tidy-data-principles" class="level3 callout-body-container callout-body">
-<h3 class="anchored" data-anchor-id="exercise-4-tidy-data-principles">Exercise 4: Tidy data principles</h3>
+<h3 data-anchor-id="exercise-4-tidy-data-principles">Exercise 4: Tidy data principles</h3>
 <p><a href="data/physiological_data.csv" class="btn btn-outline-primary" role="button">Download the data</a></p>
 <p>Examine the following dataset and determine whether it follows tidy data principles:</p>
 <div class="cell">
@@ -418,7 +422,7 @@ div.csl-indent {
 </div>
 <div id="callout-5" class="callout-5-contents callout-collapse collapse">
 <section id="exercise-5-data-organization-best-practices" class="level3 callout-body-container callout-body">
-<h3 class="anchored" data-anchor-id="exercise-5-data-organization-best-practices">Exercise 5: Data organization best practices</h3>
+<h3 data-anchor-id="exercise-5-data-organization-best-practices">Exercise 5: Data organization best practices</h3>
 <p>You are starting a new research project studying the effects of different teaching methods on student performance. You plan to collect data from 3 schools, with 2 different teaching methods, over 4 time points, measuring math and reading scores.</p>
 <ol type="1">
 <li><p>Design the structure for your main dataset following rectangular data principles. Include:</p>
@@ -446,7 +450,7 @@ div.csl-indent {
 </div>
 <div id="callout-6" class="callout-6-contents callout-collapse collapse">
 <section id="exercise-6-file-naming-and-organization" class="level3 callout-body-container callout-body">
-<h3 class="anchored" data-anchor-id="exercise-6-file-naming-and-organization">Exercise 6: File naming and organization</h3>
+<h3 data-anchor-id="exercise-6-file-naming-and-organization">Exercise 6: File naming and organization</h3>
 <p>You have the following research files that need to be renamed according to best practices:</p>
 <pre><code>final_results.xlsx
 data backup.csv
@@ -474,7 +478,7 @@ reading data - Jan 15.txt</code></pre>
 </div>
 <div id="callout-7" class="callout-7-contents callout-collapse collapse">
 <section id="exercise-7-fixing-common-data-problems" class="level3 callout-body-container callout-body">
-<h3 class="anchored" data-anchor-id="exercise-7-fixing-common-data-problems">Exercise 7: Fixing common data problems</h3>
+<h3 data-anchor-id="exercise-7-fixing-common-data-problems">Exercise 7: Fixing common data problems</h3>
 <p><a href="data/messy_data.csv" class="btn btn-outline-primary" role="button">Download the data</a></p>
 <p>The following dataset contains several common data entry errors. Identify and fix them:</p>
 <div class="cell">
@@ -496,7 +500,7 @@ reading data - Jan 15.txt</code></pre>
 </div>
 </div>
 <section id="how-to-use-these-exercises" class="level3">
-<h3 class="anchored" data-anchor-id="how-to-use-these-exercises">How to use these exercises</h3>
+<h3 data-anchor-id="how-to-use-these-exercises">How to use these exercises</h3>
 <ul>
 <li>Each exercise is self-contained and can be completed independently</li>
 <li>Some exercises build upon earlier ones, so working through them in order is recommended</li>
@@ -505,14 +509,14 @@ reading data - Jan 15.txt</code></pre>
 </ul>
 </section>
 <section id="required-packages" class="level3">
-<h3 class="anchored" data-anchor-id="required-packages">Required packages</h3>
+<h3 data-anchor-id="required-packages">Required packages</h3>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="fu">c</span>(<span class="st">"tidyr"</span>, <span class="st">"dplyr"</span>, <span class="st">"assertr"</span>, <span class="st">"readr"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 </section>
 <section id="slides" class="level2">
-<h2 class="anchored" data-anchor-id="slides">Slides</h2>
+<h2 data-anchor-id="slides">Slides</h2>
 <iframe width="100%" height="500" src="slides.html"></iframe>
 <div class="callout callout-style-simple callout-note callout-titled" title="How can I download the slides as a PDF file?">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
@@ -537,20 +541,20 @@ reading data - Jan 15.txt</code></pre>
 <li>Click <strong>Save</strong>.</li>
 </ol>
 <p>Note: This feature has been confirmed to work in <a href="https://google.com/chrome">Google Chrome</a>, <a href="https://www.chromium.org/Home">Chromium</a> as well as in <a href="https://www.mozilla.org/en-US/firefox/">Firefox</a>.</p>
-<p>Here’s what the Chrome print dialog would look like with these settings enabled:</p>
 <p>These instructions were copied from the <a href="https://quarto.org/docs/presentations/revealjs/presenting.html#print-to-pdf">Quarto documentation</a> (<a href="https://opensource.org/license/mit/">MIT License</a>) and slightly modified.</p>
 </div>
 </div>
 </div>
 </section>
 <section id="resources" class="level2">
-<h2 class="anchored" data-anchor-id="resources">Resources</h2>
+<h2 data-anchor-id="resources">Resources</h2>
 <ul>
 <li><a href="https://dplyr.tidyverse.org">dplyr documentation</a></li>
 <li><a href="https://tidyr.tidyverse.org">tidyr documentation</a></li>
 <li><a href="https://cran.r-project.org/web/packages/assertr/vignettes/assertr.html">assertr package vignette</a></li>
 <li><span class="citation" data-cites="broman2018">Broman &amp; Woo (<a href="#ref-broman2018" role="doc-biblioref">2018</a>)</span> “Data Organization in Spreadsheets”</li>
 </ul>
+
 
 
 
@@ -563,13 +567,6 @@ Broman, K. W., &amp; Woo, K. H. (2018). Data organization in spreadsheets. <em>T
 </div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
-    const icon = "";
-    const anchorJS = new window.AnchorJS();
-    anchorJS.options = {
-      placement: 'right',
-      icon: icon
-    };
-    anchorJS.add('.anchored');
     const isCodeAnnotation = (el) => {
       for (const clz of el.classList) {
         if (clz.startsWith('code-annotation-')) {                     

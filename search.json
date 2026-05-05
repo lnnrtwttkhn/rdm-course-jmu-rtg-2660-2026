@@ -522,7 +522,7 @@
     "href": "sessions/datalad/index.html#slides",
     "title": "Reproducible Research Data Management with DataLad",
     "section": "Slides",
-    "text": "Slides\n\n\n\n\n\n\n\nNoteHow can I download the slides as a PDF file?\n\n\n\n\n\nTo export the slides to PDF, do the following:\n\nToggle into Print View using the E key (or using the Navigation Menu).\nOpen the in-browser print dialog (CTRL/CMD+P).\nChange the Destination setting to Save as PDF.\nChange the Layout to Landscape.\nChange the Margins to None.\nEnable the Background graphics option.\nClick Save.\n\nNote: This feature has been confirmed to work in Google Chrome, Chromium as well as in Firefox.\nHere’s what the Chrome print dialog would look like with these settings enabled:\nThese instructions were copied from the Quarto documentation (MIT License) and slightly modified."
+    "text": "Slides\n\n\n\n\n\n\n\nNoteHow can I download the slides as a PDF file?\n\n\n\n\n\nTo export the slides to PDF, do the following:\n\nToggle into Print View using the E key (or using the Navigation Menu).\nOpen the in-browser print dialog (CTRL/CMD+P).\nChange the Destination setting to Save as PDF.\nChange the Layout to Landscape.\nChange the Margins to None.\nEnable the Background graphics option.\nClick Save.\n\nNote: This feature has been confirmed to work in Google Chrome, Chromium as well as in Firefox.\nThese instructions were copied from the Quarto documentation (MIT License) and slightly modified."
   },
   {
     "objectID": "sessions/datalad/index.html#cheatsheet",
@@ -735,6 +735,13 @@
     "text": "Introduction to Research Data Management\n\n\n\n\n\nThursday, 2026-05-07, 09:00\n\n\nDay 1\n\n\n\n\n\n\n\nProject & Data Organization\n\n\n\n\n\nThursday, 2026-05-07, 09:30\n\n\nDay 1\n\n\n\n\n\n\n\nData Management Plans\n\n\n\n\n\nThursday, 2026-05-07, 10:30\n\n\nDay 1\n\n\n\n\n\n\n\nLunch Day 1\n\n\n\n\n\nThursday, 2026-05-07, 11:30\n\n\nDay 1\n\n\n\n\n\n\n\nCommand Line\n\n\n\n\n\nThursday, 2026-05-07, 12:30\n\n\nDay 1\n\n\n\n\n\n\n\nBest practices for rectangular data\n\n\n\n\n\nThursday, 2026-05-07, 13:30\n\n\nDay 1\n\n\n\n\n\n\n\nBrain Imaging Data Structure (BIDS)\n\n\n\n\n\nThursday, 2026-05-07, 14:30\n\n\nDay 1\n\n\n\n\n\n\n\nIntroduction to Version Control\n\n\n\n\n\nFriday, 2026-05-08, 09:00\n\n\nDay 2\n\n\n\n\n\n\n\nReproducible Research Data Management with DataLad\n\n\n\n\n\nFriday, 2026-05-08, 09:30\n\n\nDay 2\n\n\n\n\n\n\n\nLunch Day 2\n\n\n\n\n\nFriday, 2026-05-08, 11:30\n\n\nDay 2\n\n\n\n\n\n\n\nData Infrastructure\n\n\n\n\n\nFriday, 2026-05-08, 12:30\n\n\nDay 2\n\n\n\n\n\n\n\nData Publication\n\n\n\n\n\nFriday, 2026-05-08, 13:30\n\n\nDay 2\n\n\n\n\n\n\n\nSummary & Outlook\n\n\n\n\n\nFriday, 2026-05-08, 15:30\n\n\nDay 2\n\n\n\n\n\nNo matching items"
   },
   {
+    "objectID": "sessions/version-control-introduction/index.html",
+    "href": "sessions/version-control-introduction/index.html",
+    "title": "Introduction to Version Control",
+    "section": "",
+    "text": "Slides"
+  },
+  {
     "objectID": "sessions/version-control-introduction/index.html#objectives",
     "href": "sessions/version-control-introduction/index.html#objectives",
     "title": "Introduction to Version Control",
@@ -753,7 +760,14 @@
     "href": "sessions/version-control-introduction/index.html#slides",
     "title": "Introduction to Version Control",
     "section": "Slides",
-    "text": "Slides\n\n\n\n\n\n\n\nNoteHow can I download the slides as a PDF file?\n\n\n\n\n\nTo export the slides to PDF, do the following:\n\nToggle into Print View using the E key (or using the Navigation Menu).\nOpen the in-browser print dialog (CTRL/CMD+P).\nChange the Destination setting to Save as PDF.\nChange the Layout to Landscape.\nChange the Margins to None.\nEnable the Background graphics option.\nClick Save.\n\nNote: This feature has been confirmed to work in Google Chrome, Chromium as well as in Firefox.\nHere’s what the Chrome print dialog would look like with these settings enabled:\nThese instructions were copied from the Quarto documentation (MIT License) and slightly modified."
+    "text": "Slides\n\n\n\n\n\n\n\nNoteHow can I download the slides as a PDF file?\n\n\n\n\n\nTo export the slides to PDF, do the following:\n\nToggle into Print View using the E key (or using the Navigation Menu).\nOpen the in-browser print dialog (CTRL/CMD+P).\nChange the Destination setting to Save as PDF.\nChange the Layout to Landscape.\nChange the Margins to None.\nEnable the Background graphics option.\nClick Save.\n\nNote: This feature has been confirmed to work in Google Chrome, Chromium as well as in Firefox.\nThese instructions were copied from the Quarto documentation (MIT License) and slightly modified."
+  },
+  {
+    "objectID": "sessions/data-publication/index.html",
+    "href": "sessions/data-publication/index.html",
+    "title": "Data Publication",
+    "section": "",
+    "text": "Slides"
   },
   {
     "objectID": "sessions/data-publication/index.html#objectives",
@@ -774,7 +788,7 @@
     "href": "sessions/data-publication/index.html#slides",
     "title": "Data Publication",
     "section": "Slides",
-    "text": "Slides\n\n\n\n\n\n\n\nNoteHow can I download the slides as a PDF file?\n\n\n\n\n\nTo export the slides to PDF, do the following:\n\nToggle into Print View using the E key (or using the Navigation Menu).\nOpen the in-browser print dialog (CTRL/CMD+P).\nChange the Destination setting to Save as PDF.\nChange the Layout to Landscape.\nChange the Margins to None.\nEnable the Background graphics option.\nClick Save.\n\nNote: This feature has been confirmed to work in Google Chrome, Chromium as well as in Firefox.\nHere’s what the Chrome print dialog would look like with these settings enabled:\nThese instructions were copied from the Quarto documentation (MIT License) and slightly modified."
+    "text": "Slides\n\n\n\n\n\n\n\nNoteHow can I download the slides as a PDF file?\n\n\n\n\n\nTo export the slides to PDF, do the following:\n\nToggle into Print View using the E key (or using the Navigation Menu).\nOpen the in-browser print dialog (CTRL/CMD+P).\nChange the Destination setting to Save as PDF.\nChange the Layout to Landscape.\nChange the Margins to None.\nEnable the Background graphics option.\nClick Save.\n\nNote: This feature has been confirmed to work in Google Chrome, Chromium as well as in Firefox.\nThese instructions were copied from the Quarto documentation (MIT License) and slightly modified."
   },
   {
     "objectID": "sessions/data-publication/index.html#resources",
@@ -782,6 +796,13 @@
     "title": "Data Publication",
     "section": "Resources",
     "text": "Resources\n\nData Publication Guidance\n\nARDC Guide to Choosing a Data Repository\nDCC Checklist for Evaluating Data Repositories\nHow to License Research Data (DCC)\n\n\n\nRepository Directories\n\nre3data.org - Registry of Research Data Repositories\nFAIRsharing - Database of data standards, repositories and policies\n\n\n\nPublisher Recommendations\n\nPLOS ONE Recommended Repositories\nSpringer Nature Data Repository Guidance\nElsevier Public Repositories List\n\n\n\nLicensing Resources\n\nCreative Commons License Chooser\nOpen Data Commons Licenses\nLicensing Research Data (Brettschneider et al., 2021) [German]\n\n\n\nLegal and Ethical Considerations\n\nData Publication Decision Tree [German]\nCambridge Data Availability Statements Guide\nOpen Research Summer School: Data Anonymity by Felix Schönbrodt\n\n\n\nPersistent Identifiers\n\nDOI.org - Digital Object Identifier System\nORCID - Open Researcher and Contributor ID\nROR - Research Organization Registry\n\n\n\nTraining Materials\n\nTU Delft Open Science MOOC\nResearch Data Management and Sharing (Coursera)\nThe Turing Way: Research Data Management"
+  },
+  {
+    "objectID": "sessions/dmp/index.html",
+    "href": "sessions/dmp/index.html",
+    "title": "Data Management Plans",
+    "section": "",
+    "text": "Slides"
   },
   {
     "objectID": "sessions/dmp/index.html#objectives",
@@ -802,7 +823,7 @@
     "href": "sessions/dmp/index.html#slides",
     "title": "Data Management Plans",
     "section": "Slides",
-    "text": "Slides\n\n\n\n\n\n\n\nNoteHow can I download the slides as a PDF file?\n\n\n\n\n\nTo export the slides to PDF, do the following:\n\nToggle into Print View using the E key (or using the Navigation Menu).\nOpen the in-browser print dialog (CTRL/CMD+P).\nChange the Destination setting to Save as PDF.\nChange the Layout to Landscape.\nChange the Margins to None.\nEnable the Background graphics option.\nClick Save.\n\nNote: This feature has been confirmed to work in Google Chrome, Chromium as well as in Firefox.\nHere’s what the Chrome print dialog would look like with these settings enabled:\nThese instructions were copied from the Quarto documentation (MIT License) and slightly modified."
+    "text": "Slides\n\n\n\n\n\n\n\nNoteHow can I download the slides as a PDF file?\n\n\n\n\n\nTo export the slides to PDF, do the following:\n\nToggle into Print View using the E key (or using the Navigation Menu).\nOpen the in-browser print dialog (CTRL/CMD+P).\nChange the Destination setting to Save as PDF.\nChange the Layout to Landscape.\nChange the Margins to None.\nEnable the Background graphics option.\nClick Save.\n\nNote: This feature has been confirmed to work in Google Chrome, Chromium as well as in Firefox.\nThese instructions were copied from the Quarto documentation (MIT License) and slightly modified."
   },
   {
     "objectID": "sessions/dmp/index.html#resources",
@@ -823,14 +844,14 @@
     "href": "sessions/rectangular-data/index.html",
     "title": "Best practices for rectangular data",
     "section": "",
-    "text": "💡 You can apply the 12 rules of rectangular data to organize research datasets effectively. 💡 You understand the principles of tidy data and can identify when data meets tidy data criteria. 💡 You can convert between wide and long data formats. 💡 You can implement data validation techniques to detect and prevent common data entry errors. 💡 You can apply best practices for file naming and data organization in research projects. 💡 You can identify and fix data problems such as empty cells, inconsistent formatting, and mixed data types. 💡 You understand the importance of data dictionaries and can create them for your datasets."
+    "text": "Slides"
   },
   {
     "objectID": "sessions/rectangular-data/index.html#objectives",
     "href": "sessions/rectangular-data/index.html#objectives",
     "title": "Best practices for rectangular data",
-    "section": "",
-    "text": "💡 You can apply the 12 rules of rectangular data to organize research datasets effectively. 💡 You understand the principles of tidy data and can identify when data meets tidy data criteria. 💡 You can convert between wide and long data formats. 💡 You can implement data validation techniques to detect and prevent common data entry errors. 💡 You can apply best practices for file naming and data organization in research projects. 💡 You can identify and fix data problems such as empty cells, inconsistent formatting, and mixed data types. 💡 You understand the importance of data dictionaries and can create them for your datasets."
+    "section": "Objectives",
+    "text": "Objectives\n💡 You can apply the 12 rules of rectangular data to organize research datasets effectively. 💡 You understand the principles of tidy data and can identify when data meets tidy data criteria. 💡 You can convert between wide and long data formats. 💡 You can implement data validation techniques to detect and prevent common data entry errors. 💡 You can apply best practices for file naming and data organization in research projects. 💡 You can identify and fix data problems such as empty cells, inconsistent formatting, and mixed data types. 💡 You understand the importance of data dictionaries and can create them for your datasets."
   },
   {
     "objectID": "sessions/rectangular-data/index.html#exercises",
@@ -844,7 +865,7 @@
     "href": "sessions/rectangular-data/index.html#slides",
     "title": "Best practices for rectangular data",
     "section": "Slides",
-    "text": "Slides\n\n\n\n\n\n\n\nNoteHow can I download the slides as a PDF file?\n\n\n\n\n\nTo export the slides to PDF, do the following:\n\nToggle into Print View using the E key (or using the Navigation Menu).\nOpen the in-browser print dialog (CTRL/CMD+P).\nChange the Destination setting to Save as PDF.\nChange the Layout to Landscape.\nChange the Margins to None.\nEnable the Background graphics option.\nClick Save.\n\nNote: This feature has been confirmed to work in Google Chrome, Chromium as well as in Firefox.\nHere’s what the Chrome print dialog would look like with these settings enabled:\nThese instructions were copied from the Quarto documentation (MIT License) and slightly modified."
+    "text": "Slides\n\n\n\n\n\n\n\nNoteHow can I download the slides as a PDF file?\n\n\n\n\n\nTo export the slides to PDF, do the following:\n\nToggle into Print View using the E key (or using the Navigation Menu).\nOpen the in-browser print dialog (CTRL/CMD+P).\nChange the Destination setting to Save as PDF.\nChange the Layout to Landscape.\nChange the Margins to None.\nEnable the Background graphics option.\nClick Save.\n\nNote: This feature has been confirmed to work in Google Chrome, Chromium as well as in Firefox.\nThese instructions were copied from the Quarto documentation (MIT License) and slightly modified."
   },
   {
     "objectID": "sessions/rectangular-data/index.html#resources",
@@ -984,7 +1005,7 @@
     "href": "sessions/introduction/slides.html#excel-a-cautionary-tale",
     "title": "Introduction to Research Data Management",
     "section": "Excel: A cautionary tale",
-    "text": "Excel: A cautionary tale\n\n\n\nTry this exercise:\n\nOpen an Excel Sheet.\nSet first column to date-format.\nEnter the year 2010 into cell A1.\n\n\n\nResult: Excel renders your entry as 2nd July 1905!\n\n\nMore seriously …\n\n\n\nCommon gene symbols: SEPT2, MARCH1, etc.\n~20% of genetic research affected by Excel errors (Ziemann et al., 2016)\n“Solution”: HUGO Gene Nomenclature Committee renamed genes!\n\n\n\nWhy is Excel still used?\n\nVery intuitive\nEasy data entry\nBuilt-in functions\nQuick to work with\n\nRecommendation\n\nUse Excel for data entry only\nUse  or Python for analysis\nSave computations in scripts for reproducibility"
+    "text": "Excel: A cautionary tale\n\n\n\nTry this exercise:\n\nOpen an Excel Sheet.\nSet first column to date-format.\nEnter the year 2010 into cell A1.\n\n\n\nResult: Excel renders your entry as 2nd July 1905!\n\n\nMore seriously …\n\n\n\nCommon gene symbols: SEPT2, MARCH1, etc.\n~20% of genetic research affected by Excel errors (Ziemann et al., 2016)\n“Solution”: HUGO Gene Nomenclature Committee renamed genes!\n\n\n\nWhy is Excel still used?\n\nVery intuitive\nEasy data entry\nBuilt-in functions\nQuick to work with\n\nRecommendation\n\nUse Excel for data entry only\nUse  or Python for analysis\nSave computations in scripts for reproducibility\n\n\n\n\nExcel stores dates as serial numbers starting from January 1, 1900, so when a cell is formatted as a date and you enter “2010,” Excel interprets it as the 2010th day after that base date rather than the year 2010; day 2010 corresponds to July 2, 1905, which is why that date appears instead of what you expected."
   },
   {
     "objectID": "sessions/introduction/slides.html#lets-avoid-this",
@@ -1071,6 +1092,13 @@
     "text": "Footnotes\n\n\nThe Turing Way Community (2022), see “Guide on Reproducible Research”\nThe Turing Way Community (2022), see “Guide on Reproducible Research”\nfor example, in Psychology: Crüwell et al. (2023); Hardwicke et al. (2021); Obels et al. (2020); Wicherts et al. (2006)\nsee Baker (2016), Nature\nsee e.g., Poldrack (2019)\n“Data Sharing and Management Snafu in 3 Short Acts”. The video by Hanson et al. (2019) from NYU Health Sciences Library features a cute animated panda researcher making a data sharing request to a bear researcher. It does not go well. The video aims to communicate some of the common and avoidable pitfalls of research data management in a light-hearted format. Topics include storage, documentation, and file formats. The video was produced using a tool called Xtranormal (now “nawmal”) and the characters are strangely expressive while talking in robotic text-to-speech voices with a limited range of movement. It was created and uploaded to YouTube by librarians at NYU School of Medicine in 2012 to be used for research data management education and has been included in numerous research data management courses and presentations. License: Creative Commons Attribution 4.0 International (CC BY 4.0). Reused without modifications."
   },
   {
+    "objectID": "sessions/introduction/index.html",
+    "href": "sessions/introduction/index.html",
+    "title": "Introduction to Research Data Management",
+    "section": "",
+    "text": "Slides"
+  },
+  {
     "objectID": "sessions/introduction/index.html#objectives",
     "href": "sessions/introduction/index.html#objectives",
     "title": "Introduction to Research Data Management",
@@ -1089,7 +1117,7 @@
     "href": "sessions/introduction/index.html#slides",
     "title": "Introduction to Research Data Management",
     "section": "Slides",
-    "text": "Slides\n\n\n\n\n\n\n\nNoteHow can I download the slides as a PDF file?\n\n\n\n\n\nTo export the slides to PDF, do the following:\n\nToggle into Print View using the E key (or using the Navigation Menu).\nOpen the in-browser print dialog (CTRL/CMD+P).\nChange the Destination setting to Save as PDF.\nChange the Layout to Landscape.\nChange the Margins to None.\nEnable the Background graphics option.\nClick Save.\n\nNote: This feature has been confirmed to work in Google Chrome, Chromium as well as in Firefox.\nHere’s what the Chrome print dialog would look like with these settings enabled:\nThese instructions were copied from the Quarto documentation (MIT License) and slightly modified."
+    "text": "Slides\n\n\n\n\n\n\n\nNoteHow can I download the slides as a PDF file?\n\n\n\n\n\nTo export the slides to PDF, do the following:\n\nToggle into Print View using the E key (or using the Navigation Menu).\nOpen the in-browser print dialog (CTRL/CMD+P).\nChange the Destination setting to Save as PDF.\nChange the Layout to Landscape.\nChange the Margins to None.\nEnable the Background graphics option.\nClick Save.\n\nNote: This feature has been confirmed to work in Google Chrome, Chromium as well as in Firefox.\nThese instructions were copied from the Quarto documentation (MIT License) and slightly modified."
   },
   {
     "objectID": "sessions/introduction/index.html#resources",
@@ -1645,6 +1673,13 @@
     "text": "Footnotes\n\n\n(Source: Wikipedia)\nsee DataLad dataset of 80TB / 15 million files from the Human Connectome Project (see details)\nbut apparently not maintained anymore\n(Source: Wikipedia)\npull requests on GitHub, merge requests on GitLab"
   },
   {
+    "objectID": "sessions/project-organization/index.html",
+    "href": "sessions/project-organization/index.html",
+    "title": "Project & Data Organization",
+    "section": "",
+    "text": "Slides"
+  },
+  {
     "objectID": "sessions/project-organization/index.html#objectives",
     "href": "sessions/project-organization/index.html#objectives",
     "title": "Project & Data Organization",
@@ -1691,7 +1726,7 @@
     "href": "sessions/project-organization/index.html#slides",
     "title": "Project & Data Organization",
     "section": "Slides",
-    "text": "Slides\n\n\n\n\n\n\n\nNoteHow can I download the slides as a PDF file?\n\n\n\n\n\nTo export the slides to PDF, do the following:\n\nToggle into Print View using the E key (or using the Navigation Menu).\nOpen the in-browser print dialog (CTRL/CMD+P).\nChange the Destination setting to Save as PDF.\nChange the Layout to Landscape.\nChange the Margins to None.\nEnable the Background graphics option.\nClick Save.\n\nNote: This feature has been confirmed to work in Google Chrome, Chromium as well as in Firefox.\nHere’s what the Chrome print dialog would look like with these settings enabled:\nThese instructions were copied from the Quarto documentation (MIT License) and slightly modified."
+    "text": "Slides\n\n\n\n\n\n\n\nNoteHow can I download the slides as a PDF file?\n\n\n\n\n\nTo export the slides to PDF, do the following:\n\nToggle into Print View using the E key (or using the Navigation Menu).\nOpen the in-browser print dialog (CTRL/CMD+P).\nChange the Destination setting to Save as PDF.\nChange the Layout to Landscape.\nChange the Margins to None.\nEnable the Background graphics option.\nClick Save.\n\nNote: This feature has been confirmed to work in Google Chrome, Chromium as well as in Firefox.\nThese instructions were copied from the Quarto documentation (MIT License) and slightly modified."
   },
   {
     "objectID": "sessions/lunch-day1/index.html",
@@ -1715,6 +1750,13 @@
     "text": "Exercises\n\n Find food.\n Eat food.\n Relax and recharge.\n Have coffee?"
   },
   {
+    "objectID": "sessions/data-infrastructure/index.html",
+    "href": "sessions/data-infrastructure/index.html",
+    "title": "Data Infrastructure",
+    "section": "",
+    "text": "Slides"
+  },
+  {
     "objectID": "sessions/data-infrastructure/index.html#objectives",
     "href": "sessions/data-infrastructure/index.html#objectives",
     "title": "Data Infrastructure",
@@ -1733,7 +1775,7 @@
     "href": "sessions/data-infrastructure/index.html#slides",
     "title": "Data Infrastructure",
     "section": "Slides",
-    "text": "Slides\n\n\n\n\n\n\n\nNoteHow can I download the slides as a PDF file?\n\n\n\n\n\nTo export the slides to PDF, do the following:\n\nToggle into Print View using the E key (or using the Navigation Menu).\nOpen the in-browser print dialog (CTRL/CMD+P).\nChange the Destination setting to Save as PDF.\nChange the Layout to Landscape.\nChange the Margins to None.\nEnable the Background graphics option.\nClick Save.\n\nNote: This feature has been confirmed to work in Google Chrome, Chromium as well as in Firefox.\nHere’s what the Chrome print dialog would look like with these settings enabled:\nThese instructions were copied from the Quarto documentation (MIT License) and slightly modified."
+    "text": "Slides\n\n\n\n\n\n\n\nNoteHow can I download the slides as a PDF file?\n\n\n\n\n\nTo export the slides to PDF, do the following:\n\nToggle into Print View using the E key (or using the Navigation Menu).\nOpen the in-browser print dialog (CTRL/CMD+P).\nChange the Destination setting to Save as PDF.\nChange the Layout to Landscape.\nChange the Margins to None.\nEnable the Background graphics option.\nClick Save.\n\nNote: This feature has been confirmed to work in Google Chrome, Chromium as well as in Firefox.\nThese instructions were copied from the Quarto documentation (MIT License) and slightly modified."
   },
   {
     "objectID": "sessions/data-infrastructure/index.html#resources",
@@ -1741,6 +1783,13 @@
     "title": "Data Infrastructure",
     "section": "Resources",
     "text": "Resources\n\nNextcloud\n\nNextcloud - Official website\nUsing Nextcloud for Research Data Management (DECIDE RDM)\n\n\n\nDataLad Integration\n\nDataLad Tutorial (Lennart Wittkuhn)\nDataLad Next: datalad create-sibling-webdav\nVideo: Deposit and retrieve DataLad datasets with WebDAV services"
+  },
+  {
+    "objectID": "sessions/bids/index.html",
+    "href": "sessions/bids/index.html",
+    "title": "Brain Imaging Data Structure (BIDS)",
+    "section": "",
+    "text": "Slides"
   },
   {
     "objectID": "sessions/bids/index.html#objectives",
@@ -1761,7 +1810,14 @@
     "href": "sessions/bids/index.html#slides",
     "title": "Brain Imaging Data Structure (BIDS)",
     "section": "Slides",
-    "text": "Slides\n\n\n\n\n\n\n\nNoteHow can I download the slides as a PDF file?\n\n\n\n\n\nTo export the slides to PDF, do the following:\n\nToggle into Print View using the E key (or using the Navigation Menu).\nOpen the in-browser print dialog (CTRL/CMD+P).\nChange the Destination setting to Save as PDF.\nChange the Layout to Landscape.\nChange the Margins to None.\nEnable the Background graphics option.\nClick Save.\n\nNote: This feature has been confirmed to work in Google Chrome, Chromium as well as in Firefox.\nHere’s what the Chrome print dialog would look like with these settings enabled:\nThese instructions were copied from the Quarto documentation (MIT License) and slightly modified."
+    "text": "Slides\n\n\n\n\n\n\n\nNoteHow can I download the slides as a PDF file?\n\n\n\n\n\nTo export the slides to PDF, do the following:\n\nToggle into Print View using the E key (or using the Navigation Menu).\nOpen the in-browser print dialog (CTRL/CMD+P).\nChange the Destination setting to Save as PDF.\nChange the Layout to Landscape.\nChange the Margins to None.\nEnable the Background graphics option.\nClick Save.\n\nNote: This feature has been confirmed to work in Google Chrome, Chromium as well as in Firefox.\nThese instructions were copied from the Quarto documentation (MIT License) and slightly modified."
+  },
+  {
+    "objectID": "sessions/summary/index.html",
+    "href": "sessions/summary/index.html",
+    "title": "Summary & Outlook",
+    "section": "",
+    "text": "Slides"
   },
   {
     "objectID": "sessions/summary/index.html#exercises",
@@ -1775,7 +1831,7 @@
     "href": "sessions/summary/index.html#slides",
     "title": "Summary & Outlook",
     "section": "Slides",
-    "text": "Slides\n\n\n\n\n\n\n\nNoteHow can I download the slides as a PDF file?\n\n\n\n\n\nTo export the slides to PDF, do the following:\n\nToggle into Print View using the E key (or using the Navigation Menu).\nOpen the in-browser print dialog (CTRL/CMD+P).\nChange the Destination setting to Save as PDF.\nChange the Layout to Landscape.\nChange the Margins to None.\nEnable the Background graphics option.\nClick Save.\n\nNote: This feature has been confirmed to work in Google Chrome, Chromium as well as in Firefox.\nHere’s what the Chrome print dialog would look like with these settings enabled:\nThese instructions were copied from the Quarto documentation (MIT License) and slightly modified."
+    "text": "Slides\n\n\n\n\n\n\n\nNoteHow can I download the slides as a PDF file?\n\n\n\n\n\nTo export the slides to PDF, do the following:\n\nToggle into Print View using the E key (or using the Navigation Menu).\nOpen the in-browser print dialog (CTRL/CMD+P).\nChange the Destination setting to Save as PDF.\nChange the Layout to Landscape.\nChange the Margins to None.\nEnable the Background graphics option.\nClick Save.\n\nNote: This feature has been confirmed to work in Google Chrome, Chromium as well as in Firefox.\nThese instructions were copied from the Quarto documentation (MIT License) and slightly modified."
   },
   {
     "objectID": "sessions/summary/index.html#email",
@@ -1783,6 +1839,13 @@
     "title": "Summary & Outlook",
     "section": "Email",
     "text": "Email\nDear course participants,\nYou are receiving this email because you took part in the course “Research Data Management for Psychology and Neuroscience”, which took place on May 7th & 8th 2026, 9:00 to 16:00 at the Julius-Maximilians-Universität Würzburg, RTG 2660: Approach-Avoidance. Thank you very much for your participation!\nWith this email, we would kindly ask you for your feedback. Your valuable feedback will help us improve future versions of this course but also other courses on related topics. We have prepared an online survey that should not take much longer than up to 15 minutes to complete.\nThe feedback survey can be accessed here: &lt;https://rdm.course-feedback.formr.org/&gt;.\nPlease use the same personal and course codeword as before, which allows us to associate your responses with the specific course that you took part in. As a reminder, the course codeword is -------- (course password will be announced during the course). Thank you very much for your feedback!\nThe course materials will continue to be available on the course website at https://lennartwittkuhn.com/rdm-course-jmu-rtg-2660-2026/. Feel free to take a look at it again at any later point of your research journey.\nIf you have any questions, feel free to contact us directly via email.\nThank you again for your participation and feedback!\nBest wishes,\nLennart Wittkuhn (Instructor) and the organizing team"
+  },
+  {
+    "objectID": "sessions/command-line/index.html",
+    "href": "sessions/command-line/index.html",
+    "title": "Command Line",
+    "section": "",
+    "text": "Slides"
   },
   {
     "objectID": "sessions/command-line/index.html#objectives",
@@ -1803,7 +1866,7 @@
     "href": "sessions/command-line/index.html#slides",
     "title": "Command Line",
     "section": "Slides",
-    "text": "Slides\n\n\n\n\n\n\n\nNoteHow can I download the slides as a PDF file?\n\n\n\n\n\nTo export the slides to PDF, do the following:\n\nToggle into Print View using the E key (or using the Navigation Menu).\nOpen the in-browser print dialog (CTRL/CMD+P).\nChange the Destination setting to Save as PDF.\nChange the Layout to Landscape.\nChange the Margins to None.\nEnable the Background graphics option.\nClick Save.\n\nNote: This feature has been confirmed to work in Google Chrome, Chromium as well as in Firefox.\nHere’s what the Chrome print dialog would look like with these settings enabled:\nThese instructions were copied from the Quarto documentation (MIT License) and slightly modified."
+    "text": "Slides\n\n\n\n\n\n\n\nNoteHow can I download the slides as a PDF file?\n\n\n\n\n\nTo export the slides to PDF, do the following:\n\nToggle into Print View using the E key (or using the Navigation Menu).\nOpen the in-browser print dialog (CTRL/CMD+P).\nChange the Destination setting to Save as PDF.\nChange the Layout to Landscape.\nChange the Margins to None.\nEnable the Background graphics option.\nClick Save.\n\nNote: This feature has been confirmed to work in Google Chrome, Chromium as well as in Firefox.\nThese instructions were copied from the Quarto documentation (MIT License) and slightly modified."
   },
   {
     "objectID": "sessions/command-line/index.html#solutions",

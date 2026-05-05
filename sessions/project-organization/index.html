@@ -71,7 +71,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-f79c7fb6db380d32be398468f2fb58cf.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
@@ -180,42 +179,44 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </nav>
     </div>
 <!-- main -->
-<main class="content column-page-left" id="quarto-document-content">
+<main class="content page-columns page-full column-page-left" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+
+
+
+<div class="quarto-about-solana column-page-left">
+  <div class="about-entity">
+    <div class="entity-contents">
+      <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">Project &amp; Data Organization</h1>
 </div>
-
-
-
 <div class="quarto-title-meta column-page-left">
-
-    
     <div>
     <div class="quarto-title-meta-heading">Starts at:</div>
     <div class="quarto-title-meta-contents">
       <p class="date">Thursday, 09:30</p>
     </div>
   </div>
-  
-    
   </div>
-  
-
-
-</header>
-
-
-<div id="hero-heading">
-
+</header> <div class="about-links">
+  <a href="https://lennartwittkuhn.com/rdm-course-jmu-rtg-2660-2026/sessions/project-organization/slides.html" class="about-link" rel="" target="">
+    <i class="bi bi-display"></i>
+     <span class="about-link-text">Slides</span>
+  </a>
 </div>
+      <div class="about-contents"><div id="hero-heading">
+</div></div>
+    </div>
+  </div>
+</div>
+
 <section id="objectives" class="level2">
-<h2 class="anchored" data-anchor-id="objectives">Objectives</h2>
+<h2 data-anchor-id="objectives">Objectives</h2>
 <p><span class="emoji" data-emoji="bulb">💡</span> You understand the importance of well-structured data organization for research.<br> <span class="emoji" data-emoji="bulb">💡</span> You can design logical and intuitive folder structures.<br> <span class="emoji" data-emoji="bulb">💡</span> You can apply file naming best practices and unique identifiers.<br> <span class="emoji" data-emoji="bulb">💡</span> You understand ISO 8601 timestamps and proper sorting methods.<br> <span class="emoji" data-emoji="bulb">💡</span> You can choose appropriate file formats for preservation.<br> <span class="emoji" data-emoji="bulb">💡</span> You can implement effective document versioning strategies.<br> <span class="emoji" data-emoji="bulb">💡</span> You understand ASCII/UTF-8 encoding advantages for text files.<br> <span class="emoji" data-emoji="bulb">💡</span> You can identify and solve common file organization problems.</p>
 </section>
 <section id="exercises" class="level2">
-<h2 class="anchored" data-anchor-id="exercises">Exercises</h2>
+<h2 data-anchor-id="exercises">Exercises</h2>
 <div class="callout callout-style-default callout-note callout-titled" title="Exercise 1: Compare project structure templates">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -229,11 +230,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <section id="exercise-1-project-template-comparison" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-1-project-template-comparison">Exercise 1: Project template comparison</h3>
+<h3 data-anchor-id="exercise-1-project-template-comparison">Exercise 1: Project template comparison</h3>
 <p><strong>Task</strong>: Compare the following project templates and discuss advantages and disadvantages of each approach.</p>
 </section>
 <section id="turing-way-template" class="level2">
-<h2 class="anchored" data-anchor-id="turing-way-template">Turing Way template</h2>
+<h2 data-anchor-id="turing-way-template">Turing Way template</h2>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">.</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">├──</span> LICENSE</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">├──</span> README.md</span>
@@ -255,7 +256,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Repository Structure Template by <a href="https://book.the-turing-way.org/index.html">The Turing Way</a>. Used under the <a href="https://github.com/the-turing-way/reproducible-project-template/blob/main/LICENSE.md">LICENSE CC-BY 4.0</a>. Reused without any modifications.</p>
 </section>
 <section id="heidi-seibold-template" class="level2">
-<h2 class="anchored" data-anchor-id="heidi-seibold-template">Heidi Seibold template</h2>
+<h2 data-anchor-id="heidi-seibold-template">Heidi Seibold template</h2>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">.</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">├──</span> README.md</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="ex">├──</span> analysis            <span class="co"># All things data analysis</span></span>
@@ -275,7 +276,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Research Project Template by <a href="https://heidiseibold.com">Heidi Seibold</a>. No license use specified. For source code, see <a href="https://github.com/HeidiSeibold/research-project-template">here</a>. Reused without modifications.</p>
 </section>
 <section id="analysistemplates-template" class="level2">
-<h2 class="anchored" data-anchor-id="analysistemplates-template"><code>analysistemplates</code> template</h2>
+<h2 data-anchor-id="analysistemplates-template"><code>analysistemplates</code> template</h2>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">.</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="ex">├──</span> 01_Data</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span>   ├── 01_Raw</span>
@@ -297,7 +298,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>analysis template packages by <a href="https://github.com/jonas-hag">Jonas Hagenbeck</a>. Used under the <a href="https://github.com/jonas-hag/analysistemplates/blob/0d76d5364c231a4710d227c8a935532c137383a2/LICENSE.md#L4">MIT License</a>. Reused without any modifications.</p>
 </section>
 <section id="worcs-template" class="level2">
-<h2 class="anchored" data-anchor-id="worcs-template">WORCS template</h2>
+<h2 data-anchor-id="worcs-template">WORCS template</h2>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -371,7 +372,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <section id="exercise-2-design-your-project-folder-structure" class="level3 callout-body-container callout-body">
-<h3 class="anchored" data-anchor-id="exercise-2-design-your-project-folder-structure">Exercise 2: Design your project folder structure</h3>
+<h3 data-anchor-id="exercise-2-design-your-project-folder-structure">Exercise 2: Design your project folder structure</h3>
 <p><strong>Use command line tools for all tasks where applicable.</strong></p>
 <ol type="1">
 <li>Create a new directory called <code>my-research-project</code> in your home directory.</li>
@@ -400,7 +401,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <section id="exercise-3-file-naming-practice" class="level3 callout-body-container callout-body">
-<h3 class="anchored" data-anchor-id="exercise-3-file-naming-practice">Exercise 3: File naming practice</h3>
+<h3 data-anchor-id="exercise-3-file-naming-practice">Exercise 3: File naming practice</h3>
 <p><strong>Use command line tools for all tasks where applicable.</strong></p>
 <ol type="1">
 <li>In your project’s raw data folder, create the following files using <strong>good naming practices</strong> (remember: no spaces, use proper date formats, include leading zeros):
@@ -438,7 +439,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <section id="exercise-4-readme-documentation" class="level3 callout-body-container callout-body">
-<h3 class="anchored" data-anchor-id="exercise-4-readme-documentation">Exercise 4: README documentation</h3>
+<h3 data-anchor-id="exercise-4-readme-documentation">Exercise 4: README documentation</h3>
 <p><strong>Use command line tools for all tasks where applicable.</strong></p>
 <ol type="1">
 <li>Create a <code>README.md</code> file in your main project directory.</li>
@@ -467,7 +468,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div id="callout-5" class="callout-5-contents callout-collapse collapse">
 <section id="exercise-5-file-format-decisions" class="level3 callout-body-container callout-body">
-<h3 class="anchored" data-anchor-id="exercise-5-file-format-decisions">Exercise 5: File format decisions</h3>
+<h3 data-anchor-id="exercise-5-file-format-decisions">Exercise 5: File format decisions</h3>
 <p><strong>Use command line tools for all tasks where applicable.</strong></p>
 <ol type="1">
 <li>Create a <code>documentation</code> folder in your project.</li>
@@ -496,7 +497,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div id="callout-6" class="callout-6-contents callout-collapse collapse">
 <section id="exercise-6-versioning-practice" class="level3 callout-body-container callout-body">
-<h3 class="anchored" data-anchor-id="exercise-6-versioning-practice">Exercise 6: Versioning practice</h3>
+<h3 data-anchor-id="exercise-6-versioning-practice">Exercise 6: Versioning practice</h3>
 <p><strong>Use command line tools for all tasks where applicable.</strong></p>
 <ol type="1">
 <li>Create a file called <code>analysis-script.R</code> in your scripts folder.</li>
@@ -516,7 +517,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </section>
 <section id="slides" class="level2">
-<h2 class="anchored" data-anchor-id="slides">Slides</h2>
+<h2 data-anchor-id="slides">Slides</h2>
 <iframe width="100%" height="500" src="slides.html"></iframe>
 <div class="callout callout-style-simple callout-note callout-titled" title="How can I download the slides as a PDF file?">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
@@ -541,11 +542,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Click <strong>Save</strong>.</li>
 </ol>
 <p>Note: This feature has been confirmed to work in <a href="https://google.com/chrome">Google Chrome</a>, <a href="https://www.chromium.org/Home">Chromium</a> as well as in <a href="https://www.mozilla.org/en-US/firefox/">Firefox</a>.</p>
-<p>Here’s what the Chrome print dialog would look like with these settings enabled:</p>
 <p>These instructions were copied from the <a href="https://quarto.org/docs/presentations/revealjs/presenting.html#print-to-pdf">Quarto documentation</a> (<a href="https://opensource.org/license/mit/">MIT License</a>) and slightly modified.</p>
 </div>
 </div>
 </div>
+
 
 
 </section>
@@ -553,13 +554,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
-    const icon = "";
-    const anchorJS = new window.AnchorJS();
-    anchorJS.options = {
-      placement: 'right',
-      icon: icon
-    };
-    anchorJS.add('.anchored');
     const isCodeAnnotation = (el) => {
       for (const clz of el.classList) {
         if (clz.startsWith('code-annotation-')) {                     

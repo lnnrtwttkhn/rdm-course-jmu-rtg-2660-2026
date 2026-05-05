@@ -36,7 +36,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-f79c7fb6db380d32be398468f2fb58cf.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
@@ -150,42 +149,44 @@ ul.task-list li input[type="checkbox"] {
 </nav>
     </div>
 <!-- main -->
-<main class="content column-page-left" id="quarto-document-content">
+<main class="content page-columns page-full column-page-left" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+
+
+
+<div class="quarto-about-solana column-page-left">
+  <div class="about-entity">
+    <div class="entity-contents">
+      <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">Data Infrastructure</h1>
 </div>
-
-
-
 <div class="quarto-title-meta column-page-left">
-
-    
     <div>
     <div class="quarto-title-meta-heading">Starts at:</div>
     <div class="quarto-title-meta-contents">
       <p class="date">Friday, 12:30</p>
     </div>
   </div>
-  
-    
   </div>
-  
-
-
-</header>
-
-
-<div id="hero-heading">
-
+</header> <div class="about-links">
+  <a href="https://lennartwittkuhn.com/rdm-course-jmu-rtg-2660-2026/sessions/data-infrastructure/slides.html" class="about-link" rel="" target="">
+    <i class="bi bi-display"></i>
+     <span class="about-link-text">Slides</span>
+  </a>
 </div>
+      <div class="about-contents"><div id="hero-heading">
+</div></div>
+    </div>
+  </div>
+</div>
+
 <section id="objectives" class="level2">
-<h2 class="anchored" data-anchor-id="objectives">Objectives</h2>
+<h2 data-anchor-id="objectives">Objectives</h2>
 <p><span class="emoji" data-emoji="bulb">💡</span> You know what Nextcloud is and its capabilities.<br> <span class="emoji" data-emoji="bulb">💡</span> You can navigate the Nextcloud web interface and describe its main areas.<br> <span class="emoji" data-emoji="bulb">💡</span> You know the typical features of Nextcloud, including file management, sharing, versioning, and collaborative editing.<br> <span class="emoji" data-emoji="bulb">💡</span> You understand the different access methods for Nextcloud (web, desktop clients, mobile apps, WebDAV/API).<br> <span class="emoji" data-emoji="bulb">💡</span> You can integrate Nextcloud with DataLad using WebDAV for automated research data workflows.</p>
 </section>
 <section id="exercises" class="level2">
-<h2 class="anchored" data-anchor-id="exercises">Exercises</h2>
+<h2 data-anchor-id="exercises">Exercises</h2>
 <div class="callout callout-style-default callout-note callout-titled" title="Exercise 1: Exploring Nextcloud">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -247,7 +248,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </section>
 <section id="slides" class="level2">
-<h2 class="anchored" data-anchor-id="slides">Slides</h2>
+<h2 data-anchor-id="slides">Slides</h2>
 <iframe width="100%" height="500" src="slides.html"></iframe>
 <div class="callout callout-style-simple callout-note callout-titled" title="How can I download the slides as a PDF file?">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
@@ -272,28 +273,28 @@ ul.task-list li input[type="checkbox"] {
 <li>Click <strong>Save</strong>.</li>
 </ol>
 <p>Note: This feature has been confirmed to work in <a href="https://google.com/chrome">Google Chrome</a>, <a href="https://www.chromium.org/Home">Chromium</a> as well as in <a href="https://www.mozilla.org/en-US/firefox/">Firefox</a>.</p>
-<p>Here’s what the Chrome print dialog would look like with these settings enabled:</p>
 <p>These instructions were copied from the <a href="https://quarto.org/docs/presentations/revealjs/presenting.html#print-to-pdf">Quarto documentation</a> (<a href="https://opensource.org/license/mit/">MIT License</a>) and slightly modified.</p>
 </div>
 </div>
 </div>
 </section>
 <section id="resources" class="level2">
-<h2 class="anchored" data-anchor-id="resources">Resources</h2>
+<h2 data-anchor-id="resources">Resources</h2>
 <section id="nextcloud" class="level3">
-<h3 class="anchored" data-anchor-id="nextcloud">Nextcloud</h3>
+<h3 data-anchor-id="nextcloud">Nextcloud</h3>
 <ul>
 <li><a href="https://nextcloud.com">Nextcloud - Official website</a></li>
 <li><a href="https://www.decide.biozentrum.uni-wuerzburg.de/nextcloud.html">Using Nextcloud for Research Data Management (DECIDE RDM)</a></li>
 </ul>
 </section>
 <section id="datalad-integration" class="level3">
-<h3 class="anchored" data-anchor-id="datalad-integration">DataLad Integration</h3>
+<h3 data-anchor-id="datalad-integration">DataLad Integration</h3>
 <ul>
 <li><a href="https://lennartwittkuhn.com/datalad-tutorial/">DataLad Tutorial (Lennart Wittkuhn)</a></li>
 <li><a href="https://docs.datalad.org/projects/next/en/stable/generated/man/datalad-create-sibling-webdav.html">DataLad Next: <code>datalad create-sibling-webdav</code></a></li>
 <li><a href="https://www.youtube.com/watch?v=XkcwpqPQHQY">Video: Deposit and retrieve DataLad datasets with WebDAV services</a></li>
 </ul>
+
 
 
 </section>
@@ -302,13 +303,6 @@ ul.task-list li input[type="checkbox"] {
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
-    const icon = "";
-    const anchorJS = new window.AnchorJS();
-    anchorJS.options = {
-      placement: 'right',
-      icon: icon
-    };
-    anchorJS.add('.anchored');
     const isCodeAnnotation = (el) => {
       for (const clz of el.classList) {
         if (clz.startsWith('code-annotation-')) {                     

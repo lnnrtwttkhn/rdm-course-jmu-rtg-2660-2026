@@ -36,7 +36,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-f79c7fb6db380d32be398468f2fb58cf.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
@@ -145,42 +144,44 @@ ul.task-list li input[type="checkbox"] {
 </nav>
     </div>
 <!-- main -->
-<main class="content column-page-left" id="quarto-document-content">
+<main class="content page-columns page-full column-page-left" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+
+
+
+<div class="quarto-about-solana column-page-left">
+  <div class="about-entity">
+    <div class="entity-contents">
+      <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">Brain Imaging Data Structure (BIDS)</h1>
 </div>
-
-
-
 <div class="quarto-title-meta column-page-left">
-
-    
     <div>
     <div class="quarto-title-meta-heading">Starts at:</div>
     <div class="quarto-title-meta-contents">
       <p class="date">Thursday, 14:30</p>
     </div>
   </div>
-  
-    
   </div>
-  
-
-
-</header>
-
-
-<div id="hero-heading">
-
+</header> <div class="about-links">
+  <a href="https://lennartwittkuhn.com/rdm-course-jmu-rtg-2660-2026/sessions/bids/slides.html" class="about-link" rel="" target="">
+    <i class="bi bi-display"></i>
+     <span class="about-link-text">Slides</span>
+  </a>
 </div>
+      <div class="about-contents"><div id="hero-heading">
+</div></div>
+    </div>
+  </div>
+</div>
+
 <section id="objectives" class="level2">
-<h2 class="anchored" data-anchor-id="objectives">Objectives</h2>
+<h2 data-anchor-id="objectives">Objectives</h2>
 <p><span class="emoji" data-emoji="bulb">💡</span> You understand what BIDS (Brain Imaging Data Structure) is and why it’s important for neuroimaging.<br> <span class="emoji" data-emoji="bulb">💡</span> You can explain the core principles of BIDS and how it solves common data organization problems.<br> <span class="emoji" data-emoji="bulb">💡</span> You can organize neuroimaging data according to BIDS directory structure standards.<br> <span class="emoji" data-emoji="bulb">💡</span> You understand the role of JSON metadata files and TSV data files in BIDS datasets.<br> <span class="emoji" data-emoji="bulb">💡</span> You know how to validate BIDS datasets using the BIDS validator.<br> <span class="emoji" data-emoji="bulb">💡</span> You understand the benefits of using BIDS for collaboration, reproducibility, and data sharing.<br></p>
 </section>
 <section id="exercises" class="level2">
-<h2 class="anchored" data-anchor-id="exercises">Exercises</h2>
+<h2 data-anchor-id="exercises">Exercises</h2>
 <div class="callout callout-style-default callout-note callout-titled" title="Exercise 1: Explore BIDS datasets on OpenNeuro">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -193,7 +194,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <section id="exercise-1-explore-bids-datasets-on-openneuro" class="level3 callout-body-container callout-body">
-<h3 class="anchored" data-anchor-id="exercise-1-explore-bids-datasets-on-openneuro">Exercise 1: Explore BIDS datasets on OpenNeuro</h3>
+<h3 data-anchor-id="exercise-1-explore-bids-datasets-on-openneuro">Exercise 1: Explore BIDS datasets on OpenNeuro</h3>
 <p><strong>Objective:</strong> Familiarize yourself with BIDS-formatted datasets and understand how standardized organization facilitates data sharing and reuse.</p>
 <p><strong>Instructions:</strong></p>
 <ol type="1">
@@ -256,7 +257,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <section id="exercise-2-hands-on-bids-practice" class="level3 callout-body-container callout-body">
-<h3 class="anchored" data-anchor-id="exercise-2-hands-on-bids-practice">Exercise 2: Hands-on BIDS practice</h3>
+<h3 data-anchor-id="exercise-2-hands-on-bids-practice">Exercise 2: Hands-on BIDS practice</h3>
 <p><strong>Objective:</strong> Learn how to create a BIDS dataset using <code>heudiconv</code> and use BIDS validation.</p>
 <p><strong>Access the hands-on tutorial:</strong> <a href="https://lennartwittkuhn.com/rdm-bids/">https://lennartwittkuhn.com/rdm-bids/</a></p>
 </section>
@@ -264,7 +265,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </section>
 <section id="slides" class="level2">
-<h2 class="anchored" data-anchor-id="slides">Slides</h2>
+<h2 data-anchor-id="slides">Slides</h2>
 <iframe width="100%" height="500" src="slides.html"></iframe>
 <div class="callout callout-style-simple callout-note callout-titled" title="How can I download the slides as a PDF file?">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
@@ -289,11 +290,11 @@ ul.task-list li input[type="checkbox"] {
 <li>Click <strong>Save</strong>.</li>
 </ol>
 <p>Note: This feature has been confirmed to work in <a href="https://google.com/chrome">Google Chrome</a>, <a href="https://www.chromium.org/Home">Chromium</a> as well as in <a href="https://www.mozilla.org/en-US/firefox/">Firefox</a>.</p>
-<p>Here’s what the Chrome print dialog would look like with these settings enabled:</p>
 <p>These instructions were copied from the <a href="https://quarto.org/docs/presentations/revealjs/presenting.html#print-to-pdf">Quarto documentation</a> (<a href="https://opensource.org/license/mit/">MIT License</a>) and slightly modified.</p>
 </div>
 </div>
 </div>
+
 
 
 </section>
@@ -301,13 +302,6 @@ ul.task-list li input[type="checkbox"] {
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
-    const icon = "";
-    const anchorJS = new window.AnchorJS();
-    anchorJS.options = {
-      placement: 'right',
-      icon: icon
-    };
-    anchorJS.add('.anchored');
     const isCodeAnnotation = (el) => {
       for (const clz of el.classList) {
         if (clz.startsWith('code-annotation-')) {                     

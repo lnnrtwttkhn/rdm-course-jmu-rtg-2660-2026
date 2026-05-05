@@ -36,7 +36,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-f79c7fb6db380d32be398468f2fb58cf.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
@@ -145,38 +144,40 @@ ul.task-list li input[type="checkbox"] {
 </nav>
     </div>
 <!-- main -->
-<main class="content column-page-left" id="quarto-document-content">
+<main class="content page-columns page-full column-page-left" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+
+
+
+<div class="quarto-about-solana column-page-left">
+  <div class="about-entity">
+    <div class="entity-contents">
+      <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">Summary &amp; Outlook</h1>
 </div>
-
-
-
 <div class="quarto-title-meta column-page-left">
-
-    
     <div>
     <div class="quarto-title-meta-heading">Starts at:</div>
     <div class="quarto-title-meta-contents">
       <p class="date">Friday, 15:30</p>
     </div>
   </div>
-  
-    
   </div>
-  
-
-
-</header>
-
-
-<div id="hero-heading">
-
+</header> <div class="about-links">
+  <a href="https://lennartwittkuhn.com/rdm-course-jmu-rtg-2660-2026/sessions/summary/slides.html" class="about-link" rel="" target="">
+    <i class="bi bi-display"></i>
+     <span class="about-link-text">Slides</span>
+  </a>
 </div>
+      <div class="about-contents"><div id="hero-heading">
+</div></div>
+    </div>
+  </div>
+</div>
+
 <section id="exercises" class="level2">
-<h2 class="anchored" data-anchor-id="exercises">Exercises</h2>
+<h2 data-anchor-id="exercises">Exercises</h2>
 <p>Reflect on the following discussion questions:</p>
 <ul>
 <li>What are your experiences with (non-)reproducible research?</li>
@@ -186,7 +187,7 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 </section>
 <section id="slides" class="level2">
-<h2 class="anchored" data-anchor-id="slides">Slides</h2>
+<h2 data-anchor-id="slides">Slides</h2>
 <iframe width="100%" height="500" src="slides.html"></iframe>
 <div class="callout callout-style-simple callout-note callout-titled" title="How can I download the slides as a PDF file?">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
@@ -211,14 +212,13 @@ ul.task-list li input[type="checkbox"] {
 <li>Click <strong>Save</strong>.</li>
 </ol>
 <p>Note: This feature has been confirmed to work in <a href="https://google.com/chrome">Google Chrome</a>, <a href="https://www.chromium.org/Home">Chromium</a> as well as in <a href="https://www.mozilla.org/en-US/firefox/">Firefox</a>.</p>
-<p>Here’s what the Chrome print dialog would look like with these settings enabled:</p>
 <p>These instructions were copied from the <a href="https://quarto.org/docs/presentations/revealjs/presenting.html#print-to-pdf">Quarto documentation</a> (<a href="https://opensource.org/license/mit/">MIT License</a>) and slightly modified.</p>
 </div>
 </div>
 </div>
 </section>
 <section id="email" class="level2">
-<h2 class="anchored" data-anchor-id="email">Email</h2>
+<h2 data-anchor-id="email">Email</h2>
 <p>Dear course participants,</p>
 <p>You are receiving this email because you took part in the course “Research Data Management for Psychology and Neuroscience”, which took place on May 7th &amp; 8th 2026, 9:00 to 16:00 at the Julius-Maximilians-Universität Würzburg, RTG 2660: Approach-Avoidance. Thank you very much for your participation!</p>
 <p>With this email, we would kindly <strong>ask you for your feedback</strong>. Your valuable feedback will help us improve future versions of this course but also other courses on related topics. We have prepared an online survey that should not take much longer than up to <strong>15 minutes to complete</strong>.</p>
@@ -231,18 +231,12 @@ ul.task-list li input[type="checkbox"] {
 <p>Lennart Wittkuhn (Instructor) and the organizing team</p>
 
 
+
 </section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
-    const icon = "";
-    const anchorJS = new window.AnchorJS();
-    anchorJS.options = {
-      placement: 'right',
-      icon: icon
-    };
-    anchorJS.add('.anchored');
     const isCodeAnnotation = (el) => {
       for (const clz of el.classList) {
         if (clz.startsWith('code-annotation-')) {                     

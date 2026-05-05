@@ -90,7 +90,6 @@ div.csl-indent {
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-f79c7fb6db380d32be398468f2fb58cf.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
@@ -209,45 +208,47 @@ div.csl-indent {
 </nav>
     </div>
 <!-- main -->
-<main class="content column-page-left" id="quarto-document-content">
+<main class="content page-columns page-full column-page-left" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+
+
+
+<div class="quarto-about-solana column-page-left">
+  <div class="about-entity">
+    <div class="entity-contents">
+      <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">Command Line</h1>
 </div>
-
-
-
 <div class="quarto-title-meta column-page-left">
-
-    
     <div>
     <div class="quarto-title-meta-heading">Starts at:</div>
     <div class="quarto-title-meta-contents">
       <p class="date">Thursday, 12:30</p>
     </div>
   </div>
-  
-    
   </div>
-  
-
-
-</header>
-
-
-<div id="hero-heading">
-
+</header> <div class="about-links">
+  <a href="https://lennartwittkuhn.com/rdm-course-jmu-rtg-2660-2026/sessions/command-line/slides.html" class="about-link" rel="" target="">
+    <i class="bi bi-display"></i>
+     <span class="about-link-text">Slides</span>
+  </a>
 </div>
+      <div class="about-contents"><div id="hero-heading">
+</div></div>
+    </div>
+  </div>
+</div>
+
 <section id="objectives" class="level2">
-<h2 class="anchored" data-anchor-id="objectives">Objectives</h2>
+<h2 data-anchor-id="objectives">Objectives</h2>
 <p><span class="emoji" data-emoji="bulb">💡</span> You can name the advantages of command-line interfaces.<br> <span class="emoji" data-emoji="bulb">💡</span> You can navigate directories using absolute and relative paths.<br> <span class="emoji" data-emoji="bulb">💡</span> You can use shortcuts like the tilde or dots to navigate your file system.<br> <span class="emoji" data-emoji="bulb">💡</span> You can apply arguments and flags to customize command-line commands.<br> <span class="emoji" data-emoji="bulb">💡</span> You can use wildcards (<code>*</code>) for file selection.<br> <span class="emoji" data-emoji="bulb">💡</span> You can combine command-line commands.</p>
 </section>
 <section id="exercises" class="level2">
-<h2 class="anchored" data-anchor-id="exercises">Exercises</h2>
+<h2 data-anchor-id="exercises">Exercises</h2>
 <p><strong>Use only command line commands for all tasks.</strong></p>
 <section id="exercise-1-set-up-your-research-workspace" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-1-set-up-your-research-workspace">Exercise 1: Set up your research workspace</h3>
+<h3 data-anchor-id="exercise-1-set-up-your-research-workspace">Exercise 1: Set up your research workspace</h3>
 <ol type="1">
 <li>Navigate to a folder where you want to keep course-related files and display its path.</li>
 <li>Create a new directory called <code>my-research-project</code>.</li>
@@ -255,7 +256,7 @@ div.csl-indent {
 </ol>
 </section>
 <section id="exercise-2-create-project-structure" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-2-create-project-structure">Exercise 2: Create project structure</h3>
+<h3 data-anchor-id="exercise-2-create-project-structure">Exercise 2: Create project structure</h3>
 <ol type="1">
 <li>Create three subdirectories inside your research project: <code>data</code>, <code>scripts</code>, and <code>docs</code>.</li>
 <li>List all contents and verify the directories were created.</li>
@@ -263,7 +264,7 @@ div.csl-indent {
 </ol>
 </section>
 <section id="exercise-3-create-project-documentation" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-3-create-project-documentation">Exercise 3: Create project documentation</h3>
+<h3 data-anchor-id="exercise-3-create-project-documentation">Exercise 3: Create project documentation</h3>
 <ol type="1">
 <li>While in the <code>docs</code> directory, create a file called <code>README.md</code>.</li>
 <li>Add the text “# My Research Project” to this file.</li>
@@ -271,7 +272,7 @@ div.csl-indent {
 </ol>
 </section>
 <section id="exercise-4-set-up-data-organization" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-4-set-up-data-organization">Exercise 4: Set up data organization</h3>
+<h3 data-anchor-id="exercise-4-set-up-data-organization">Exercise 4: Set up data organization</h3>
 <ol type="1">
 <li>Navigate to the <code>data</code> directory.</li>
 <li>Create two subdirectories: <code>raw</code> and <code>processed</code>.</li>
@@ -279,7 +280,7 @@ div.csl-indent {
 </ol>
 </section>
 <section id="exercise-5-add-project-metadata" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-5-add-project-metadata">Exercise 5: Add project metadata</h3>
+<h3 data-anchor-id="exercise-5-add-project-metadata">Exercise 5: Add project metadata</h3>
 <ol type="1">
 <li>Navigate back to your main project directory.</li>
 <li>Create three files: <code>project-notes.txt</code>, <code>todo-list.md</code>, and <code>references.bib</code>.</li>
@@ -287,7 +288,7 @@ div.csl-indent {
 </ol>
 </section>
 <section id="exercise-6-organize-and-clean-up" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-6-organize-and-clean-up">Exercise 6: Organize and clean up</h3>
+<h3 data-anchor-id="exercise-6-organize-and-clean-up">Exercise 6: Organize and clean up</h3>
 <ol type="1">
 <li>Create a new directory called <code>archive</code>.</li>
 <li>Move all <code>.txt</code> files from your main project directory into the <code>archive</code> directory.</li>
@@ -296,7 +297,7 @@ div.csl-indent {
 </section>
 </section>
 <section id="slides" class="level2">
-<h2 class="anchored" data-anchor-id="slides">Slides</h2>
+<h2 data-anchor-id="slides">Slides</h2>
 <iframe width="100%" height="500" src="slides.html"></iframe>
 <div class="callout callout-style-simple callout-note callout-titled" title="How can I download the slides as a PDF file?">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
@@ -321,14 +322,13 @@ div.csl-indent {
 <li>Click <strong>Save</strong>.</li>
 </ol>
 <p>Note: This feature has been confirmed to work in <a href="https://google.com/chrome">Google Chrome</a>, <a href="https://www.chromium.org/Home">Chromium</a> as well as in <a href="https://www.mozilla.org/en-US/firefox/">Firefox</a>.</p>
-<p>Here’s what the Chrome print dialog would look like with these settings enabled:</p>
 <p>These instructions were copied from the <a href="https://quarto.org/docs/presentations/revealjs/presenting.html#print-to-pdf">Quarto documentation</a> (<a href="https://opensource.org/license/mit/">MIT License</a>) and slightly modified.</p>
 </div>
 </div>
 </div>
 </section>
 <section id="solutions" class="level2">
-<h2 class="anchored" data-anchor-id="solutions">Solutions</h2>
+<h2 data-anchor-id="solutions">Solutions</h2>
 <div class="callout callout-style-default callout-tip callout-titled" title="Show me the solutions!">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -342,7 +342,7 @@ div.csl-indent {
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <section id="exercise-1-set-up-your-research-workspace-1" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-1-set-up-your-research-workspace-1">Exercise 1: Set up your research workspace</h3>
+<h3 data-anchor-id="exercise-1-set-up-your-research-workspace-1">Exercise 1: Set up your research workspace</h3>
 <ol type="1">
 <li>Navigate to your home directory and display its path:</li>
 </ol>
@@ -359,7 +359,7 @@ div.csl-indent {
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="bu">pwd</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="exercise-2-create-project-structure-1" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-2-create-project-structure-1">Exercise 2: Create project structure</h3>
+<h3 data-anchor-id="exercise-2-create-project-structure-1">Exercise 2: Create project structure</h3>
 <ol type="1">
 <li>Inside your research project, create three subdirectories: <code>data</code>, <code>scripts</code>, and <code>docs</code>:</li>
 </ol>
@@ -374,7 +374,7 @@ div.csl-indent {
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> docs</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="exercise-3-create-project-documentation-1" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-3-create-project-documentation-1">Exercise 3: Create project documentation</h3>
+<h3 data-anchor-id="exercise-3-create-project-documentation-1">Exercise 3: Create project documentation</h3>
 <ol type="1">
 <li>In the <code>docs</code> directory, create a file called <code>README.md</code>:</li>
 </ol>
@@ -389,7 +389,7 @@ div.csl-indent {
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="exercise-4-set-up-data-organization-1" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-4-set-up-data-organization-1">Exercise 4: Set up data organization</h3>
+<h3 data-anchor-id="exercise-4-set-up-data-organization-1">Exercise 4: Set up data organization</h3>
 <ol type="1">
 <li>Navigate to the <code>data</code> directory:</li>
 </ol>
@@ -404,7 +404,7 @@ div.csl-indent {
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">touch</span> experiment1.csv experiment2.csv survey.txt</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="exercise-5-add-project-metadata-1" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-5-add-project-metadata-1">Exercise 5: Add project metadata</h3>
+<h3 data-anchor-id="exercise-5-add-project-metadata-1">Exercise 5: Add project metadata</h3>
 <ol type="1">
 <li>Navigate back to your main project directory:</li>
 </ol>
@@ -419,7 +419,7 @@ div.csl-indent {
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> <span class="pp">*</span>.txt</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="exercise-6-organize-and-clean-up-1" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-6-organize-and-clean-up-1">Exercise 6: Organize and clean up</h3>
+<h3 data-anchor-id="exercise-6-organize-and-clean-up-1">Exercise 6: Organize and clean up</h3>
 <ol type="1">
 <li>Create a new directory called <code>archive</code>:</li>
 </ol>
@@ -440,10 +440,11 @@ div.csl-indent {
 </div>
 </section>
 <section id="references" class="level2">
-<h2 class="anchored" data-anchor-id="references">References</h2>
+<h2 data-anchor-id="references">References</h2>
 <div id="refs" role="list">
 
 </div>
+
 
 
 </section>
@@ -451,13 +452,6 @@ div.csl-indent {
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
-    const icon = "";
-    const anchorJS = new window.AnchorJS();
-    anchorJS.options = {
-      placement: 'right',
-      icon: icon
-    };
-    anchorJS.add('.anchored');
     const isCodeAnnotation = (el) => {
       for (const clz of el.classList) {
         if (clz.startsWith('code-annotation-')) {                     
