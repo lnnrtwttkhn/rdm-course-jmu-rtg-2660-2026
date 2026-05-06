@@ -225,7 +225,7 @@
   <h1 class="title">Brain Imaging Data Structure (BIDS)</h1>
   <p class="subtitle"><strong>Research Data Management for Psychology and Neuroscience</strong><br>
 Course at Julius-Maximilians-Universität Würzburg, RTG 2660: Approach-Avoidance<br>
-<a href="https://lennartwittkuhn.com/rdm-course"><i class="fa-solid fa-display" aria-label="display"></i> Slides</a> | <a href="https://github.com/lnnrtwttkhn/rdm-course"><i class="fa-brands fa-github" aria-label="github"></i> Source</a><br>
+<a href="https://lennartwittkuhn.com/rdm-course-jmu-rtg-2660-2026"><i class="fa-solid fa-display" aria-label="display"></i> Slides</a> | <a href="https://github.com/lnnrtwttkhn/rdm-course-jmu-rtg-2660-2026"><i class="fa-brands fa-github" aria-label="github"></i> Source</a><br>
 <a href="https://creativecommons.org/licenses/by/4.0/"><img data-src="https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg" alt="License: CC BY 4.0"></a></p>
 
 <div class="quarto-title-authors">
@@ -339,7 +339,7 @@ Course at Julius-Maximilians-Universität Würzburg, RTG 2660: Approach-Avoidanc
 </section>
 <section id="what-is-bids" class="slide level2">
 <h2>What is BIDS?</h2>
-<p><strong>The Brain Imaging Data Structure (BIDS)</strong> is a simple and intuitive way to organize and describe neuroimaging and behavioral data.</p>
+<p><strong>The Brain Imaging Data Structure (BIDS)</strong> is a standard to organize and describe neuroimaging and behavioral data.</p>
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="quarto-figure quarto-figure-center">
@@ -354,7 +354,7 @@ Course at Julius-Maximilians-Universität Würzburg, RTG 2660: Approach-Avoidanc
 <ul>
 <li><strong>Standardized</strong> file organization and naming conventions</li>
 <li><strong>Community-driven</strong> specification</li>
-<li><strong>Modality-agnostic</strong> (fMRI, EEG, MEG, PET, behavioral data, etc.)</li>
+<li><strong>Modality-agnostic</strong> (fMRI, EEG, MEG, PET, behavior)</li>
 <li><strong>Human and machine readable</strong></li>
 <li><strong>Growing ecosystem</strong> of compatible tools</li>
 </ul>
@@ -380,11 +380,10 @@ Course at Julius-Maximilians-Universität Würzburg, RTG 2660: Approach-Avoidanc
 <h3 id="with-bids">With BIDS 😊</h3>
 <ul>
 <li>Standard organization across labs</li>
-<li>Immediate data comprehension</li>
+<li>Immediate understanding of data structure</li>
 <li>Easy collaboration and sharing</li>
 <li>Tool interoperability</li>
 <li>Structured metadata</li>
-<li>Automated validation</li>
 </ul>
 </div>
 </div></div>
@@ -540,14 +539,15 @@ Course at Julius-Maximilians-Universität Würzburg, RTG 2660: Approach-Avoidanc
 <span id="cb4-6"><a></a>  <span class="dt">"SliceTiming"</span><span class="fu">:</span> <span class="ot">[</span><span class="dv">0</span><span class="ot">,</span> <span class="fl">0.5</span><span class="ot">,</span> <span class="fl">1.0</span><span class="ot">,</span> <span class="fl">1.5</span><span class="ot">]</span><span class="fu">,</span></span>
 <span id="cb4-7"><a></a>  <span class="dt">"TaskDescription"</span><span class="fu">:</span> <span class="st">"Participants viewed faces and objects"</span></span>
 <span id="cb4-8"><a></a><span class="fu">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Also see section on “Data Dictionaries” in session on “Rectangular Data”</p>
 </div>
 </section>
 <section id="tsv-files-for-tabular-data" class="slide level2">
 <h2>TSV Files for Tabular Data</h2>
 <p><strong>Tab-separated values</strong> for events, participants, and other tabular data:</p>
 <div class="fragment">
-<pre><code>onset   duration    trial_type  response_time
-0.0 2.5 face    1.2
+<pre><code>onset   duration  trial_type    response_time
+0.0 2.5 face  1.2
 3.0 2.5 object  0.9
 6.0 2.5 face    1.1</code></pre>
 </div>

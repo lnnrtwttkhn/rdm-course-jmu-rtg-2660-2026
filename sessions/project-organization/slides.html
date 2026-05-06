@@ -224,7 +224,7 @@
   <h1 class="title">Project &amp; Data Organization</h1>
   <p class="subtitle"><strong>Research Data Management for Psychology and Neuroscience</strong><br>
 Course at Julius-Maximilians-Universität Würzburg, RTG 2660: Approach-Avoidance<br>
-<a href="https://lennartwittkuhn.com/rdm-course"><i class="fa-solid fa-display" aria-label="display"></i> Slides</a> | <a href="https://github.com/lnnrtwttkhn/rdm-course"><i class="fa-brands fa-github" aria-label="github"></i> Source</a><br>
+<a href="https://lennartwittkuhn.com/rdm-course-jmu-rtg-2660-2026"><i class="fa-solid fa-display" aria-label="display"></i> Slides</a> | <a href="https://github.com/lnnrtwttkhn/rdm-course-jmu-rtg-2660-2026"><i class="fa-brands fa-github" aria-label="github"></i> Source</a><br>
 <a href="https://creativecommons.org/licenses/by/4.0/"><img data-src="https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg" alt="License: CC BY 4.0"></a></p>
 
 <div class="quarto-title-authors">
@@ -314,10 +314,34 @@ Course at Julius-Maximilians-Universität Würzburg, RTG 2660: Approach-Avoidanc
 </section>
 <section id="this-session-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206d657461207469746c65203e7d7d" class="slide level2">
 <h2>This session: Project &amp; Data Organization</h2>
+<p><img data-src="../../images/phd-comic-story-told-in-file-names.gif"></p>
 </section>
 <section id="objectives" class="slide level2">
 <h2>Objectives</h2>
 <p><span class="emoji" data-emoji="bulb">💡</span> You understand the importance of well-structured data organization for research.<br> <span class="emoji" data-emoji="bulb">💡</span> You can design logical and intuitive folder structures.<br> <span class="emoji" data-emoji="bulb">💡</span> You can apply file naming best practices and unique identifiers.<br> <span class="emoji" data-emoji="bulb">💡</span> You understand ISO 8601 timestamps and proper sorting methods.<br> <span class="emoji" data-emoji="bulb">💡</span> You can choose appropriate file formats for preservation.<br> <span class="emoji" data-emoji="bulb">💡</span> You can implement effective document versioning strategies.<br> <span class="emoji" data-emoji="bulb">💡</span> You understand ASCII/UTF-8 encoding advantages for text files.<br> <span class="emoji" data-emoji="bulb">💡</span> You can identify and solve common file organization problems.</p>
+</section>
+<section id="your-perspective" class="slide level2">
+<h2>Your perspective</h2>
+<h3 id="challenges-solutions-in-research-project-organization">Challenges &amp; solutions in research project organization</h3>
+<p>Reflect on your own experience organizing research projects and discuss with the group:</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Common challenges:</strong></p>
+<ul>
+<li>What problems have you encountered in your own projects?</li>
+<li>What made it hard to find files or understand the structure later?</li>
+<li>Have you ever lost work or wasted time due to poor organization?</li>
+<li>What mistakes did you or your team make that you would avoid now?</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><strong>Potential solutions &amp; what helps:</strong></p>
+<ul>
+<li>What strategies or conventions have worked well for you?</li>
+<li>Which tools or systems do you rely on to keep projects organized?</li>
+<li>What would you recommend to a colleague starting a new project?</li>
+<li>What is one change you plan to make to your current workflow?</li>
+</ul>
+</div></div>
 </section>
 <section>
 <section id="folder-structure" class="title-slide slide level1 center" data-number="1">
@@ -326,6 +350,8 @@ Course at Julius-Maximilians-Universität Würzburg, RTG 2660: Approach-Avoidanc
 </section>
 <section id="research-data-organization-basics" class="slide level2">
 <h2>Research data organization basics</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
 <p><strong>FAIR principles:</strong></p>
 <ul>
 <li>Clear folder structure makes data <strong>findable</strong> and <strong>interoperable</strong></li>
@@ -335,9 +361,13 @@ Course at Julius-Maximilians-Universität Würzburg, RTG 2660: Approach-Avoidanc
 <p><strong>Documentation matters:</strong></p>
 <ul>
 <li>Make conventions intuitive</li>
-<li>Document everything in a <code>README</code> file</li>
+<li>Document “everything” in a <code>README</code> file</li>
 <li>Think of your future self: “Why did I do this?”</li>
 </ul>
+</div><div class="column" style="width:50%;">
+<h4 id="reminder-lets-try-to-avoid-this">Reminder: Let’s try to avoid this …</h4>
+<p><img data-src="../../images/phd-comic-story-told-in-file-names.gif"></p>
+</div></div>
 </section>
 <section id="folder-structure-1" class="slide level2">
 <h2>Folder structure</h2>
@@ -403,7 +433,6 @@ Course at Julius-Maximilians-Universität Würzburg, RTG 2660: Approach-Avoidanc
 <span id="cb1-6"><a></a>    <span class="ex">├──</span> Figure1.tif</span>
 <span id="cb1-7"><a></a>    <span class="ex">├──</span> Figure2a.tif</span>
 <span id="cb1-8"><a></a>    <span class="ex">└──</span> Figure2b.tif</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Adapted from <a href="https://datadryad.org/stash/best_practices#organize">https://datadryad.org/stash/best_practices#organize</a></p>
 </div>
 <div class="fragment">
 <h3 id="organized-by-analysis">Organized by analysis</h3>
@@ -417,7 +446,7 @@ Course at Julius-Maximilians-Universität Würzburg, RTG 2660: Approach-Avoidanc
 <span id="cb2-8"><a></a>    <span class="ex">├──</span> 2_Processed</span>
 <span id="cb2-9"><a></a>    <span class="ex">├──</span> Figure2a.tif</span>
 <span id="cb2-10"><a></a>    <span class="ex">└──</span> Figure2b.tif</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Adapted from <a href="https://datadryad.org/stash/best_practices#organize">https://datadryad.org/stash/best_practices#organize</a></p>
+<p>Adapted from <a href="https://datadryad.org/stash/best_practices#organize">DataDryad</a></p>
 </div>
 </div><div class="column" style="width:50%;">
 <div class="fragment">
@@ -820,7 +849,6 @@ Course at Julius-Maximilians-Universität Würzburg, RTG 2660: Approach-Avoidanc
 <section id="exercise-2" class="slide level2 scrollable">
 <h2>Exercise 2</h2>
 <h3 id="exercise-2-design-your-project-folder-structure">Exercise 2: Design your project folder structure</h3>
-<p><strong>Use command line tools for all tasks where applicable.</strong></p>
 <ol type="1">
 <li>Create a new directory called <code>my-research-project</code> in your home directory.</li>
 <li>Design and create a folder structure for your own or a fictional research project e.g., studying “Effects of Social Media on Sleep Patterns in College Students”. Consider:
@@ -837,7 +865,6 @@ Course at Julius-Maximilians-Universität Würzburg, RTG 2660: Approach-Avoidanc
 <section id="exercise-3" class="slide level2 scrollable">
 <h2>Exercise 3</h2>
 <h3 id="exercise-3-file-naming-practice">Exercise 3: File naming practice</h3>
-<p><strong>Use command line tools for all tasks where applicable.</strong></p>
 <ol type="1">
 <li>In your project’s raw data folder, create the following files using <strong>good naming practices</strong> (remember: no spaces, use proper date formats, include leading zeros):
 <ul>
@@ -863,7 +890,6 @@ Course at Julius-Maximilians-Universität Würzburg, RTG 2660: Approach-Avoidanc
 <section id="exercise-4" class="slide level2 scrollable">
 <h2>Exercise 4</h2>
 <h3 id="exercise-4-readme-documentation">Exercise 4: README documentation</h3>
-<p><strong>Use command line tools for all tasks where applicable.</strong></p>
 <ol type="1">
 <li>Create a <code>README.md</code> file in your main project directory.</li>
 <li>Document the following in your README:
@@ -880,7 +906,6 @@ Course at Julius-Maximilians-Universität Würzburg, RTG 2660: Approach-Avoidanc
 <section id="exercise-5" class="slide level2 scrollable">
 <h2>Exercise 5</h2>
 <h3 id="exercise-5-file-format-decisions">Exercise 5: File format decisions</h3>
-<p><strong>Use command line tools for all tasks where applicable.</strong></p>
 <ol type="1">
 <li>Create a <code>documentation</code> folder in your project.</li>
 <li>In this folder, create files representing different types of documentation using <strong>appropriate file formats</strong>:
@@ -897,7 +922,6 @@ Course at Julius-Maximilians-Universität Würzburg, RTG 2660: Approach-Avoidanc
 <section id="exercise-6" class="slide level2 scrollable">
 <h2>Exercise 6</h2>
 <h3 id="exercise-6-versioning-practice">Exercise 6: Versioning practice</h3>
-<p><strong>Use command line tools for all tasks where applicable.</strong></p>
 <ol type="1">
 <li>Create a file called <code>analysis-script.R</code> in your scripts folder.</li>
 <li>Add some sample R code (even if basic) to the file.</li>
@@ -911,6 +935,29 @@ Course at Julius-Maximilians-Universität Würzburg, RTG 2660: Approach-Avoidanc
 <li>Practice both numbering and date-based versioning approaches.</li>
 <li>Document your versioning system in a <code>versioning-notes.txt</code> file.</li>
 </ol>
+</section>
+<section id="exercise-7" class="slide level2">
+<h2>Exercise 7</h2>
+<h3 id="challenges-solutions-in-research-project-organization-1">Challenges &amp; solutions in research project organization</h3>
+<p>Reflect on your own experience organizing research projects and discuss with the group:</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Common challenges:</strong></p>
+<ul>
+<li>What problems have you encountered in your own projects?</li>
+<li>What made it hard to find files or understand the structure later?</li>
+<li>Have you ever lost work or wasted time due to poor organization?</li>
+<li>What mistakes did you or your team make that you would avoid now?</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><strong>Potential solutions &amp; what helps:</strong></p>
+<ul>
+<li>What strategies or conventions have worked well for you?</li>
+<li>Which tools or systems do you rely on to keep projects organized?</li>
+<li>What would you recommend to a colleague starting a new project?</li>
+<li>What is one change you plan to make to your current workflow?</li>
+</ul>
+</div></div>
 </section></section>
 <section id="references" class="title-slide slide level1 smaller scrollable" data-number="5">
 <h1><span class="header-section-number">5</span> References</h1>
