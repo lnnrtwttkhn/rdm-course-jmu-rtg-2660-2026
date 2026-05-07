@@ -1526,18 +1526,18 @@
     "text": "Licensing Recommendations\n\nBest practices for research data:\n\nCC0 - when data likely not copyrighted (preferred)\nCC BY - when copyright applies but you want maximum reusability\nAvoid restrictive licenses (NC, ND, SA) unless absolutely necessary\n\n\n\n⚠️ Why avoid restrictive licenses?\n\nCan prevent combining datasets\nMay block follow-up research\nCreates compatibility issues"
   },
   {
-    "objectID": "sessions/data-publication/slides.html#the-problem-with-urls",
-    "href": "sessions/data-publication/slides.html#the-problem-with-urls",
-    "title": "Data Publication",
-    "section": "The Problem with URLs",
-    "text": "The Problem with URLs\nImagine this scenario:\n\n\nYou publish data at https://repository.university.edu/dataset123\nRepository shuts down or migrates\nYour dataset gets a new URL\nPapers linking to the old URL can’t find the data\n\n\n\nSolution: Persistent identifiers (PIDs) that redirect to current location!"
-  },
-  {
     "objectID": "sessions/data-publication/slides.html#choo-choo-choose-your-license",
     "href": "sessions/data-publication/slides.html#choo-choo-choose-your-license",
     "title": "Data Publication",
     "section": "Choo Choo Choose Your License!",
     "text": "Choo Choo Choose Your License!"
+  },
+  {
+    "objectID": "sessions/data-publication/slides.html#the-problem-with-urls",
+    "href": "sessions/data-publication/slides.html#the-problem-with-urls",
+    "title": "Data Publication",
+    "section": "The Problem with URLs",
+    "text": "The Problem with URLs\nImagine this scenario:\n\n\nYou publish data at https://repository.university.edu/dataset123\nRepository shuts down or migrates\nYour dataset gets a new URL\nPapers linking to the old URL can’t find the data\n\n\n\nSolution: Persistent identifiers (PIDs) that redirect to current location!"
   },
   {
     "objectID": "sessions/data-publication/slides.html#digital-object-identifier-doi",
